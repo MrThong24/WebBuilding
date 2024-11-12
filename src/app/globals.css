@@ -1,10 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Import font Montserrat */
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --thm-font: "Barlow";
+  --thm-base-color: #254a39;
+  --thm-base-color-rgb: #254a39;
+  --thm-red-color-rgb: 229, 0, 25;
+  --thm-primary-color: #07864b;
+  --thm-primary-color-hover: #025830;
+  --thm-primary-color-rgb: 85, 56, 244;
+  --thm-black-color: #2d2c2c;
+  --thm-black-color-rgb: 45, 44, 44;
+  --thm-gray-color: #f0f1f5;
+  --thm-red-color: #e50019;
+  --thm-text-color: #2d2d2d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +28,47 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--background);
+  background: var(--foreground);
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  /* Cập nhật font thành Montserrat */
+}
+
+header {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  /* Cập nhật font thành Montserrat */
+}
+/* Import font Montserrat */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --thm-font: "Barlow";
+  --thm-base-color: #254a39;
+  --thm-base-color-rgb: #254a39;
+  --thm-red-color-rgb: 229, 0, 25;
+  --thm-primary-color: #07864b;
+  --thm-primary-color-rgb: 85, 56, 244;
+  --thm-black-color: #2d2c2c;
+  --thm-black-color-rgb: 45, 44, 44;
+  --thm-gray-color: #f0f1f5;
+  --thm-red-color: #e50019;
+  --thm-text-color: #2d2d2d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--background);
+  background: var(--foreground);
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  /* Cập nhật font thành Montserrat */
+}
+header {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  /* Cập nhật font thành Montserrat */
 }
