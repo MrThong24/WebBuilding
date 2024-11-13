@@ -6,7 +6,7 @@ import { Montserrat } from "next/font/google";
 import { dataIntroduce, dataService } from "./mockData";
 import { CustomPopover } from "./components/CustomPopover";
 import CustomDisclosure from "./components/CustomDisclosure";
-import logoCty from '../../assest/image/LOGOCTY.png'
+import logoCty from "../../assest/image/LOGOCTY.png";
 import Image from "next/image";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -42,7 +42,7 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-          <Image
+            <Image
               alt="Logo Company" // Cập nhật thuộc tính alt
               src={logoCty}
               width={80} // Thay đổi kích thước theo yêu cầu
@@ -74,7 +74,6 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <CustomPopover title="TRANG CHỦ" items={[]} />
           <CustomPopover title="GIỚI THIỆU" items={dataIntroduce} />
           <CustomPopover title="LĨNH VỰC HOẠT ĐỘNG" items={dataService} />
           <CustomPopover title="DỰ ÁN" items={[]} />
