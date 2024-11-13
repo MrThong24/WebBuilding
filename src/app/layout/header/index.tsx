@@ -6,6 +6,8 @@ import { Montserrat } from "next/font/google";
 import { dataIntroduce, dataService } from "./mockData";
 import { CustomPopover } from "./components/CustomPopover";
 import CustomDisclosure from "./components/CustomDisclosure";
+import logoCty from "../../assest/image/LOGOCTY.png";
+import Image from "next/image";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -40,10 +42,11 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <img
-              alt=""
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
+            <Image
+              alt="Logo Company" // Cập nhật thuộc tính alt
+              src={logoCty}
+              width={80} // Thay đổi kích thước theo yêu cầu
+              height={80} // Thay đổi kích thước theo yêu cầu
             />
           </a>
         </div>
