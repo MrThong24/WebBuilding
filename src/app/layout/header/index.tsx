@@ -74,7 +74,6 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <CustomPopover title="TRANG CHỦ" items={[]} />
           <CustomPopover title="GIỚI THIỆU" items={dataIntroduce} />
           <CustomPopover title="LĨNH VỰC HOẠT ĐỘNG" items={dataService} />
           <CustomPopover title="DỰ ÁN" items={[]} />
