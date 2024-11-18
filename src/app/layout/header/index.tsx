@@ -3,15 +3,18 @@
 import { useEffect, useState } from "react";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Montserrat } from "next/font/google";
+import logoCty from "../../assest/image/LOGOCTY.png";
+import Image from "next/image";
 import { dataIntroduce, dataService } from "./mockData";
 import { CustomPopover } from "./components/CustomPopover";
 import CustomDisclosure from "./components/CustomDisclosure";
-import logoCty from "../../assest/image/LOGOCTY.png";
-import Image from "next/image";
+import { useParams, usePathname } from "next/navigation";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function Header() {
+  const pathname = usePathname();
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false); // Add state for scroll
 
@@ -41,7 +44,7 @@ export default function Header() {
         } lg:px-8`}
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <Image
               alt="Logo Company" // Cập nhật thuộc tính alt
               src={logoCty}
@@ -74,11 +77,23 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <CustomPopover title="GIỚI THIỆU" items={dataIntroduce} />
-          <CustomPopover title="LĨNH VỰC HOẠT ĐỘNG" items={dataService} />
-          <CustomPopover title="DỰ ÁN" items={[]} />
-          <CustomPopover title="TIN TỨC" items={[]} />
-          <CustomPopover title="LIÊN HỆ" items={[]} />
+          <CustomPopover
+            title="GIỚI THIỆU"
+            items={dataIntroduce}
+            isStatus={pathname.split("/")[1] === "about"}
+          />
+          <CustomPopover
+            title="LĨNH VỰC HOẠT ĐỘNG"
+            items={dataService}
+            isStatus={pathname.split("/")[1] === "service"}
+          />
+          <CustomPopover
+            title="DỰ ÁN"
+            items={[]}
+            isStatus={pathname.split("/")[1] === "projects"}
+          />
+          <CustomPopover title="TIN TỨC" items={[]} isStatus={false} />
+          <CustomPopover title="LIÊN HỆ" items={[]} isStatus={false} />
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm/6 font-semibold text-gray-900">

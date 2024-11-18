@@ -1,49 +1,51 @@
+import { TypeAbout, TypeService } from "@/app/constant/unit";
+
 export const dataIntroduce = [
   {
     name: "Tổng quan",
-    href: "#",
+    href: `/about/${TypeAbout.TONG_QUAN_TYPE}`,
   },
   {
-    name: "Lịch sử phát triễn",
-    href: "#",
+    name: "Lịch sử và cột mốc phát triển",
+    href: `/about/${TypeAbout.LICH_SU_PHAT_TRIEN_TYPE}`,
   },
   {
-    name: "Công ty thành viên",
-    href: "#",
-  },
-  {
-    name: "Đội ngũ nhân sự",
-    href: "#",
+    name: "Tầm nhìn, sứ mệnh và giá trị cốt lõi",
+    href: `/about/${TypeAbout.TAM_NHIN_SU_MENH_GIA_TRI_COT_LOI_TYPE}`,
   },
   {
     name: "Sơ đồ tổ chức",
-    href: "#",
-  },
-  {
-    name: "Ban điều hành/ Ban quản lý",
-    href: "#",
-  },
-  {
-    name: "Thành tích, chứng chỉ",
-    href: "#",
-  },
-  {
-    name: "Tầm nhìn, sứ mệnh",
-    href: "#",
+    href: `/about/${TypeAbout.SO_DO_TO_CHUC_TYPE}`,
   },
 ];
 
 export const dataService = [
   {
-    name: "Xây dựng",
-    href: "abcd",
+    name: "Thi công hoàn thiện - nội thất",
+    href: `/service/${TypeService.THI_CONG_HOAN_THIEN_NOI_THAT_TYPE}`,
   },
   {
-    name: "Thiết kế",
-    href: "sss",
+    name: "Thi công nhà xưởng công nghiệp",
+    href: `/service/${TypeService.THI_CONG_NHA_XUONG_CONG_NGHIEP_TYPE}`,
   },
   {
-    name: "In Ấn",
-    href: "vvvv",
+    name: "Thi công công trình dân dụng",
+    href: `/service/${TypeService.THI_CONG_CONG_TRINH_DAN_DUNG_TYPE}`,
   },
-]
+  {
+    name: "Thi công hạ tầng kỹ thuật và cấp thoát nước",
+    href: `/service/${TypeService.THI_CONG_HA_TANG_KY_THUAT_TYPE}`,
+  },
+  {
+    name: "Thi công cảnh quan",
+    href: `/service/${TypeService.THI_CONG_CANH_QUAN_TYPE}`,
+  },
+  {
+    name: "Cải tạo, sửa chữa công trình",
+    href: `/service/${TypeService.CAI_TAO_SUA_CHUA_CONG_TRINH_TYPE}`,
+  },
+  {
+    name: "Sản xuất và thương mại nội thất, quảng cáo",
+    href: `/service/${TypeService.SAN_XUAT_THUONG_MAI_NOI_THAT_QUANG_CAO_TYPE}`,
+  },
+];
