@@ -1,26 +1,33 @@
-"use client";
+"use client"; // <===== REQUIRED
 
 import Breadcrumb from "@/app/components/Breadcrumb";
 import { useParams } from "next/navigation";
 import { dataService } from "../mockData";
 import Link from "next/link";
 import { getTypeNameService } from "@/app/unit/common";
-import SectionThiCongHoanThien from "./SectionThiCongHoanThien";
 import { TypeService } from "@/app/constant/unit";
-import SectionThiCongNhaSuong from "./SectionThiCongNhaSuong";
-import SectionThiCongCongTrinhDanDung from "./SectionThiCongCongTrinhDanDung";
-import SectionThiCongHaTangKyThuat from "./SectionThiCongHaTangKyThuat";
-import SectionThiCongCanhQuan from "./SectionThiCongCanhQuan";
-import SectionCaiTao from "./SectionCaiTao";
-import SectionSanXuat from "./SectionSanXuat";
 import ThiCongHoanThien from "../../assest/image/ThiCongHoanThien.jpg";
-import ThiCongNhaSuong from "../../assest/image/ThiCongNhaSuong.jpg";
 import Image from "next/image";
 
+import { useEffect, useState } from "react";
+import { listProject, Project } from "@/app/projects/mockData";
 export default function Service() {
   const params = useParams<{ id: string }>(); // Định nghĩa kiểu cho params
   const { id } = params; // Lấy id từ params
-  console.log("id", id);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // State for hovered index
+  const [keyFilter, setKeyFilter] = useState("");
+  const [listProjectFilter, setListProjectFilter] =
+    useState<Project[]>(listProject);
+
+  useEffect(() => {
+    if (keyFilter === "all" || keyFilter === "") {
+      setListProjectFilter(listProject);
+      return;
+    }
+    setListProjectFilter(
+      listProject?.filter((item) => item?.type === keyFilter)
+    );
+  }, [keyFilter]);
   return (
     <div className="mt-24 bg-white">
       <div className="relative">
@@ -73,28 +80,42 @@ export default function Service() {
             ))}
           </ul>
         </div>
-        <div className=" mt-16">
-          {id === TypeService.THI_CONG_HOAN_THIEN_NOI_THAT_TYPE && (
-            <SectionThiCongHoanThien />
-          )}
-          {id === TypeService.THI_CONG_NHA_XUONG_CONG_NGHIEP_TYPE && (
-            <SectionThiCongNhaSuong />
-          )}
-          {id === TypeService.THI_CONG_CONG_TRINH_DAN_DUNG_TYPE && (
-            <SectionThiCongCongTrinhDanDung />
-          )}
-          {id === TypeService.THI_CONG_HA_TANG_KY_THUAT_TYPE && (
-            <SectionThiCongHaTangKyThuat />
-          )}
-          {id === TypeService.THI_CONG_CANH_QUAN_TYPE && (
-            <SectionThiCongCanhQuan />
-          )}
-          {id === TypeService.CAI_TAO_SUA_CHUA_CONG_TRINH_TYPE && (
-            <SectionCaiTao />
-          )}
-          {id === TypeService.SAN_XUAT_THUONG_MAI_NOI_THAT_QUANG_CAO_TYPE && (
-            <SectionSanXuat />
-          )}
+        <div className="grid lg:grid-cols-7 grid-cols-6 gap-4 mt-20">
+          {listProjectFilter.map((item, index) => {
+            const colSpan = item?.col;
+
+            return (
+              <Link
+                key={item.id} // Add a unique key for each item
+                href={`/projects/${item.slug}`}
+                className={`lg:col-span-${colSpan} sm:col-span-3 col-span-6 cursor-pointer transition-opacity duration-300 ${
+                  hoveredIndex !== null && hoveredIndex !== index
+                    ? "opacity-60"
+                    : "opacity-100"
+                }`} // Adjust opacity with animation
+                onMouseEnter={() => setHoveredIndex(index)} // Set hovered index
+                onMouseLeave={() => setHoveredIndex(null)} // Reset hovered index
+              >
+                <div className="overflow-hidden h-[400px]">
+                  <Image
+                    src={item.img} // Use the image from the item
+                    alt={`project image ${item.title}`} // Use the title for alt text
+                    className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+                <h2
+                  className={`md:text-lg text-[14px] font-medium ${
+                    hoveredIndex === index ? "text-green-700" : "text-black"
+                  }`}
+                >
+                  {item.title}
+                </h2>
+                <h2 className="md:text-sm text-[12px] text-gray-500 font-normal transition-transform duration-300 hover:text-black">
+                  {item.type}
+                </h2>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

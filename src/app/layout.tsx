@@ -11,8 +11,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="bg-white">
-          {/* <Header />
-          {children} */}
+          <Header />
+          <div className="min-h-screen">{children}</div>
           <Footer />
         </div>
       </body>
