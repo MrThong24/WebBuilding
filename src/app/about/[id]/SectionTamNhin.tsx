@@ -1,4 +1,4 @@
-import { dataGiaTriCotLoi } from "@/app/Home/mockData";
+import { dataGiaTriCotLoi } from "@/app/home/mockData";
 import Image from "next/image";
 
 export default function SectionTamNhin() {
@@ -99,10 +99,10 @@ export default function SectionTamNhin() {
                       width={40} // Thay đổi kích thước theo yêu cầu
                       height={40} // Thay đổi kích thước theo yêu cầu
                     />
-                    <p className="text-[14px]">{post.title}</p>
+                    <p className="text-[16px]">{post.title}</p>
                   </div>
                 </h3>
-                <p className="mt-5 line-clamp-3 text-[12px] text-gray-800 font-medium">
+                <p className="mt-5 line-clamp-3 text-[14px] text-gray-800 font-medium">
                   {post.description}
                 </p>
               </div>

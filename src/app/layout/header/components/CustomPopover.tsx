@@ -1,3 +1,4 @@
+import { getLink } from "@/app/unit/common";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { Inter } from "next/font/google";
 import Link from "next/link";
@@ -22,7 +23,7 @@ export const CustomPopover = ({
           isStatus ? "text-red-500 font-semibold" : "text-gray-700 font-medium"
         } focus:outline-none data-[active]:text-red-500 data-[hover]:text-red-500 data-[focus]:outline-1 data-[focus]:outline-[var(--thm-base-color)]`}
       >
-        {items?.length === 0 && <Link href="/projects">{title}</Link>}
+        {items?.length === 0 && <Link href={getLink(title)}>{title}</Link>}
         {items?.length > 0 && (
           <>
             {title}

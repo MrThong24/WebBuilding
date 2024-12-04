@@ -4,10 +4,10 @@ import Credibility from "../../assest/image/Credibility.png";
 import Sustainability from "../../assest/image/Sustainability.png";
 import Team from "../../assest/image/Team.png";
 import Custom from "../../assest/image/Custom.png";
-import ThiCong  from "../../assest/image/ThiCong.png";
-import CongNghiep  from "../../assest/image/CongNghiep.png";
-import ThietKe  from "../../assest/image/ThietKe.png";
-import CaiTao  from "../../assest/image/CaiTao.png";
+import ThiCong from "../../assest/image/ThiCong.png";
+import CongNghiep from "../../assest/image/CongNghiep.png";
+import ThietKe from "../../assest/image/ThietKe.png";
+import CaiTao from "../../assest/image/CaiTao.png";
 export const dataGiaTriCotLoi = [
   {
     id: 1,
@@ -58,42 +58,47 @@ export const dataBanner = [
     title: "ARE AWESOME",
     tagline: "NEXTJS 13 & SWIPER SLIDER",
     image:
-      "https://www.cc1.vn/wp-content/uploads/2023/07/1_HayLenTieng_PRINT-07.jpg",
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80",
   },
   {
     id: 2,
     title: "GIVE IT A SHOOT",
     tagline: "IF YOU LIKE IT",
-    image: "https://www.cc1.vn/wp-content/uploads/2024/05/DBP_2024_F-03.jpg",
+    image:
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
   },
 ];
 export const dataLinhVucHoatDong = [
   {
     id: 1,
-    title: "Thi công hoàn thiện nội thất",
+    title: "Thi công hoàn thiện - Nội thất công trình",
     description:
-      "Để đáp ứng nhu cầu đa dạng của thị trường trong và ngoài nước, đồng thời hỗ trợ tối đa cho các nhà máy sản xuất vật liệu xây dựng trong nước, phục vụ cho các công trình xây dựng công nghiệp, cơ sở hạ tầng, năng lượng …",
+      "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như biệt thự, nhà phố, nhà hàng và showroom. Chúng tôi không chỉ đơn thuần thi công mà còn là người đồng hành cùng khách hàng, biến những ý tưởng thiết kế thành hiện thực, mang lại không gian sống và làm việc tối ưu về công năng và thẩm mỹ.",
     icons: ThiCong,
+    href: "thi-cong-hoan-thien-noi-that",
   },
   {
     id: 2,
-    title: "Thi công hoàn thiện nội thất",
+    title: "Thi công nhà xưởng công nghiệp",
     description:
-      "Để đáp ứng nhu cầu đa dạng của thị trường trong và ngoài nước, đồng thời hỗ trợ tối đa cho các nhà máy sản xuất vật liệu xây dựng trong nước, phục vụ cho các công trình xây dựng công nghiệp, cơ sở hạ tầng, năng lượng …",
+      "DTP là đối tác tin cậy trong lĩnh vực thi công nhà xưởng công nghiệp. Chúng tôi hiểu rằng mỗi ngành công nghiệp đều có những yêu cầu đặc thù về không gian và cơ sở hạ tầng. Vì vậy, các giải pháp của chúng tôi luôn được tùy chỉnh để đáp ứng tối đa nhu cầu sản xuất và vận hành của khách hàng.",
     icons: CongNghiep,
+    href: "thi-cong-nha-xuong-cong-nghiep",
   },
   {
     id: 3,
-    title: "Thi công hoàn thiện nội thất",
+    title: "Thi công công trình dân dụng",
     description:
-      "Để đáp ứng nhu cầu đa dạng của thị trường trong và ngoài nước, đồng thời hỗ trợ tối đa cho các nhà máy sản xuất vật liệu xây dựng trong nước, phục vụ cho các công trình xây dựng công nghiệp, cơ sở hạ tầng, năng lượng …",
+      "Trong lĩnh vực thi công công trình dân dụng, DTP luôn đặt chất lượng và sự hài lòng của khách hàng lên hàng đầu. Chúng tôi đã và đang thực hiện thành công nhiều dự án nhà ở, trung tâm thương mại và showroom, góp phần nâng cao chất lượng cuộc sống và hiệu quả kinh doanh.",
     icons: ThietKe,
+    href: "thi-cong-cong-trinh-dan-dung",
   },
   {
     id: 4,
-    title: "Thi công hoàn thiện nội thất",
+    title: "Thi công hạ tầng kỹ thuật, cấp thoát nước",
     description:
-      "Để đáp ứng nhu cầu đa dạng của thị trường trong và ngoài nước, đồng thời hỗ trợ tối đa cho các nhà máy sản xuất vật liệu xây dựng trong nước, phục vụ cho các công trình xây dựng công nghiệp, cơ sở hạ tầng, năng lượng …",
+      "Hạ tầng kỹ thuật và hệ thống cấp thoát nước là yếu tố quyết định đến sự bền vững và hiệu quả của một công trình. Tại DTP, chúng tôi cung cấp các giải pháp toàn diện trong lĩnh vực này, mang lại sự an tâm tuyệt đối cho khách hàng.",
     icons: CaiTao,
+    href: "thi-cong-ha-tang-ky-thuat-cap-nuoc",
   },
-]
+];
