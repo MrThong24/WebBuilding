@@ -16,6 +16,12 @@ export default function SectionDuAnMoiNhat() {
       children={
         <div className="lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <Swiper
+            style={
+              {
+                "--swiper-navigation-color": "#fff",
+                "--swiper-pagination-color": "#fff",
+              } as React.CSSProperties
+            }
             watchSlidesProgress={true}
             slidesPerView={3}
             breakpoints={{

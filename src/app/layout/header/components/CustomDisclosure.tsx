@@ -12,11 +12,13 @@ interface Item {
 interface CustomDisclosureProps {
   title: string;
   items: Item[];
+  isStatus: boolean;
 }
 
 const CustomDisclosure: React.FC<CustomDisclosureProps> = ({
   title,
   items,
+  isStatus,
 }) => {
   return (
     <Disclosure as="div" className="-mx-3">

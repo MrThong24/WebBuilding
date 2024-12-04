@@ -57,7 +57,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-green-700"
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -92,14 +92,18 @@ export default function Header() {
             items={[]}
             isStatus={pathname.split("/")[1] === "projects"}
           />
-          <CustomPopover title="TIN TỨC" items={[]} isStatus={false} />
-          <CustomPopover title="LIÊN HỆ" items={[]} isStatus={false} />
+          <CustomPopover
+            title="TIN TỨC"
+            items={[]}
+            isStatus={pathname.split("/")[1] === "news"}
+          />
+          <CustomPopover
+            title="LIÊN HỆ"
+            items={[]}
+            isStatus={pathname.split("/")[1] === "contact"}
+          />
         </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
       </nav>
       <Dialog
         open={mobileMenuOpen}
@@ -141,24 +145,20 @@ export default function Header() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                <CustomDisclosure title="Trang chủ" items={[]} />
-                <CustomDisclosure title="Giới thiệu" items={dataIntroduce} />
+              <div className="space-y-2 py-6 mt-6">
+                <CustomDisclosure
+                  title="Giới thiệu"
+                  items={dataIntroduce}
+                  isStatus={pathname.split("/")[1] === "about"}
+                />
                 <CustomDisclosure
                   title="Lĩnh vực hoạt động"
                   items={dataService}
+                  isStatus={false}
                 />
-                <CustomDisclosure title="Dự án" items={[]} />
-                <CustomDisclosure title="Tin tức" items={[]} />
-                <CustomDisclosure title="Liên hệ" items={[]} />
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
+                <CustomDisclosure title="Dự án" items={[]} isStatus={false} />
+                <CustomDisclosure title="Tin tức" items={[]} isStatus={false} />
+                <CustomDisclosure title="Liên hệ" items={[]} isStatus={false} />
               </div>
             </div>
           </div>

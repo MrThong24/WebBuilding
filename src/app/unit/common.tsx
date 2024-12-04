@@ -41,3 +41,15 @@ export const getTypeNameService = (id: string): string => {
       return ""; // Giá trị mặc định nếu không khớp
   }
 };
+export const getLink = (title: string) => {
+  switch (title) {
+    case "LIÊN HỆ":
+      return "/contact";
+    case "DỰ ÁN":
+      return "/projects";
+    case "TIN TỨC":
+      return "/news";
+    default:
+      return "/";
+  }
+};

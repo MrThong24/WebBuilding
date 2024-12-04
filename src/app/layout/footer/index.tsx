@@ -1,6 +1,16 @@
 export default function Footer() {
   return (
-    <footer className="w-full bg-[var(--thm-primary-color)]">
+    <footer
+      className="w-full"
+      style={{
+        clear: "both",
+        width: "100%",
+        position: "relative",
+        background:
+          "#232323 url(https://khangnhatcons.com/images/footer.png) no-repeat",
+        backgroundSize: "120% auto",
+      }}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/*Grid*/}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-10 max-w-full mx-auto sm:max-w-2xl lg:max-w-full">
@@ -26,7 +36,7 @@ export default function Footer() {
               <div className="flex gap-x-8">
                 <span className="text-white text-[14px] w-[80px]">EMAIL</span>
                 <span className="text-white text-[14px]">
-                  daitienphatgroup@gmail.com.
+                  daitienphatgroup@gmail.com
                 </span>
               </div>
             </div>
@@ -61,7 +71,7 @@ export default function Footer() {
         </div>
         {/*Grid*/}
         <div className="py-7 border-t border-gray-200">
-          <div className="flex items-center justify-center ">
+          <div className="flex items-center justify-center">
             <span className="text-sm text-white ">
               ©<a href="https://pagedone.io/">Copyright</a> 2024, Thiết kế bởi
               Công ty TNHH Đầu tư Xây dựng Đại Tiến Phát

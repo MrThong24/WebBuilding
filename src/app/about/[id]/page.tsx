@@ -8,11 +8,21 @@ import Breadcrumb from "../../components/Breadcrumb";
 import SectionTongQuan from "./SectionTongQuan";
 import SectionLichSu from "./SectionLichSu";
 import SectionTamNhin from "./SectionTamNhin";
+import SectionSoDoToChuc from "./SectionSoDoToChuc";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function About() {
   const params = useParams<{ id: string }>(); // Định nghĩa kiểu cho params
   const { id } = params; // Lấy id từ params
-
+  let tabs = [
+    { id: "world", label: "World" },
+    { id: "ny", label: "N.Y." },
+    { id: "business", label: "Business" },
+    { id: "arts", label: "Arts" },
+    { id: "science", label: "Science" },
+  ];
+  let [activeTab, setActiveTab] = useState(tabs[0].id);
   return (
     <div className="mt-24 bg-white">
       <div className="relative">
@@ -37,14 +47,14 @@ export default function About() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 lg:px-8 pb-10">
-        <div className="flex justify-center text-sm font-medium text-center text-gray-500 border-b border-red-500 sm:border-gray-200 dark:text-gray-400 dark:border-gray-700">
-          <ul className="flex flex-wrap -mb-px">
+        <div className="flex justify-center text-sm font-medium text-center text-gray-600  sm:border-gray-200 dark:text-gray-600 dark:border-gray-700">
+          <ul className="flex flex-nowrap -mb-px overflow-x-auto scrollbar-hidden">
             {dataAbout?.map((item) => (
-              <li className="" key={item?.href}>
+              <li className="flex-shrink-0" key={item?.href}>
                 <Link
                   href={item?.href}
                   aria-current="page"
-                  className={`inline-block p-4 border-b-2 rounded-t-lg ${
+                  className={`inline-block sm:p-4 p-[12px] border-b-2 rounded-t-lg ${
                     id === item?.href
                       ? "border-red-600 text-red-500"
                       : "border-transparent hover:text-red-500 hover:border-red-600 dark:hover:text-red-500"
@@ -56,12 +66,14 @@ export default function About() {
             ))}
           </ul>
         </div>
-        <div className="mt-10">
+
+        <div className="sm:mt-10 mt-4">
           {id === TypeAbout.TONG_QUAN_TYPE && <SectionTongQuan />}
           {id === TypeAbout.LICH_SU_PHAT_TRIEN_TYPE && <SectionLichSu />}
           {id === TypeAbout.TAM_NHIN_SU_MENH_GIA_TRI_COT_LOI_TYPE && (
             <SectionTamNhin />
           )}
+          {id === TypeAbout.SO_DO_TO_CHUC_TYPE && <SectionSoDoToChuc />}
         </div>
       </div>
     </div>
