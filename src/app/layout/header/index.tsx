@@ -3,13 +3,12 @@
 import { useEffect, useState } from "react";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Montserrat } from "next/font/google";
-import logoCty from "../../assest/image/LOGO CTY.jpg";
+import logoCty from "../../assest/image/LOGOCTY.png";
 import Image from "next/image";
-import { dataIntroduce } from "./mockData";
+import { dataIntroduce, dataService } from "./mockData";
 import { CustomPopover } from "./components/CustomPopover";
 import CustomDisclosure from "./components/CustomDisclosure";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { useParams, usePathname } from "next/navigation";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -45,14 +44,14 @@ export default function Header() {
         } lg:px-8`}
       >
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <Image
               alt="Logo Company" // Cập nhật thuộc tính alt
               src={logoCty}
               width={80} // Thay đổi kích thước theo yêu cầu
               height={80} // Thay đổi kích thước theo yêu cầu
             />
-          </Link>
+          </a>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -82,6 +81,11 @@ export default function Header() {
             title="GIỚI THIỆU"
             items={dataIntroduce}
             isStatus={pathname.split("/")[1] === "about"}
+          />
+          <CustomPopover
+            title="LĨNH VỰC HOẠT ĐỘNG"
+            items={dataService}
+            isStatus={pathname.split("/")[1] === "service"}
           />
           <CustomPopover
             title="DỰ ÁN"
@@ -142,10 +146,19 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6 mt-6">
-                <CustomDisclosure title="Giới thiệu" items={dataIntroduce} />
-                <CustomDisclosure title="Dự án" items={[]} />
-                <CustomDisclosure title="Tin tức" items={[]} />
-                <CustomDisclosure title="Liên hệ" items={[]} />
+                <CustomDisclosure
+                  title="Giới thiệu"
+                  items={dataIntroduce}
+                  isStatus={pathname.split("/")[1] === "about"}
+                />
+                <CustomDisclosure
+                  title="Lĩnh vực hoạt động"
+                  items={dataService}
+                  isStatus={false}
+                />
+                <CustomDisclosure title="Dự án" items={[]} isStatus={false} />
+                <CustomDisclosure title="Tin tức" items={[]} isStatus={false} />
+                <CustomDisclosure title="Liên hệ" items={[]} isStatus={false} />
               </div>
             </div>
           </div>

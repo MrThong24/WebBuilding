@@ -1,33 +1,62 @@
-import { StaticImageData } from "next/image";
 import a1_project1 from "../../assest/image/projects/project_1/a1.jpg";
+import a2_project1 from "../../assest/image/projects/project_1/a2.jpg";
+import a3_project1 from "../../assest/image/projects/project_1/a3.jpg";
+import a4_project1 from "../../assest/image/projects/project_1/a4.jpg";
+import a5_project1 from "../../assest/image/projects/project_1/a5.jpg";
+import a6_project1 from "../../assest/image/projects/project_1/a6.jpg";
 import a1_project2 from "../../assest/image/projects/project_2/a1.jpg";
-
+import a1_project3 from "../../assest/image/projects/project_3/a1.jpg";
+import a1_project4 from "../../assest/image/projects/project_4/a1.jpg";
+import a1_project5 from "../../assest/image/projects/project_5/a1.jpg";
+import a1_project6 from "../../assest/image/projects/project_5/a1.jpg";
+import a1_project7 from "../../assest/image/projects/project_7/a1.jpg";
+import a1_project8 from "../../assest/image/projects/project_8/a1.jpg";
+import a1_project9 from "../../assest/image/projects/project_9/a1.jpg";
 
 export interface Project {
   id: number;
   title: string;
-  img: string | StaticImageData;
+  img: any;
   type: string;
   col: number;
   slug: string;
   location: string;
   time: string;
+  subImage: any[];
   des: string;
-  content: string;
 }
 
 export const listProject: Project[] = [
   {
     id: 1,
-    title: "Thi công sân Pickleball",
+    title: "BEVERLY HILLS POLO CLUB",
     img: a1_project1,
     type: "Fit-out",
     col: 3,
-    slug: "thi-cong-san-pickleball", 
+    slug: "BEVERLY-HILLS-POLO-CLUB",
     location: "AEON MALL Huế",
     time: "Tháng 6-8/2024",
+    subImage: [
+      {
+        img: a1_project1,
+      },
+      {
+        img: a2_project1,
+      },
+      {
+        img: a3_project1,
+      },
+      {
+        img: a4_project1,
+      },
+      {
+        img: a5_project1,
+      },
+      {
+        img: a6_project1,
+      },
+    ],
     des: "Thi công hoàn thiện nội thất",
-    content: "<p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; font-weight: 400; color: rgb(0, 0, 0);\"><strong style=\"box-sizing: border-box; font-weight: bolder;\"><a href=\"https://chihaodecor.vn/bang-gia-thiet-ke-thi-cong-san-pickleball.html\" style=\"box-sizing: border-box; background-color: transparent; touch-action: manipulation; color: rgb(0, 0, 0); text-decoration: none;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 255);\">Thi công sân Picklebal</span>l</a></strong><span>&nbsp;</span>là quá trình xây dựng và hoàn thiện một không gian chơi thể thao chuyên biệt. Sân Pickleball đòi hỏi các tiêu chuẩn kỹ thuật nghiêm ngặt để đảm bảo trải nghiệm chơi tốt nhất. Quá trình thi công bao gồm nhiều bước từ chuẩn bị nền móng đến hoàn thiện bề mặt và lắp đặt thiết bị. Bài viết này sẽ cung cấp thông tin chi tiết về các yêu cầu kỹ thuật, quy trình thi công, vật liệu sử dụng, chi phí, cách chọn đơn vị thi công uy tín, đảm bảo chất lượng và an toàn, cũng như cách khắc phục các lỗi thường gặp trong quá trình thi công sân Pickleball.</span></p><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(237, 28, 36);\"><strong style=\"box-sizing: border-box; font-weight: bolder;\">Video hoàn thiện thi công sân Pickleball tại quận 1 của Chí Hào Decor</strong></span></p><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center;\"><iframe src=\"https://www.youtube.com/embed/qmWyy8Op9PA?si=vYfFwJA5QNmcNC6j\" width=\"800\" height=\"449\" allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\" style=\"box-sizing: border-box; max-width: 100%;\"></iframe></p><h2 style=\"box-sizing: border-box; color: rgb(51, 51, 51); width: 892.281px; margin-top: 0px; margin-bottom: 0.5em; text-rendering: optimizespeed; font-size: 1.6em; line-height: 1.3; font-family: &quot;Open Sans&quot;, sans-serif; font-weight: 700; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; -webkit-box-decoration-break: clone; box-decoration-break: clone; color: rgb(0, 0, 0);\"><b style=\"box-sizing: border-box; font-weight: bolder;\">Pickbleball là gì?</b></span></h2><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Pickleball là một môn thể thao kết hợp giữa tennis, bóng bàn và cầu lông được chơi trên sân có kích thước tương tự sân cầu lông. Người chơi sử dụng vợt nhỏ hơn so với vợt tennis và bóng có lỗ tương tự như bóng Wiffle ball. Môn thể thao này có thể chơi đơn hoặc chơi đôi và quy tắc chơi khá đơn giản, phù hợp với nhiều lứa tuổi. Và sự kết hợp của các yếu tốt từ các môn thể thao khác nhau. Pickleball mang đến một trải nghiệm thú vị và đầy thử thách cho người chơi.</span></p><figure id=\"attachment_13879\" aria-describedby=\"caption-attachment-13879\" class=\"wp-caption aligncenter\" style=\"box-sizing: border-box; display: block; margin: 0px auto 2em; clear: both; max-width: 100%; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; width: 800px;\"><a href=\"https://chihaodecor.vn/wp-content/uploads/2024/09/anh-thi-cong-san-pickleball-1.jpg\" style=\"box-sizing: border-box; background-color: transparent; touch-action: manipulation; color: rgb(0, 0, 0); text-decoration: none;\"><img loading=\"lazy\" class=\"size-full wp-image-13879\" src=\"https://chihaodecor.vn/wp-content/uploads/2024/09/anh-thi-cong-san-pickleball-1.jpg\" alt=\"Sân Pickleball\" width=\"800\" height=\"388\" srcset=\"https://chihaodecor.vn/wp-content/uploads/2024/09/anh-thi-cong-san-pickleball-1.jpg 800w, https://chihaodecor.vn/wp-content/uploads/2024/09/anh-thi-cong-san-pickleball-1-768x372.jpg 768w, https://chihaodecor.vn/wp-content/uploads/2024/09/anh-thi-cong-san-pickleball-1-64x31.jpg 64w\" sizes=\"(max-width: 800px) 100vw, 800px\" style=\"box-sizing: border-box; height: auto; max-width: 100%; border-style: none; display: inline-block; vertical-align: middle; transition: opacity 1s; opacity: 1;\"></a><figcaption id=\"caption-attachment-13879\" class=\"wp-caption-text\" style=\"box-sizing: border-box; display: block; text-align: center; padding: 0.4em; font-size: 0.9em; background: rgba(0, 0, 0, 0.05); font-style: italic;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Sân Pickleball</span></figcaption></figure><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Pickleball không chỉ là một môn thể thao giải trí mà còn mang lại nhiều lợi ích cho sức khỏe. Chơi pickleball giúp cải thiện sức khỏe tim mạch, tăng cường sức mạnh cơ bắp và khả năng phối hợp tay mắt. Môn thể thao này cũng giúp giảm căng thẳng và cải thiện tinh thần. Với nhịp độ chơi nhanh và yêu cầu sự khéo léo, pickleball mang lại cảm giác thách thức và hứng thú cho người chơi ở mọi trình độ kỹ năng.</span></p><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Tại Việt Nam, pickleball đang dần trở nên phổ biến và thu hút nhiều người tham gia. Từ trẻ em, người trưởng thành đến người cao tuổi, ai cũng có thể tìm thấy niềm vui và lợi ích từ môn thể thao này. Pickleball không chỉ là một cách tuyệt vời để rèn luyện sức khỏe mà còn là cơ hội để kết nối và giao lưu với cộng đồng.</span></p><h2 style=\"box-sizing: border-box; color: rgb(51, 51, 51); width: 892.281px; margin-top: 0px; margin-bottom: 0.5em; text-rendering: optimizespeed; font-size: 1.6em; line-height: 1.3; font-family: &quot;Open Sans&quot;, sans-serif; font-weight: 700; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; -webkit-box-decoration-break: clone; box-decoration-break: clone; color: rgb(0, 0, 0);\"><b style=\"box-sizing: border-box; font-weight: bolder;\">Tiêu chuẩn và yêu cầu kỹ thuật sân Pickleball</b></span></h2><figure id=\"attachment_11713\" aria-describedby=\"caption-attachment-11713\" class=\"wp-caption aligncenter\" style=\"box-sizing: border-box; display: block; margin: 0px auto 2em; clear: both; max-width: 100%; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; width: 800px;\"><img loading=\"lazy\" class=\"wp-image-11713\" src=\"https://chihaodecor.vn/wp-content/uploads/2023/12/kich-thuoc-san-pickleball.jpg\" alt=\"Kích Thước Sân Pickleball\" width=\"800\" height=\"490\" srcset=\"https://chihaodecor.vn/wp-content/uploads/2023/12/kich-thuoc-san-pickleball.jpg 620w, https://chihaodecor.vn/wp-content/uploads/2023/12/kich-thuoc-san-pickleball-64x39.jpg 64w\" sizes=\"(max-width: 800px) 100vw, 800px\" style=\"box-sizing: border-box; height: auto; max-width: 100%; border-style: none; display: inline-block; vertical-align: middle; transition: opacity 1s; opacity: 1;\"><figcaption id=\"caption-attachment-11713\" class=\"wp-caption-text\" style=\"box-sizing: border-box; display: block; text-align: center; padding: 0.4em; font-size: 0.9em; background: rgba(0, 0, 0, 0.05); font-style: italic;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Kích Thước Sân Pickleball</span></figcaption></figure><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Dưới đây là kích thước của sân pickleball:</span></p><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\"><strong style=\"box-sizing: border-box; font-weight: bolder;\">Trận đôi (Double):</strong></span></p><ul style=\"box-sizing: border-box; list-style: disc; margin-top: 0px; padding: 0px; margin-bottom: 0.6em; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Chiều rộng sân: 20 feet (6.1m).</span></li><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Chiều dài sân: 44 feet (13.4m).</span></li><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Khu vực không chơi (Non-Volley Zone): Bắt đầu từ lưới và mở rộng về phía trong sân hai bên lưới, khu vực này có chiều dài 7 feet (tương đương 2.13m).</span></li><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Đường giữa sân: Đường giữa sân chạy theo chiều ngang, chia sân thành hai phần bằng nhau.</span></li></ul><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\"><strong style=\"box-sizing: border-box; font-weight: bolder;\">Trận đơn (Single):</strong></span></p><ul style=\"box-sizing: border-box; list-style: disc; margin-top: 0px; padding: 0px; margin-bottom: 0.6em; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Chiều rộng sân: 20 feet (6.1m).</span></li><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Chiều dài sân: 44 feet (13.4m).</span></li><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Khu vực không chơi (Non-Volley Zone): Bắt đầu từ lưới và mở rộng 7 feet (2.13m) vào sân ở cả hai bên lưới.</span></li><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Đường giữa sân: Đường giữa sân chạy theo chiều rộng, chia sân thành hai phần bằng nhau.</span></li></ul><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Các kích thước của sân pickleball thường được coi là chuẩn, nhưng có thể có sự điều chỉnh nhỏ tùy thuộc vào quy định của từng giải đấu hoặc điều kiện cụ thể của không gian chơi.</span></p><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><strong style=\"box-sizing: border-box; font-weight: bolder;\"><span style=\"box-sizing: border-box; color: rgb(237, 28, 36);\">Video cải tạo sàn cũ nền bê tông nhà xưởng thành sân Pickleball tại Quận Nhà Bè</span></strong></p><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center;\"><iframe loading=\"lazy\" src=\"https://www.youtube.com/embed/xWVMbYvSaYQ?si=4RTv3gSaaIx1iogo\" width=\"800\" height=\"449\" allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\" style=\"box-sizing: border-box; max-width: 100%;\"></iframe></p><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Để đáp ứng các tiêu chuẩn thi đấu, bề mặt sân cần được làm từ vật liệu chất lượng cao như bê tông, nhựa hoặc sàn thể thao chuyên dụng, đảm bảo độ bằng phẳng, độ cứng và khả năng thoát nước tối ưu. Tất cả các đường kẻ trên sân đều có bề rộng 2 inches (5,08cm) và được sơn màu tương phản rõ ràng với mặt sân.</span></p><table border=\"1\" cellspacing=\"1\" style=\"box-sizing: border-box; width: 892.281px; margin-bottom: 1em; border-color: rgb(236, 236, 236); border-spacing: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><tbody style=\"box-sizing: border-box;\"><tr style=\"box-sizing: border-box;\"><td style=\"box-sizing: border-box; padding: 0.5em 0.5em 0.5em 0px; text-align: left; border-bottom: 1px solid rgb(236, 236, 236); line-height: 1.3; font-size: 0.9em; color: rgb(102, 102, 102); width: 196.422px;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\"><b style=\"box-sizing: border-box; font-weight: bolder;\">Loại sân</b></span></td><td style=\"box-sizing: border-box; padding: 0.5em; text-align: left; border-bottom: 1px solid rgb(236, 236, 236); line-height: 1.3; font-size: 0.9em; color: rgb(102, 102, 102); width: 275.625px;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\"><b style=\"box-sizing: border-box; font-weight: bolder;\">Kích thước</b></span></td><td style=\"box-sizing: border-box; padding: 0.5em 0px 0.5em 0.5em; text-align: left; border-bottom: 1px solid rgb(236, 236, 236); line-height: 1.3; font-size: 0.9em; color: rgb(102, 102, 102); width: 418.234px;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\"><b style=\"box-sizing: border-box; font-weight: bolder;\">Vùng không chơi</b></span></td></tr><tr style=\"box-sizing: border-box;\"><td style=\"box-sizing: border-box; padding: 0.5em 0.5em 0.5em 0px; text-align: left; border-bottom: 1px solid rgb(236, 236, 236); line-height: 1.3; font-size: 0.9em; color: rgb(102, 102, 102); width: 196.422px;\"><span style=\"box-sizing: border-box; font-weight: 400; color: rgb(0, 0, 0);\">Sân đơn</span></td><td style=\"box-sizing: border-box; padding: 0.5em; text-align: left; border-bottom: 1px solid rgb(236, 236, 236); line-height: 1.3; font-size: 0.9em; color: rgb(102, 102, 102); width: 275.625px;\"><span style=\"box-sizing: border-box; font-weight: 400; color: rgb(0, 0, 0);\">6m x 13.41m</span></td><td style=\"box-sizing: border-box; padding: 0.5em 0px 0.5em 0.5em; text-align: left; border-bottom: 1px solid rgb(236, 236, 236); line-height: 1.3; font-size: 0.9em; color: rgb(102, 102, 102); width: 418.234px;\"><span style=\"box-sizing: border-box; font-weight: 400; color: rgb(0, 0, 0);\">2.13m từ lưới</span></td></tr><tr style=\"box-sizing: border-box;\"><td style=\"box-sizing: border-box; padding: 0.5em 0.5em 0.5em 0px; text-align: left; border-bottom: 1px solid rgb(236, 236, 236); line-height: 1.3; font-size: 0.9em; color: rgb(102, 102, 102); width: 196.422px;\"><span style=\"box-sizing: border-box; font-weight: 400; color: rgb(0, 0, 0);\">Sân đôi</span></td><td style=\"box-sizing: border-box; padding: 0.5em; text-align: left; border-bottom: 1px solid rgb(236, 236, 236); line-height: 1.3; font-size: 0.9em; color: rgb(102, 102, 102); width: 275.625px;\"><span style=\"box-sizing: border-box; font-weight: 400; color: rgb(0, 0, 0);\">6m x 13.41m</span></td><td style=\"box-sizing: border-box; padding: 0.5em 0px 0.5em 0.5em; text-align: left; border-bottom: 1px solid rgb(236, 236, 236); line-height: 1.3; font-size: 0.9em; color: rgb(102, 102, 102); width: 418.234px;\"><span style=\"box-sizing: border-box; font-weight: 400; color: rgb(0, 0, 0);\">2.13m từ lưới</span></td></tr></tbody></table><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Một bộ phận quan trọng khác của sân Pickleball là lưới thi đấu. Lưới cần có kích thước chuẩn với chiều cao 36 inches (91,44cm) ở giữa sân và 34 inches (86,36cm) ở hai đầu. Chất liệu thường được sử dụng là lưới nylon hoặc polyester để đảm bảo độ căng và độ bền trong suốt quá trình thi đấu. Việc kiểm tra và bảo dưỡng lưới thường xuyên là rất cần thiết để đảm bảo trận đấu diễn ra suôn sẻ.</span></p><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Ngoài ra, khu vực gần lưới có tên gọi là “Non-volley zone” hay “Kitchen”, được tính từ chân lưới đến vạch kẻ song song cách lưới 7 feet (2,13m). Đây là khu vực mà người chơi không được phép bước vào để đỡ bóng trước khi bóng chạm sân.</span></p><h2 style=\"box-sizing: border-box; color: rgb(51, 51, 51); width: 892.281px; margin-top: 0px; margin-bottom: 0.5em; text-rendering: optimizespeed; font-size: 1.6em; line-height: 1.3; font-family: &quot;Open Sans&quot;, sans-serif; font-weight: 700; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; -webkit-box-decoration-break: clone; box-decoration-break: clone; color: rgb(0, 0, 0);\"><strong style=\"box-sizing: border-box; font-weight: bolder;\">Các loại sân Pickleball phổ biến hiện nay</strong></span></h2><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Dưới đây là một số loại sân Pickleball phổ biến hiện nay mà Chí Hào Decor chúng tôi đã tổng hợp lại để bạn có thể tham khảo:</span></p><h3 style=\"box-sizing: border-box; color: rgb(51, 51, 51); width: 892.281px; margin-top: 0px; margin-bottom: 0.5em; text-rendering: optimizespeed; font-size: 1.25em; font-family: &quot;Open Sans&quot;, sans-serif; font-weight: 700; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; -webkit-box-decoration-break: clone; box-decoration-break: clone; color: rgb(0, 0, 0);\"><strong style=\"box-sizing: border-box; font-weight: bolder;\">Sân Pickleball Acrylic</strong></span></h3><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Sân Pickleball được làm từ Acrylic là một trong những lựa chọn hàng đầu hiện nay.</span></p><figure id=\"attachment_13932\" aria-describedby=\"caption-attachment-13932\" class=\"wp-caption aligncenter\" style=\"box-sizing: border-box; display: block; margin: 0px auto 2em; clear: both; max-width: 100%; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; width: 800px;\"><a href=\"https://chihaodecor.vn/wp-content/uploads/2024/11/san-pickleball-duoc-lam-tu-chat-lieu-acrylic.jpg\" style=\"box-sizing: border-box; background-color: transparent; touch-action: manipulation; color: rgb(0, 0, 0); text-decoration: none;\"><img loading=\"lazy\" class=\"size-full wp-image-13932\" src=\"https://chihaodecor.vn/wp-content/uploads/2024/11/san-pickleball-duoc-lam-tu-chat-lieu-acrylic.jpg\" alt=\"Sân pickleball được làm bằng chất liệu Acrylic\" width=\"800\" height=\"574\" srcset=\"https://chihaodecor.vn/wp-content/uploads/2024/11/san-pickleball-duoc-lam-tu-chat-lieu-acrylic.jpg 800w, https://chihaodecor.vn/wp-content/uploads/2024/11/san-pickleball-duoc-lam-tu-chat-lieu-acrylic-768x551.jpg 768w, https://chihaodecor.vn/wp-content/uploads/2024/11/san-pickleball-duoc-lam-tu-chat-lieu-acrylic-64x46.jpg 64w\" sizes=\"(max-width: 800px) 100vw, 800px\" style=\"box-sizing: border-box; height: auto; max-width: 100%; border-style: none; display: inline-block; vertical-align: middle; transition: opacity 1s; opacity: 1;\"></a><figcaption id=\"caption-attachment-13932\" class=\"wp-caption-text\" style=\"box-sizing: border-box; display: block; text-align: center; padding: 0.4em; font-size: 0.9em; background: rgba(0, 0, 0, 0.05); font-style: italic;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Sân pickleball được làm bằng chất liệu Acrylic</span></figcaption></figure><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\"><strong style=\"box-sizing: border-box; font-weight: bolder;\">Ưu điểm</strong></span></p><ul style=\"box-sizing: border-box; list-style: disc; margin-top: 0px; padding: 0px; margin-bottom: 0.6em; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Độ bền cao: Với độ bền cao sân Acrylic có khả năng chịu được tốt trước các điều kiện khắc nghiệt, đảm bảo tuổi tho lâu dài cho sân đấu.</span></li><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Chống trượt hiệu quả: Bề mặt sân cung cấp độ bám tốt, giúp giảm thiểu nguy cơ trượt ngã trong trận đấu.</span></li><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Bảo trì đơn giản: Việc làm sạch và bảo dưỡng sân Acrylic tương đối dễ dàng tiếp kiệm thời gian và công sức.</span></li></ul><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\"><strong style=\"box-sizing: border-box; font-weight: bolder;\">Nhược điểm</strong></span></p><ul style=\"box-sizing: border-box; list-style: disc; margin-top: 0px; padding: 0px; margin-bottom: 0.6em; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Chi phí lắp đặt sân cao: So với một số loại sân khách, sân Acrylic có chi phí đầu tư ban đầu khá lớn.</span></li><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Khó khăn trong việc thay thế: Khi sân bị hư hỏng nặng, việc sửa chữa saan Acrylic có thể khá tốn kém</span></li></ul><h3 style=\"box-sizing: border-box; color: rgb(51, 51, 51); width: 892.281px; margin-top: 0px; margin-bottom: 0.5em; text-rendering: optimizespeed; font-size: 1.25em; font-family: &quot;Open Sans&quot;, sans-serif; font-weight: 700; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; -webkit-box-decoration-break: clone; box-decoration-break: clone; color: rgb(0, 0, 0);\"><strong style=\"box-sizing: border-box; font-weight: bolder;\">Sân Pickleball Polyurethane</strong></span></h3><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Trong các loại sân Pickleball thì sân Polyurethane ở vị trí thứ hai. Đây là loại sân đặc biệt được ưa chuộng trong các giải đấu chuyên nghiệp.</span></p><figure id=\"attachment_13928\" aria-describedby=\"caption-attachment-13928\" class=\"wp-caption aligncenter\" style=\"box-sizing: border-box; display: block; margin: 0px auto 2em; clear: both; max-width: 100%; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; width: 800px;\"><a href=\"https://chihaodecor.vn/wp-content/uploads/2024/11/san-pickleball-duoc-lam-bang-polyurethane.jpg\" style=\"box-sizing: border-box; background-color: transparent; touch-action: manipulation; color: rgb(0, 0, 0); text-decoration: none;\"><img loading=\"lazy\" class=\"wp-image-13928 size-full\" src=\"https://chihaodecor.vn/wp-content/uploads/2024/11/san-pickleball-duoc-lam-bang-polyurethane.jpg\" alt=\"Sân Pickleball làm bằng Polyurethane\" width=\"800\" height=\"798\" srcset=\"https://chihaodecor.vn/wp-content/uploads/2024/11/san-pickleball-duoc-lam-bang-polyurethane.jpg 800w, https://chihaodecor.vn/wp-content/uploads/2024/11/san-pickleball-duoc-lam-bang-polyurethane-768x766.jpg 768w, https://chihaodecor.vn/wp-content/uploads/2024/11/san-pickleball-duoc-lam-bang-polyurethane-100x100.jpg 100w, https://chihaodecor.vn/wp-content/uploads/2024/11/san-pickleball-duoc-lam-bang-polyurethane-64x64.jpg 64w\" sizes=\"(max-width: 800px) 100vw, 800px\" style=\"box-sizing: border-box; height: auto; max-width: 100%; border-style: none; display: inline-block; vertical-align: middle; transition: opacity 1s; opacity: 1;\"></a><figcaption id=\"caption-attachment-13928\" class=\"wp-caption-text\" style=\"box-sizing: border-box; display: block; text-align: center; padding: 0.4em; font-size: 0.9em; background: rgba(0, 0, 0, 0.05); font-style: italic;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Sân Pickleball làm bằng Polyurethane</span></figcaption></figure><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\"><strong style=\"box-sizing: border-box; font-weight: bolder;\">Ưu điểm</strong></span></p><ul style=\"box-sizing: border-box; list-style: disc; margin-top: 0px; padding: 0px; margin-bottom: 0.6em; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Đàn hồi tốt: Tính đàn hồi cao giúp giảm thiểu chấn thương cao cho người chơi, đặc biệt là các vấn đề về khớp</span></li><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Khả năng chống mài mòn: Bề mặt sân có khả năng chống mài mòn tốt, đảm bảo độ bền lâu dài</span></li></ul><p style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-top: 0px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\"><strong style=\"box-sizing: border-box; font-weight: bolder;\">Nhược điểm:&nbsp;</strong></span></p><ul style=\"box-sizing: border-box; list-style: disc; margin-top: 0px; padding: 0px; margin-bottom: 0.6em; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Chi phí đầu tư ban đầu khá cao: Tương tự như sân Acrylic, sân Polyurethane cũng đòi hỏi khoản đầu tư ban đầu lớn.</span></li><li style=\"box-sizing: border-box; margin-bottom: 0.6em; margin-left: 1.3em;\"><span style=\"box-sizing: border-box; color: rgb(0, 0, 0);\">Yêu cầu bảo dưỡng định kỳ: Để duy trì chất lượng bề mặt sân, cần thực hiện bảo dưỡng định kỳ, điều này có thể tốn thời gian và chi phí.</span></li></ul>",
   },
   {
     id: 2,
@@ -38,119 +67,123 @@ export const listProject: Project[] = [
     slug: "ANH-KAFE",
     location: "AEON MALL Huế",
     time: "Tháng 6-8/2024",
+    subImage: [
+      {
+        img: a1_project2,
+      },
+    ],
     des: "Thi công hoàn thiện nội thất",
-    content: "<p>Heelo</p>"
   },
-  // {
-  //   id: 3,
-  //   title: "SHUYI GRASS JELLY",
-  //   img: a1_project3,
-  //   type: "Fit-out",
-  //   col: 2,
-  //   slug: "SHUYI-GRASS-JELLY",
-  //   location: "AEON MALL Huế",
-  //   time: "Tháng 6-8/2024",
-  //   subImage: [
-  //     {
-  //       img: a1_project3,
-  //     },
-  //   ],
-  //   des: "Thi công hoàn thiện nội thất",
-  // },
-  // {
-  //   id: 4,
-  //   title: "FM STYLE",
-  //   img: a1_project4,
-  //   type: "Fit-out",
-  //   col: 2,
-  //   slug: "FM-STYLE",
-  //   location: "AEON MALL Huế",
-  //   time: "Tháng 6-8/2024",
-  //   subImage: [
-  //     {
-  //       img: a1_project4,
-  //     },
-  //   ],
-  //   des: "Thi công hoàn thiện nội thất",
-  // },
-  // {
-  //   id: 5,
-  //   title: "DOOKKI",
-  //   img: a1_project5,
-  //   type: "Fit-out",
-  //   col: 2,
-  //   slug: "DOOKKI",
-  //   location: "AEON MALL Huế",
-  //   time: "Tháng 6-8/2024",
-  //   subImage: [
-  //     {
-  //       img: a1_project5,
-  //     },
-  //   ],
-  //   des: "Thi công hoàn thiện nội thất",
-  // },
-  // {
-  //   id: 6,
-  //   title: "INNO",
-  //   img: a1_project6,
-  //   type: "Fit-out",
-  //   col: 3,
-  //   slug: "INNO",
-  //   location: "AEON MALL Huế",
-  //   time: "Tháng 6-8/2024",
-  //   subImage: [
-  //     {
-  //       img: a1_project6,
-  //     },
-  //   ],
-  //   des: "Thi công hoàn thiện nội thất",
-  // },
-  // {
-  //   id: 7,
-  //   title: "TIROSS",
-  //   img: a1_project7,
-  //   type: "Fit-out",
-  //   col: 2,
-  //   slug: "TIROSS",
-  //   location: "AEON MALL Huế",
-  //   time: "Tháng 6-8/2024",
-  //   subImage: [
-  //     {
-  //       img: a1_project7,
-  //     },
-  //   ],
-  //   des: "Thi công hoàn thiện nội thất",
-  // },
-  // {
-  //   id: 8,
-  //   title: "FRESH NOODLE HUT",
-  //   img: a1_project8,
-  //   type: "Fit-out",
-  //   col: 3,
-  //   slug: "FRESH-NOODLE-HUT",
-  //   location: "AEON MALL Huế",
-  //   time: "Tháng 6-8/2024",
-  //   subImage: [
-  //     {
-  //       img: a1_project8,
-  //     },
-  //   ],
-  //   des: "Thi công hoàn thiện nội thất",
-  // },
-  // {
-  //   id: 9,
-  //   title: "OWEN",
-  //   img: a1_project9,
-  //   type: "Fit-out",
-  //   col: 2,
-  //   slug: "OWEN",
-  //   location: "AEON MALL Huế",
-  //   time: "Tháng 6-8/2024",
-  //   subImage: [
-  //     {
-  //       img: a1_project9,
-  //     },
-  //   ],
-  //   des: "Thi công hoàn thiện nội thất",
-  // },
+  {
+    id: 3,
+    title: "SHUYI GRASS JELLY",
+    img: a1_project3,
+    type: "Fit-out",
+    col: 2,
+    slug: "SHUYI-GRASS-JELLY",
+    location: "AEON MALL Huế",
+    time: "Tháng 6-8/2024",
+    subImage: [
+      {
+        img: a1_project3,
+      },
+    ],
+    des: "Thi công hoàn thiện nội thất",
+  },
+  {
+    id: 4,
+    title: "FM STYLE",
+    img: a1_project4,
+    type: "Fit-out",
+    col: 2,
+    slug: "FM-STYLE",
+    location: "AEON MALL Huế",
+    time: "Tháng 6-8/2024",
+    subImage: [
+      {
+        img: a1_project4,
+      },
+    ],
+    des: "Thi công hoàn thiện nội thất",
+  },
+  {
+    id: 5,
+    title: "DOOKKI",
+    img: a1_project5,
+    type: "Fit-out",
+    col: 2,
+    slug: "DOOKKI",
+    location: "AEON MALL Huế",
+    time: "Tháng 6-8/2024",
+    subImage: [
+      {
+        img: a1_project5,
+      },
+    ],
+    des: "Thi công hoàn thiện nội thất",
+  },
+  {
+    id: 6,
+    title: "INNO",
+    img: a1_project6,
+    type: "Fit-out",
+    col: 3,
+    slug: "INNO",
+    location: "AEON MALL Huế",
+    time: "Tháng 6-8/2024",
+    subImage: [
+      {
+        img: a1_project6,
+      },
+    ],
+    des: "Thi công hoàn thiện nội thất",
+  },
+  {
+    id: 7,
+    title: "TIROSS",
+    img: a1_project7,
+    type: "Fit-out",
+    col: 2,
+    slug: "TIROSS",
+    location: "AEON MALL Huế",
+    time: "Tháng 6-8/2024",
+    subImage: [
+      {
+        img: a1_project7,
+      },
+    ],
+    des: "Thi công hoàn thiện nội thất",
+  },
+  {
+    id: 8,
+    title: "FRESH NOODLE HUT",
+    img: a1_project8,
+    type: "Fit-out",
+    col: 3,
+    slug: "FRESH-NOODLE-HUT",
+    location: "AEON MALL Huế",
+    time: "Tháng 6-8/2024",
+    subImage: [
+      {
+        img: a1_project8,
+      },
+    ],
+    des: "Thi công hoàn thiện nội thất",
+  },
+  {
+    id: 9,
+    title: "OWEN",
+    img: a1_project9,
+    type: "Fit-out",
+    col: 2,
+    slug: "OWEN",
+    location: "AEON MALL Huế",
+    time: "Tháng 6-8/2024",
+    subImage: [
+      {
+        img: a1_project9,
+      },
+    ],
+    des: "Thi công hoàn thiện nội thất",
+  },
 ];

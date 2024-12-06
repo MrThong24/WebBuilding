@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Breadcrumb from "../components/Breadcrumb";
+import { Select } from "@headlessui/react";
+import clsx from "clsx";
 
 export default function MyApp() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // State for hovered index
@@ -42,7 +45,7 @@ export default function MyApp() {
       type: "option2",
     },
   ]);
-  const [keyFilter] = useState("");
+  const [keyFilter, setKeyFilter] = useState("");
   const [listProjectFilter, setListProjectFilter] = useState([
     {
       id: 1,
@@ -80,7 +83,13 @@ export default function MyApp() {
       type: "option2",
     },
   ]);
-
+  const listFilterOption = [
+    { value: "all", name: "Tất cả" },
+    { value: "option2", name: "Dự án 1" },
+  ];
+  const handleClickOption = (value: string) => {
+    setKeyFilter(value);
+  };
   useEffect(() => {
     if (keyFilter === "all" || keyFilter === "") {
       setListProjectFilter(listProject);
