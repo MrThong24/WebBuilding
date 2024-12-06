@@ -1,28 +1,23 @@
-"use client";
+// "use client";
 import { TypeAbout } from "@/app/constant/unit";
 import { getTypeNameAbout } from "@/app/unit/common";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { dataAbout } from "../mockData";
 import Breadcrumb from "../../components/Breadcrumb";
 import SectionTongQuan from "./SectionTongQuan";
 import SectionLichSu from "./SectionLichSu";
 import SectionTamNhin from "./SectionTamNhin";
 import SectionSoDoToChuc from "./SectionSoDoToChuc";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import SectionLinhVucHoatDong from "./SectionLinhVucHoatDong";
+interface BlogPostPageProps {
+  params: Promise<{ id: string }>; // Đảm bảo params là một Promise
+}
 
-export default function About() {
-  const params = useParams<{ id: string }>(); // Định nghĩa kiểu cho params
-  const { id } = params; // Lấy id từ params
-  let tabs = [
-    { id: "world", label: "World" },
-    { id: "ny", label: "N.Y." },
-    { id: "business", label: "Business" },
-    { id: "arts", label: "Arts" },
-    { id: "science", label: "Science" },
-  ];
-  let [activeTab, setActiveTab] = useState(tabs[0].id);
+export default async function About({ params }: BlogPostPageProps) {
+  const resolvedParams = await params; // Chờ đợi params hoàn thành
+  console.log("resolvedParams", resolvedParams);
+  const id = resolvedParams?.id;
+
   return (
     <div className="mt-24 bg-white">
       <div className="relative">
@@ -52,7 +47,7 @@ export default function About() {
             {dataAbout?.map((item) => (
               <li className="flex-shrink-0" key={item?.href}>
                 <Link
-                  href={item?.href}
+                  href={`/about/${item?.href}`}
                   aria-current="page"
                   className={`inline-block sm:p-4 p-[12px] border-b-2 rounded-t-lg ${
                     id === item?.href
@@ -74,8 +69,18 @@ export default function About() {
             <SectionTamNhin />
           )}
           {id === TypeAbout.SO_DO_TO_CHUC_TYPE && <SectionSoDoToChuc />}
+          {id === TypeAbout.LINH_VUC_HOAT_DONG_TYPE && (
+            <SectionLinhVucHoatDong />
+          )}
         </div>
       </div>
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  // Define the static parameters for the dynamic route
+  return dataAbout.map((item) => ({
+    id: item.href, // Assuming 'href' corresponds to the dynamic 'id'
+  }));
 }

@@ -17,6 +17,10 @@ export const dataIntroduce = [
     name: "Sơ đồ tổ chức",
     href: `/about/${TypeAbout.SO_DO_TO_CHUC_TYPE}`,
   },
+  {
+    name: "Lĩnh vực hoạt động",
+    href: `/about/${TypeAbout.LINH_VUC_HOAT_DONG_TYPE}`,
+  },
 ];
 
 export const dataService = [

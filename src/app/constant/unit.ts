@@ -3,6 +3,7 @@ export const TypeAbout = {
   LICH_SU_PHAT_TRIEN_TYPE: "lich-su-phat-trien",
   TAM_NHIN_SU_MENH_GIA_TRI_COT_LOI_TYPE: "tam-nhin-su-menh-gia-tri-cot-loi",
   SO_DO_TO_CHUC_TYPE: "so-do-to-chuc",
+  LINH_VUC_HOAT_DONG_TYPE: "linh-vuc-hoat-dong",
 };
 export const TypeService = {
   THI_CONG_HOAN_THIEN_NOI_THAT_TYPE: "thi-cong-hoan-thien-noi-that",

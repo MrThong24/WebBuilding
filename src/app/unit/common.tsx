@@ -15,6 +15,9 @@ export const getTypeNameAbout = (id: string): string => {
     case TypeAbout.SO_DO_TO_CHUC_TYPE:
       return "Sơ đồ tổ chức";
 
+    case TypeAbout.LINH_VUC_HOAT_DONG_TYPE:
+      return "Lĩnh vực hoạt động";
+
     default:
       return ""; // Giá trị mặc định nếu không khớp
   }

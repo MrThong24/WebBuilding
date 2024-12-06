@@ -14,6 +14,9 @@ export default function MyApp() {
   const listFilterOption = [
     { value: "all", name: "Tất cả" },
     { value: "Fit-out", name: "Fit-out" },
+    { value: "San-choi-the-thao", name: "Sân chơi thể thao" },
+    { value: "Cai-tao-cong-trinh", name: "Cải tạo công trình" },
+    { value: "Cong-trinh-nha-thep", name: "Công trình nhà thép" },
   ];
   const handleClickOption = (value: string) => {
     setKeyFilter(value);

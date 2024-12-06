@@ -1,7 +1,3 @@
-"use client"; // <===== REQUIRED
-
-import { useState } from "react";
-
 export default function MyApp() {
   return (
     <div className="pt-24 bg-white ">
@@ -28,4 +24,48 @@ export default function MyApp() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8 pb-10 grid md:grid-cols-2 grid-cols-1 gap-4 mt-16"></div>
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  // Here you would typically fetch the list of news slugs or IDs
+  const params = [
+    {
+      id: 1,
+      title: "Dự án 1",
+      img: "https://wallpaperaccess.com/full/508840.jpg",
+      description: "Công trình dân dụng",
+      type: "option1",
+    },
+    {
+      id: 2,
+      title: "Dự án 2",
+      img: "https://wallpaperaccess.com/full/508840.jpg",
+      description: "Công trình công nghiệp",
+      type: "option1",
+    },
+    {
+      id: 3,
+      title: "Dự án 3",
+      img: "https://wallpaperaccess.com/full/508840.jpg",
+      description: "Thi công nội thất",
+      type: "option2",
+    },
+    {
+      id: 4,
+      title: "Dự án 4",
+      img: "https://wallpaperaccess.com/full/508840.jpg",
+      description: "Thi công cảnh quan",
+      type: "option2",
+    },
+    {
+      id: 5,
+      title: "Dự án 5",
+      img: "https://wallpaperaccess.com/full/508840.jpg",
+      description: "Hạ tầng kỹ thuật",
+      type: "option2",
+    },
+  ].map((news) => ({
+    id: String(news.id), // Assuming 'slug' is the identifier for the news
+  }));
+  return params;
 }
