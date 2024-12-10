@@ -71,13 +71,13 @@ export default function SectionAbout() {
               </svg>
             </motion.button>
           </div>
-          <div className="relative">
+          <div className="relative lg:h-[560px] sm:h-[460px] h-[420px]">
             <Image
-              className="lg:mx-0 mx-auto max-h-[500px] rounded-3xl object-cover"
-              alt="Logo Company" // Cập nhật thuộc tính alt
+              className="w-full h-full rounded-2xl object-cover relative"
+              alt="Đại Tiến Phát" // Cập nhật thuộc tính alt
               src={About}
             />
-            <div className="absolute inset-0 bg-black opacity-40 rounded-3xl" />
+            <div className="absolute inset-0 bg-black opacity-40 rounded-2xl" />
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Breadcrumb({
   title,
   href,
@@ -12,12 +14,12 @@ export default function Breadcrumb({
       <nav className="flex" aria-label="Breadcrumb">
         <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
           <li className="inline-flex items-center">
-            <a
-              href="#"
+            <Link
+              href={"/"}
               className="inline-flex items-center text-sm md:text-md font-medium text-white"
             >
               Trang chủ
-            </a>
+            </Link>
           </li>
 
           <li>
@@ -38,12 +40,12 @@ export default function Breadcrumb({
                 />
               </svg>
 
-              <a
+              <Link
                 href={href}
                 className="ms-1 text-sm md:text-md font-medium text-white"
               >
                 {title}
-              </a>
+              </Link>
             </div>
           </li>
           <li aria-current="page" className="flex-1">

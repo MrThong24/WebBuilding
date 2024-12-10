@@ -1,9 +1,12 @@
 import Image from "next/image";
 import { listProject } from "../mockData";
-
+import "../styles/detail.css";
+import { Open_Sans } from "next/font/google";
 interface BlogPostPageProps {
   params: Promise<{ id: string }>; // Đảm bảo params là một Promise
 }
+
+const openSans = Open_Sans({ subsets: ["latin"] });
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const resolvedParams = await params; // Chờ đợi params hoàn thành
@@ -36,7 +39,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <h2 className="text-[#333333] font-bold text-2xl mb-6">
           {detail?.title}
         </h2>
-        <div dangerouslySetInnerHTML={{ __html: detail?.content ?? "" }}></div>
+        <div
+          className={`${openSans.className} containerEditor`}
+          dangerouslySetInnerHTML={{ __html: detail?.content ?? "" }}
+        ></div>
       </div>
     </div>
   );

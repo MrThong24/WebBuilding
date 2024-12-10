@@ -35,7 +35,7 @@ export default async function About({ params }: BlogPostPageProps) {
         />
         <Breadcrumb
           title="Giới thiệu"
-          href="tong-quan"
+          href="/about/tong-quan"
           nameChild={getTypeNameAbout(id)}
         />
       </div>

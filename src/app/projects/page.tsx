@@ -8,7 +8,10 @@ import Image from "next/image";
 export default function MyApp() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // State for hovered index
   const [keyFilter, setKeyFilter] = useState(() => {
-    return localStorage.getItem("keyFilter") || "";
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("keyFilter") || "";
+    }
+    return "";
   });
   const [listProjectFilter, setListProjectFilter] =
     useState<Project[]>(listProject);
@@ -25,7 +28,6 @@ export default function MyApp() {
   };
 
   useEffect(() => {
-    // Save keyFilter to localStorage whenever it changes
     localStorage.setItem("keyFilter", keyFilter);
 
     if (keyFilter === "all" || keyFilter === "") {
