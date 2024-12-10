@@ -23,7 +23,14 @@ export const CustomPopover = ({
           isStatus ? "text-red-500 font-semibold" : "text-gray-700 font-medium"
         } focus:outline-none data-[active]:text-red-500 data-[hover]:text-red-500 data-[focus]:outline-1 data-[focus]:outline-[var(--thm-base-color)]`}
       >
-        {items?.length === 0 && <Link href={getLink(title)}>{title}</Link>}
+        {items?.length === 0 && (
+          <Link
+            href={getLink(title)}
+            onClick={() => localStorage.setItem("keyFilter", "all")}
+          >
+            {title}
+          </Link>
+        )}
         {items?.length > 0 && (
           <>
             {title}

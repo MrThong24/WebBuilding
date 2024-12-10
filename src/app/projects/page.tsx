@@ -7,21 +7,27 @@ import Image from "next/image";
 
 export default function MyApp() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // State for hovered index
-  const [keyFilter, setKeyFilter] = useState("");
+  const [keyFilter, setKeyFilter] = useState(() => {
+    return localStorage.getItem("keyFilter") || "";
+  });
   const [listProjectFilter, setListProjectFilter] =
     useState<Project[]>(listProject);
 
   const listFilterOption = [
     { value: "all", name: "Tất cả" },
-    { value: "Fit-out", name: "Fit-out" },
-    { value: "San-choi-the-thao", name: "Sân chơi thể thao" },
-    { value: "Cai-tao-cong-trinh", name: "Cải tạo công trình" },
-    { value: "Cong-trinh-nha-thep", name: "Công trình nhà thép" },
+    { value: "san-choi-the-thao", name: "Sân chơi thể thao" },
+    { value: "cai-tao-cong-trinh", name: "Cải tạo công trình" },
+    { value: "cong-trinh-nha-thep", name: "Công trình nhà thép" },
   ];
+
   const handleClickOption = (value: string) => {
     setKeyFilter(value);
   };
+
   useEffect(() => {
+    // Save keyFilter to localStorage whenever it changes
+    localStorage.setItem("keyFilter", keyFilter);
+
     if (keyFilter === "all" || keyFilter === "") {
       setListProjectFilter(listProject);
       return;
@@ -60,6 +66,7 @@ export default function MyApp() {
             <select
               className="h-12 text-gray-900 text-sm font-medium py-2.5 px-4 appearance-none w-full cursor-pointer"
               onChange={(e) => handleClickOption(e.target.value)}
+              value={keyFilter}
             >
               {listFilterOption?.map((item) => (
                 <option key={item?.value} value={item?.value}>
@@ -89,7 +96,6 @@ export default function MyApp() {
         <div className="grid lg:grid-cols-7 grid-cols-6 gap-4">
           {listProjectFilter.map((item, index) => {
             const colSpan = item?.col;
-
             return (
               <Link
                 key={item.id} // Add a unique key for each item

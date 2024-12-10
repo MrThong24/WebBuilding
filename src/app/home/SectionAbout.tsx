@@ -1,8 +1,11 @@
 "use client"; // <===== REQUIRED
 
 import { motion } from "framer-motion";
-
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import About from "../assest/image/About.jpeg";
 export default function SectionAbout() {
+  const router = useRouter();
   return (
     <section className="py-12 lg:py-24 relative bg-white">
       <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
@@ -49,6 +52,7 @@ export default function SectionAbout() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
+              onClick={() => router.push("/about/tong-quan")}
             >
               <span className="px-1.5 text-white text-sm font-medium leading-6">
                 Tìm hiểu thêm
@@ -67,11 +71,14 @@ export default function SectionAbout() {
               </svg>
             </motion.button>
           </div>
-          <img
-            className="lg:mx-0 mx-auto h-full rounded-3xl object-cover"
-            src="https://pagedone.io/asset/uploads/1717751272.png"
-            alt="about Us image"
-          />
+          <div className="relative">
+            <Image
+              className="lg:mx-0 mx-auto max-h-[500px] rounded-3xl object-cover"
+              alt="Logo Company" // Cập nhật thuộc tính alt
+              src={About}
+            />
+            <div className="absolute inset-0 bg-black opacity-40 rounded-3xl" />
+          </div>
         </div>
       </div>
     </section>

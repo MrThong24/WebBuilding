@@ -15,7 +15,6 @@ interface BlogPostPageProps {
 
 export default async function About({ params }: BlogPostPageProps) {
   const resolvedParams = await params; // Chờ đợi params hoàn thành
-  console.log("resolvedParams", resolvedParams);
   const id = resolvedParams?.id;
 
   return (

@@ -6,11 +6,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useRouter } from "next/navigation";
 import LayoutSection from "./layout/LayoutSection";
-
+import Image from "next/image";
+import DuAn1 from "../assest/image/DuAnMoiNhat/a1.jpg";
+import Link from "next/link";
 export default function SectionDuAnMoiNhat() {
+  const router = useRouter();
+
   return (
-    <LayoutSection title="DỰ ÁN MỚI NHẤT" showBtnMore={true}>
+    <LayoutSection
+      title="DỰ ÁN MỚI NHẤT"
+      showBtnMore={true}
+      handleClick={() => {
+        router.push("/projects");
+        localStorage.setItem("keyFilter", "all");
+      }}
+    >
       <div className="lg:mx-0 lg:max-w-none lg:grid-cols-3">
         <Swiper
           style={
@@ -37,56 +49,38 @@ export default function SectionDuAnMoiNhat() {
           }}
         >
           <SwiperSlide className=" bg-slate-400">
-            <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-green-800/30 ">
-              <div className="max-h-[500px] w-auto">
-                <img
-                  className="h-full w-full object-fill transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="https://khangnhatcons.com/uploads/article/370x472thi-cong-gian-hang-trung-tam-thuong-mai-aeon-mall-hue-1728292660.jpg"
-                  alt=""
-                />
+            <Link
+              href={`/projects/thi-cong-san-pickleball`}
+              onClick={() =>
+                localStorage.setItem("keyFilter", "san-choi-the-thao")
+              }
+            >
+              <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-green-800/30">
+                <div className="max-h-[500px] w-auto">
+                  <Image
+                    alt="DuAn1"
+                    className="lg:h-[500px] sm:h-[460px] h-[400px] w-full object-fill transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                    src={DuAn1}
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black ` group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70" />
+                <div className="absolute inset-12 flex translate-y-[60%] flex-col items-center justify-center px-5 text-center transition-all duration-500 group-hover:translate-y-0">
+                  <h1 className="text-[18px] font-bold text-white flex w-auto">
+                    Thi Công Sân Pickleball Chuyên Nghiệp
+                  </h1>
+                  <p className="mb-3 text-[14px] italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    Thi công sân Pickleball chuyên nghiệp trên mọi nền với cam
+                    kết chất lượng hàng đầu. Thực hiện thi công sân pickleball
+                    chuyên nghiệp, đảm bảo rằng mọi sân pickleball đều đạt tiêu
+                    chuẩn cao nhất. Với thi công sân pickleball chú trọng vào
+                    từng chi tiết, sẽ mang lại trải nghiệm cho khách hàng
+                  </p>
+                  <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-green-600/60">
+                    Xem chi tiết
+                  </button>
+                </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black ` group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70" />
-              <div className="absolute inset-12 flex translate-y-[60%] flex-col items-center justify-center px-5 text-center transition-all duration-500 group-hover:translate-y-0">
-                <h1 className="text-[18px] font-bold text-white flex w-auto">
-                  Bàn giao dự án Trung tâm thương mại AEON MALL Huế
-                </h1>
-                <p className="mb-3 text-[14px] italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Ngày 21/9, tại thành phố Huế, chính thức tổ chức lễ khai
-                  trương AEON MALL Huế. Dự án Trung tâm thương mại AEON MALL HUẾ
-                  tọa lạc tại số 8, đường Võ Nguyên Giáp, phường An Đông, thành
-                  phố Huế.....
-                </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-green-600/60">
-                  Xem chi tiết
-                </button>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className=" bg-slate-400">
-            <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-green-800/30 ">
-              <div className="max-h-[500px] w-auto">
-                <img
-                  className="h-full w-full object-fill transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src="https://khangnhatcons.com/uploads/article/370x472thi-cong-gian-hang-trung-tam-thuong-mai-aeon-mall-hue-1728292660.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black ` group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70" />
-              <div className="absolute inset-12 flex translate-y-[60%] flex-col items-center justify-center px-5 text-center transition-all duration-500 group-hover:translate-y-0">
-                <h1 className="text-[18px] font-bold text-white flex w-auto">
-                  Bàn giao dự án Trung tâm thương mại AEON MALL Huế
-                </h1>
-                <p className="mb-3 text-[14px] italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Ngày 21/9, tại thành phố Huế, chính thức tổ chức lễ khai
-                  trương AEON MALL Huế. Dự án Trung tâm thương mại AEON MALL HUẾ
-                  tọa lạc tại số 8, đường Võ Nguyên Giáp, phường An Đông, thành
-                  phố Huế.....
-                </p>
-                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-green-600/60">
-                  Xem chi tiết
-                </button>
-              </div>
-            </div>
+            </Link>
           </SwiperSlide>
         </Swiper>
       </div>

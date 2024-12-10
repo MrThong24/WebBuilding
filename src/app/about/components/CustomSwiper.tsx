@@ -14,8 +14,9 @@ interface Data {
 
 interface PageProps {
   data: Data[];
+  handleClickLink: () => void;
 }
-export default function CustomSwiper({ data }: PageProps) {
+export default function CustomSwiper({ data, handleClickLink }: PageProps) {
   return (
     <Swiper
       style={
@@ -50,7 +51,7 @@ export default function CustomSwiper({ data }: PageProps) {
           className="bg-slate-200 rounded-lg hover:bg-slate-300 transition-colors duration-300"
           key={item?.title}
         >
-          <Link href={`/service/`}>
+          <Link href={`/projects`} onClick={handleClickLink}>
             <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow p-4">
               <div className="flex mb-4">
                 <Image

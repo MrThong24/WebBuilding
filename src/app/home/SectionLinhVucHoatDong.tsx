@@ -29,7 +29,7 @@ export default function SectionLinhVucHoatDong({ datas }: PageProps) {
       title="LĨNH VỰC HOẠT ĐỘNG"
       showBtnMore={true}
       handleClick={() => {
-        router.push("/service/thi-cong-hoan-thien-noi-that");
+        router.push("/about/linh-vuc-hoat-dong/");
       }}
     >
       <Swiper
@@ -65,14 +65,14 @@ export default function SectionLinhVucHoatDong({ datas }: PageProps) {
             className="bg-slate-200 rounded-lg hover:bg-slate-300 transition-colors duration-300"
             key={item?.id}
           >
-            <Link href={`/service/${item?.href}`}>
+            <Link href={`/about/linh-vuc-hoat-dong`}>
               <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow p-4">
                 <div className="flex mb-4">
                   <Image
-                    alt="Logo Company" // Cập nhật thuộc tính alt
+                    alt="Logo Company"
                     src={item?.icons}
-                    width={50} // Thay đổi kích thước theo yêu cầu
-                    height={50} // Thay đổi kích thước theo yêu cầu
+                    width={50}
+                    height={50}
                   />
                 </div>
                 <h3 className="mt-2 text-lg font-semibold text-[var(--thm-primary-color)] mb-4 h-14">

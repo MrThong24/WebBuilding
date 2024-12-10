@@ -1,8 +1,22 @@
+"use client"; // <===== REQUIRED
+
 import LayoutSection from "./layout/LayoutSection";
+import { useRouter } from "next/navigation";
 
 export default function SectionTintuc({}) {
+  const router = useRouter();
+
   return (
-    <LayoutSection title="TIN TỨC" showBtnMore={true}>
+    <LayoutSection
+      title="TIN TỨC"
+      showBtnMore={true}
+      handleClick={() => {
+        const path = "/news";
+        // Chỉ cần sử dụng path mà không cần xử lý thêm
+        router.push(path); // Đảm bảo không có dấu / ở cuối
+        localStorage.setItem("keyFilter", "all");
+      }}
+    >
       <div className="lg:max-w-none grid grid-cols-4 grid-rows-1 md:grid-rows-4 md:gap-3 gap-2">
         <div className="col-span-4 lg:col-span-2 row-span-2 md:row-span-4">
           <div className="relative flex flex-col cursor-pointer bg-white shadow-sm border border-slate-200 rounded-lg w-auto">
