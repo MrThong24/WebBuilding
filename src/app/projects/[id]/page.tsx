@@ -35,10 +35,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         )}
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 pb-10 mt-4">
-        <h2 className="text-[#333333] font-bold text-2xl mb-6">
-          {detail?.title}
-        </h2>
+      <div className="mx-auto max-w-6xl px-4 lg:px-8 pb-10 mt-4">
         <div
           className={`${openSans.className} containerEditor`}
           dangerouslySetInnerHTML={{ __html: detail?.content ?? "" }}

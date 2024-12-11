@@ -1,5 +1,16 @@
 .containerEditor {
   line-height: 1.6;
+  font-family: "Open Sans" !important;
+}
+
+.containerEditor img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+}
+.containerEditor strong {
+  font-size: 16px !important;
+  font-family: "Open Sans" !important;
 }
 .entry-title {
   font-weight: 700 !important;
