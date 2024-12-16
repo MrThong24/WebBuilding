@@ -9,10 +9,14 @@ import SectionLichSu from "./SectionLichSu";
 import SectionTamNhin from "./SectionTamNhin";
 import SectionSoDoToChuc from "./SectionSoDoToChuc";
 import SectionLinhVucHoatDong from "./SectionLinhVucHoatDong";
+import { Metadata } from "next";
 interface BlogPostPageProps {
   params: Promise<{ id: string }>; // Đảm bảo params là một Promise
 }
-
+export const metadata: Metadata = {
+  title: "Giới thiệu",
+  description: "",
+};
 export default async function About({ params }: BlogPostPageProps) {
   const resolvedParams = await params; // Chờ đợi params hoàn thành
   const id = resolvedParams?.id;

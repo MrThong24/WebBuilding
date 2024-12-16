@@ -24,7 +24,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           }}
         ></div>
         <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center items-center p-6">
-          <p className="text-white text-3xl font-semibold">{detail?.title}</p>
+          <p className="text-white text-xl sm:text-3xl font-semibold">
+            {detail?.title}
+          </p>
         </div>
         {detail?.img && detail.img !== "" && (
           <Image

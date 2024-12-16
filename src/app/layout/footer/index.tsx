@@ -6,8 +6,7 @@ export default function Footer() {
         clear: "both",
         width: "100%",
         position: "relative",
-        background:
-          "#232323 url(https://khangnhatcons.com/images/footer.png) no-repeat",
+        background: "#232323 url('/images/footer.png') no-repeat",
         backgroundSize: "120% auto",
       }}
     >

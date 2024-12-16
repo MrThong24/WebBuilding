@@ -1,6 +1,7 @@
 import "./globals.css";
 import Footer from "./layout/footer";
 import Header from "./layout/header";
+import Head from "next/head"; // Thêm import này
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/images/favicon-light.png" />
+      </Head>
       <body>
         <div className="bg-white">
           <Header />
