@@ -6,22 +6,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { useRouter } from "next/navigation";
 import LayoutSection from "./layout/LayoutSection";
 import Image from "next/image";
 import DuAn1 from "../assest/image/DuAnMoiNhat/a1.jpg";
 import Link from "next/link";
 export default function SectionDuAnMoiNhat() {
-  const router = useRouter();
-
   return (
-    <LayoutSection
-      title="DỰ ÁN MỚI NHẤT"
-      showBtnMore={true}
-      handleClick={() => {
-        router.push("/projects");
-      }}
-    >
+    <LayoutSection title="DỰ ÁN MỚI NHẤT" showBtnMore={true} slug="/projects">
       <div className="lg:mx-0 lg:max-w-none lg:grid-cols-3">
         <Swiper
           style={

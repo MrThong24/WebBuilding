@@ -12,6 +12,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        'width-animation': 'widthAnimation 1s ease-in-out forwards',
+      },
+      keyframes: {
+        widthAnimation: {
+          '0%': { width: '0' },
+          '100%': { width: '100%' },
+        },
+      },
     },
   },
   plugins: [],

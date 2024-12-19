@@ -21,8 +21,8 @@ export default async function BlogPostNews({ params }: BlogPostPageProps) {
           }}
         ></div>
         <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center items-center p-6">
-          <p className="text-white text-3xl font-semibold">
-            Trung Tâm Thương Mại AEON MALL Huế
+          <p className="text-white text-xl sm:text-3xl font-semibold min-w-[260px] text-center">
+            {detail?.title}
           </p>
         </div>
         <img

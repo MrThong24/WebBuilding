@@ -16,7 +16,7 @@ interface PageProps {
 
 export default function SectionGiaTriCotLoi({ posts }: PageProps) {
   return (
-    <LayoutSection title="GIÁ TRỊ CỐT LÕI" showBtnMore={false}>
+    <LayoutSection title="GIÁ TRỊ CỐT LÕI" showBtnMore={false} slug="">
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 lg:gap-y-16 md:max-w-none md:grid-cols-3 sm:grid-cols-2">
         {posts.map((post) => (
           <div

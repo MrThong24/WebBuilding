@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer
@@ -51,19 +53,12 @@ export default function Footer() {
             <h4 className="text-[16px] text-white font-medium mb-2">Tin tức</h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-2 text-[14px]">
-                <a href="javascript:;" className="text-white ">
-                  CDC Đà Nẵng được Bộ Y Tế thẩm định TKKT
-                </a>
-              </li>
-              <li className="mb-2 text-[14px]">
-                <a href="javascript:;" className=" text-white ">
-                  CDC Đà Nẵng được Bộ Y Tế thẩm định TKKT
-                </a>
-              </li>
-              <li className="mb-2 text-[14px]">
-                <a href="javascript:;" className=" text-white ">
-                  CDC Đà Nẵng được Bộ Y Tế thẩm định TKKT
-                </a>
+                <Link
+                  href="/news/aeon-hue-chinh-thuc-di-vao-hoat-dong/"
+                  className="text-white"
+                >
+                  AEON HUẾ CHÍNH THỨC ĐI VÀO HOẠT ĐỘNG
+                </Link>
               </li>
             </ul>
           </div>

@@ -8,7 +8,6 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 import Image, { StaticImageData } from "next/image";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 interface Data {
@@ -23,14 +22,11 @@ interface PageProps {
   datas: Data[];
 }
 export default function SectionLinhVucHoatDong({ datas }: PageProps) {
-  const router = useRouter();
   return (
     <LayoutSection
       title="LĨNH VỰC HOẠT ĐỘNG"
       showBtnMore={true}
-      handleClick={() => {
-        router.push("/about/linh-vuc-hoat-dong/");
-      }}
+      slug="/about/linh-vuc-hoat-dong"
     >
       <Swiper
         style={

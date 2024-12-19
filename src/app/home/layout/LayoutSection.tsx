@@ -1,15 +1,16 @@
 "use client";
-import { motion } from "framer-motion";
+
+import Link from "next/link";
 export default function LayoutSection({
   children, // Change from child to children
   title,
   showBtnMore,
-  handleClick,
+  slug,
 }: {
   children: React.ReactNode; // Change from child to children
   title: string;
   showBtnMore: boolean;
-  handleClick?: () => void;
+  slug: string;
 }) {
   return (
     <section className="py-12 lg:py-14 relative bg-white">
@@ -19,9 +20,8 @@ export default function LayoutSection({
             {title}
           </h2>
           {showBtnMore && (
-            <button
-              type="button"
-              onClick={handleClick}
+            <Link
+              href={slug}
               className=" text-white hidden bg-green-800 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2 text-center sm:inline-flex items-center dark:bg-green-700 dark:hover:bg-green-800 dark:focus:ring-green-900"
             >
               Xem thêm
@@ -40,17 +40,11 @@ export default function LayoutSection({
                   d="M1 5h12m0 0L9 1m4 4L9 9"
                 />
               </svg>
-            </button>
+            </Link>
           )}
         </div>
         <div>
-          <motion.div
-            className="border-t border-green-800 mt-8 pt-10 sm:mt-4 sm:pt-10 md:mx-0"
-            initial={{ width: 0 }} // Start with width 0
-            whileInView={{ width: "100%" }} // Animate to full width when in view
-            transition={{ duration: 1 }} // Duration of the animation
-            viewport={{ once: false }} // Only animate once
-          ></motion.div>
+          <div className="border-t border-green-800 mt-8 pt-10 sm:mt-4 sm:pt-10 md:mx-0 animate-width-animation"></div>
           {children}
         </div>
       </div>
