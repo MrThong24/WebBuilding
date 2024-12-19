@@ -29,7 +29,7 @@ export default function SectionAbout() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  Công ty TNHH Đầu tư Xây dựng Đại Tiến Phát
+                  Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát
                 </motion.h2>
               </div>
               <motion.p
@@ -74,7 +74,7 @@ export default function SectionAbout() {
           <div className="relative lg:h-[560px] sm:h-[460px] h-[420px]">
             <Image
               className="w-full h-full rounded-2xl object-cover relative"
-              alt="Đại Tiến Phát" // Cập nhật thuộc tính alt
+              alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
               src={About}
             />
             <div className="absolute inset-0 bg-black opacity-40 rounded-2xl" />

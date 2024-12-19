@@ -12,6 +12,7 @@ interface AboutDADTH {
 interface AboutListChild {
   title: string;
   des: string;
+  slug:string
 }
 export const dataAbout: AboutItem[] = [
   {
@@ -62,19 +63,19 @@ export const dataDuAnDaThucHien: AboutDADTH[] = [
   },
 ];
 export const dataSanTheThao: AboutListChild[] = [
-  { title: "Thi công sân pickleball", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" },
+  { title: "Thi công sân pickleball", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như", slug: "san-choi-the-thao" },
 ];
 export const dataCaiTaoSuaChuaCongTrinh: AboutListChild[] = [
-  { title: "Sửa chữa, bảo dưỡng hệ thống điều hoà, không khí", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" },
-  { title: "Sửa chữa điện nước", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" },
-  { title: "Chống thấm và xử lý độ ẩm", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" },
-  { title: "Cải tạo mặt tiền, nội thất, ngoại thất và cảnh quan", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" },
-  { title: "Cách âm, cách nhiệt", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" },
-  { title: "Cải tạo công trình phụ", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" },
+  { title: "Sửa chữa, bảo dưỡng hệ thống điều hoà, không khí", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như",slug: "cai-tao-cong-trinh" },
+  { title: "Sửa chữa điện nước", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như",slug: "cai-tao-cong-trinh" },
+  { title: "Chống thấm và xử lý độ ẩm", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như",slug: "cai-tao-cong-trinh" },
+  { title: "Cải tạo mặt tiền, nội thất, ngoại thất và cảnh quan", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như",slug: "cai-tao-cong-trinh" },
+  { title: "Cách âm, cách nhiệt", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như",slug: "cai-tao-cong-trinh" },
+  { title: "Cải tạo công trình phụ", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" ,slug: "cai-tao-cong-trinh"},
 ];
 export const dataCongTrinhNhaThep: AboutListChild[] = [
-  { title: "Thi công nhà thép cho nhà xưởng, kho bãi", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" },
-  { title: "Thi công nhà thép cho công trình công nghiệp", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" },
-  { title: "Thi công nhà thép cho công trình dân dụng", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" },
-  { title: "Thi công nhà thép cho công trình thể thao và giải trí", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như" },
+  { title: "Thi công nhà thép cho nhà xưởng, kho bãi", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như", slug: "cong-trinh-nha-thep" },
+  { title: "Thi công nhà thép cho công trình công nghiệp", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như",slug: "cong-trinh-nha-thep" },
+  { title: "Thi công nhà thép cho công trình dân dụng", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như",slug: "cong-trinh-nha-thep" },
+  { title: "Thi công nhà thép cho công trình thể thao và giải trí", des: "Công ty TNHH Đầu Tư Phát Triển Xây Dựng Đại Tiến Phát (DTP) tự hào là đơn vị tiên phong trong việc cung cấp dịch vụ thi công hoàn thiện nội thất chuyên sâu, phù hợp với nhiều loại hình công trình như",slug: "cong-trinh-nha-thep" },
 ];

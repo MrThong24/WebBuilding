@@ -35,7 +35,7 @@ export default async function About({ params }: BlogPostPageProps) {
         <img
           className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
           src="https://wallpaperaccess.com/full/508840.jpg"
-          alt="about Us image"
+          alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
         />
         <Breadcrumb
           title="Giới thiệu"

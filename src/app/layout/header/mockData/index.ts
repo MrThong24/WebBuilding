@@ -23,6 +23,29 @@ export const dataIntroduce = [
   },
 ];
 
+export const dataListProject = [
+  {
+    name: "Tất cả",
+    href: `/projects/tat-ca`,
+    slug: "tat-ca",
+  },
+  {
+    name: "Sân chơi thể thao",
+    href: `/projects/san-choi-the-thao`,
+    slug: "san-choi-the-thao",
+  },
+  {
+    name: "Cải tạo công trình",
+    href: `/projects/cai-tao-cong-trinh`,
+    slug: "cai-tao-cong-trinh",
+  },
+   {
+    name: "Công trình nhà thép",
+    href: `/projects/cong-trinh-nha-thep`,
+    slug: "cong-trinh-nha-thep",
+  },
+];
+
 export const dataService = [
   {
     name: "Thi công hoàn thiện - nội thất",

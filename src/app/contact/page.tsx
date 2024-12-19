@@ -1,4 +1,6 @@
 "use client";
+import a1 from "../assest/image/contact/a1.jpg";
+import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -12,10 +14,10 @@ export default function Contact() {
           }}
         ></div>
 
-        <img
+        <Image
+          alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
+          src={a1}
           className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
-          src="https://wallpaperaccess.com/full/508840.jpg"
-          alt="about Us image"
         />
         <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white">
           <p className="text-4xl font-bold">Liên hệ</p>
@@ -86,92 +88,6 @@ export default function Contact() {
                   </p>
                 </li>
               </ul>
-              {/* <ul className="flex flex-wrap gap-4 mt-16">
-                <li className="bg-white hover:bg-gray-900 cursor-pointer h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20px"
-                    height="20px"
-                    fill="red"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M6.812 13.937H9.33v9.312c0 .414.335.75.75.75l4.007.001a.75.75 0 0 0 .75-.75v-9.312h2.387a.75.75 0 0 0 .744-.657l.498-4a.75.75 0 0 0-.744-.843h-2.885c.113-2.471-.435-3.202 1.172-3.202 1.088-.13 2.804.421 2.804-.75V.909a.75.75 0 0 0-.648-.743A26.926 26.926 0 0 0 15.071 0c-7.01 0-5.567 7.772-5.74 8.437H6.812a.75.75 0 0 0-.75.75v4c0 .414.336.75.75.75zm.75-3.999h2.518a.75.75 0 0 0 .75-.75V6.037c0-2.883 1.545-4.536 4.24-4.536.878 0 1.686.043 2.242.087v2.149c-.402.205-3.976-.884-3.976 2.697v2.755c0 .414.336.75.75.75h2.786l-.312 2.5h-2.474a.75.75 0 0 0-.75.75V22.5h-2.505v-9.312a.75.75 0 0 0-.75-.75H7.562z"
-                      data-original="#000000"
-                    />
-                  </svg>
-                </li>
-              </ul> */}
-            </div>
-            <div className="lg:col-span-2 p-6">
-              <form>
-                <div className="grid gap-6 mb-6 md:grid-cols-2">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block mb-2 text-sm font-medium text-gray-900"
-                    >
-                      Họ và tên
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
-                      placeholder="Họ và tên"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block mb-2 text-sm font-medium text-gray-900"
-                    >
-                      Số điện thoại
-                    </label>
-                    <input
-                      type="text"
-                      id="phone"
-                      className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
-                      placeholder="Số điện thoại"
-                    />
-                  </div>
-                </div>
-                <div className="mb-6">
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm font-medium text-gray-900 "
-                  >
-                    Địa chỉ Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-2.5"
-                    placeholder="Email"
-                  />
-                </div>
-                <div className="mb-6">
-                  <>
-                    <label
-                      htmlFor="message"
-                      className="block mb-2 text-sm font-medium text-gray-900 "
-                    >
-                      Nội dung
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={4}
-                      className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
-                      placeholder="Nội dung"
-                    />
-                  </>
-                </div>
-                <button
-                  type="submit"
-                  className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-                >
-                  Gửi
-                </button>
-              </form>
             </div>
           </div>
         </div>

@@ -39,13 +39,23 @@ body {
 
 header {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
-  /* Cập nhật font thành Montserrat */
 }
 select:focus {
   outline: none;
   border: none;
   box-shadow: none;
 }
+button:focus {
+  outline: none;
+  box-shadow: none;
+  --tw-ring-offset-shadow: none !important;
+}
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
+textarea:focus-visible,
+input:focus-visible {
+  outline: none;
+  border: 1px solid #254a39;
+}
+

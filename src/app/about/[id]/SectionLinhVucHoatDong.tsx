@@ -17,34 +17,19 @@ export default function SectionLinhVucHoatDong() {
         <h3 className="text-[16px] md:text-2xl leading-6 font-semibold text-green-900 mb-6">
           Sân chơi thể thao
         </h3>
-        <CustomSwiper
-          data={dataSanTheThao}
-          handleClickLink={() =>
-            localStorage.setItem("keyFilter", "san-choi-the-thao")
-          }
-        />
+        <CustomSwiper data={dataSanTheThao} />
       </div>
       <div className="px-4 py-5 sm:px-6 mb-10">
         <h3 className="text-[16px] md:text-2xl leading-6 font-semibold text-green-900 mb-6">
           Cải tạo công trình
         </h3>
-        <CustomSwiper
-          data={dataCaiTaoSuaChuaCongTrinh}
-          handleClickLink={() =>
-            localStorage.setItem("keyFilter", "cai-tao-cong-trinh")
-          }
-        />
+        <CustomSwiper data={dataCaiTaoSuaChuaCongTrinh} />
       </div>
       <div className="px-4 py-5 sm:px-6 mb-10">
         <h3 className="text-[16px] md:text-2xl leading-6 font-semibold text-green-900 mb-6">
           Công trình nhà thép
         </h3>
-        <CustomSwiper
-          data={dataCongTrinhNhaThep}
-          handleClickLink={() =>
-            localStorage.setItem("keyFilter", "cong-trinh-nha-thep")
-          }
-        />
+        <CustomSwiper data={dataCongTrinhNhaThep} />
       </div>
     </div>
   );

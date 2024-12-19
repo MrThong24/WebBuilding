@@ -15,10 +15,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-10 max-w-full mx-auto sm:max-w-2xl lg:max-w-full">
           <div className="col-span-full lg:mb-10 max-lg:border-b max-lg:pb-8 lg:col-span-2 lg:max-w-full ">
             <h2 className="text-white mb-4 font-semibold text-[18px]">
-              Công ty TNHH Đầu tư Xây dựng Đại Tiến Phát
+              CÔNG TY TNHH ĐẦU TƯ PHÁT TRIỂN XÂY DỰNG ĐẠI TIẾN PHÁT
             </h2>
             <div className="grid border-b border-white pb-4">
               <p className="text-white text-[14px]">ĐỊA CHỈ</p>
+              <p className="text-white text-[14px]">
+                Hòa Tiến - Hòa Vang - Đà Nẵng - Việt Nam
+              </p>
+            </div>
+            <div className="grid border-b border-white py-4">
+              <p className="text-white text-[14px]">VĂN PHÒNG CÔNG TY</p>
               <p className="text-white text-[14px]">
                 222 Tôn Đức Thắng, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Vietnam
               </p>
@@ -73,7 +79,7 @@ export default function Footer() {
           <div className="flex items-center justify-center">
             <span className="text-sm text-white ">
               ©<a href="https://pagedone.io/">Copyright</a> 2024, Thiết kế bởi
-              Công ty TNHH Đầu tư Xây dựng Đại Tiến Phát
+              Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát
             </span>
           </div>
         </div>

@@ -1,4 +1,15 @@
-export default function MyApp() {
+import { Open_Sans } from "next/font/google";
+import { listNews } from "../Mockdata";
+import "../styles/detail.css";
+interface BlogPostPageProps {
+  params: Promise<{ id: string }>; // Đảm bảo params là một Promise
+}
+const openSans = Open_Sans({ subsets: ["latin"] });
+
+export default async function BlogPostNews({ params }: BlogPostPageProps) {
+  const resolvedParams = await params; // Chờ đợi params hoàn thành
+  const id = resolvedParams?.id;
+  const detail = listNews.find((item) => item?.slug === id);
   return (
     <div className="pt-24 bg-white ">
       <div className="relative">
@@ -17,55 +28,24 @@ export default function MyApp() {
         <img
           className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
           src="https://wallpaperaccess.com/full/508840.jpg"
-          alt="about Us image"
+          alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
         />
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 pb-10 grid md:grid-cols-2 grid-cols-1 gap-4 mt-16"></div>
+      <div className="mx-auto max-w-6xl px-4 lg:px-8 pb-10 mt-4">
+        <div
+          className={`${openSans.className} containerEditor`}
+          dangerouslySetInnerHTML={{ __html: detail?.content ?? "" }}
+        ></div>
+      </div>
     </div>
   );
 }
 
 export async function generateStaticParams() {
   // Here you would typically fetch the list of news slugs or IDs
-  const params = [
-    {
-      id: 1,
-      title: "Dự án 1",
-      img: "https://wallpaperaccess.com/full/508840.jpg",
-      description: "Công trình dân dụng",
-      type: "option1",
-    },
-    {
-      id: 2,
-      title: "Dự án 2",
-      img: "https://wallpaperaccess.com/full/508840.jpg",
-      description: "Công trình công nghiệp",
-      type: "option1",
-    },
-    {
-      id: 3,
-      title: "Dự án 3",
-      img: "https://wallpaperaccess.com/full/508840.jpg",
-      description: "Thi công nội thất",
-      type: "option2",
-    },
-    {
-      id: 4,
-      title: "Dự án 4",
-      img: "https://wallpaperaccess.com/full/508840.jpg",
-      description: "Thi công cảnh quan",
-      type: "option2",
-    },
-    {
-      id: 5,
-      title: "Dự án 5",
-      img: "https://wallpaperaccess.com/full/508840.jpg",
-      description: "Hạ tầng kỹ thuật",
-      type: "option2",
-    },
-  ].map((news) => ({
-    id: String(news.id), // Assuming 'slug' is the identifier for the news
+  const params = listNews.map((news) => ({
+    id: String(news.slug), // Assuming 'slug' is the identifier for the news
   }));
   return params;
 }

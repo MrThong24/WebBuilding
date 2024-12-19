@@ -28,7 +28,7 @@ export default function SectionGiaTriCotLoi({ posts }: PageProps) {
                 <div className="flex justify-start items-center gap-x-4">
                   <span className="absolute inset-0" />
                   <Image
-                    alt="Logo Company" // Cập nhật thuộc tính alt
+                    alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
                     src={post.icons}
                     width={50} // Thay đổi kích thước theo yêu cầu
                     height={50} // Thay đổi kích thước theo yêu cầu

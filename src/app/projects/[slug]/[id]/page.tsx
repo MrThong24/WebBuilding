@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { listProject } from "../mockData";
-import "../styles/detail.css";
 import { Open_Sans } from "next/font/google";
+import "../styles/detail.css";
+
 interface BlogPostPageProps {
   params: Promise<{ id: string }>; // Đảm bảo params là một Promise
 }
@@ -31,7 +32,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {detail?.img && detail.img !== "" && (
           <Image
             className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
-            alt={`project image ${detail?.title}`} // Use the title for alt text
+            alt={`Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát: ${detail?.title}`} // Use the title for alt text
             src={detail.img}
           />
         )}
@@ -50,6 +51,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 export async function generateStaticParams() {
   // Here you would typically fetch the list of project slugs or IDs
   const params = listProject.map((project) => ({
+    slug: project.type,
     id: project.slug, // Assuming 'slug' is the identifier for the project
   }));
   return params;

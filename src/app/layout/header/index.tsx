@@ -5,7 +5,7 @@ import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Montserrat } from "next/font/google";
 import logoCty from "../../assest/image/LOGO CTY.jpg";
 import Image from "next/image";
-import { dataIntroduce } from "./mockData";
+import { dataIntroduce, dataListProject } from "./mockData";
 import { CustomPopover } from "./components/CustomPopover";
 import CustomDisclosure from "./components/CustomDisclosure";
 import { usePathname } from "next/navigation";
@@ -47,7 +47,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <Image
-              alt="Logo Company" // Cập nhật thuộc tính alt
+              alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
               src={logoCty}
               width={80} // Thay đổi kích thước theo yêu cầu
               height={80} // Thay đổi kích thước theo yêu cầu
@@ -82,21 +82,25 @@ export default function Header() {
             title="GIỚI THIỆU"
             items={dataIntroduce}
             isStatus={pathname.split("/")[1] === "about"}
+            isProject={false}
           />
           <CustomPopover
             title="DỰ ÁN"
-            items={[]}
+            items={dataListProject}
             isStatus={pathname.split("/")[1] === "projects"}
+            isProject={true}
           />
           <CustomPopover
             title="TIN TỨC"
             items={[]}
             isStatus={pathname.split("/")[1] === "news"}
+            isProject={false}
           />
           <CustomPopover
             title="LIÊN HỆ"
             items={[]}
             isStatus={pathname.split("/")[1] === "contact"}
+            isProject={false}
           />
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
@@ -112,7 +116,7 @@ export default function Header() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
-                alt=""
+                alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
                 src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
                 className="h-8 w-auto"
               />
@@ -143,7 +147,7 @@ export default function Header() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6 mt-6">
                 <CustomDisclosure title="Giới thiệu" items={dataIntroduce} />
-                <CustomDisclosure title="Dự án" items={[]} />
+                <CustomDisclosure title="Dự án" items={dataListProject} />
                 <CustomDisclosure title="Tin tức" items={[]} />
                 <CustomDisclosure title="Liên hệ" items={[]} />
               </div>

@@ -3,10 +3,12 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
+import Link from "next/link";
 
 interface Item {
   name: string;
   href: string;
+  slug?: string;
 }
 
 interface CustomDisclosureProps {
@@ -42,14 +44,29 @@ const CustomDisclosure: React.FC<CustomDisclosureProps> = ({
       {items?.length > 0 && (
         <DisclosurePanel className="mt-2 space-y-2">
           {items.map((item) => (
-            <DisclosureButton
+            <Link
               key={item.name}
-              as="a"
               href={item.href}
-              className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+              onClick={(e) => {
+                e.preventDefault(); // Ngăn chặn hành động mặc định
+                window.location.href = item.href;
+              }}
             >
-              {item.name}
-            </DisclosureButton>
+              <div className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">
+                {item.name}
+              </div>
+            </Link>
+            // <DisclosureButton
+            //   key={item.name}
+            //   as="a"
+            //   onClick={() => {
+            //     localStorage.setItem("keyFilter", item.slug || "");
+            //   }}
+            //   href={item.href}
+            //   className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+            // >
+            //   {item.name}
+            // </DisclosureButton>
           ))}
         </DisclosurePanel>
       )}

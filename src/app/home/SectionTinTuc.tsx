@@ -12,9 +12,7 @@ export default function SectionTintuc({}) {
       showBtnMore={true}
       handleClick={() => {
         const path = "/news";
-        // Chỉ cần sử dụng path mà không cần xử lý thêm
         router.push(path); // Đảm bảo không có dấu / ở cuối
-        localStorage.setItem("keyFilter", "all");
       }}
     >
       <div className="lg:max-w-none grid grid-cols-4 grid-rows-1 md:grid-rows-4 md:gap-3 gap-2">
@@ -24,7 +22,7 @@ export default function SectionTintuc({}) {
               <img
                 className="lg:h-[328px] h-auto w-full object-cover transition-transform duration-300 hover:scale-105"
                 src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt="card-image"
+                alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
               />
             </div>
             <div className="p-4">
@@ -54,7 +52,7 @@ export default function SectionTintuc({}) {
               <img
                 className="w-[90px] sm:w-[120px] lg:w-[170px] h-full object-cover transition-transform duration-300 hover:scale-105"
                 src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt="card-image"
+                alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
               />
             </div>
             <div className="p-2 flex flex-col justify-start flex-1">
@@ -74,7 +72,7 @@ export default function SectionTintuc({}) {
               <img
                 className="w-[90px] sm:w-[120px] lg:w-[170px] h-full object-cover transition-transform duration-300 hover:scale-105"
                 src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt="card-image"
+                alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
               />
             </div>
             <div className="p-2 flex flex-col justify-start flex-1">
@@ -94,7 +92,7 @@ export default function SectionTintuc({}) {
               <img
                 className="w-[90px] sm:w-[120px] lg:w-[170px] h-full object-cover transition-transform duration-300 hover:scale-105"
                 src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt="card-image"
+                alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
               />
             </div>
             <div className="p-2 flex flex-col justify-start flex-1">
@@ -114,7 +112,7 @@ export default function SectionTintuc({}) {
               <img
                 className="w-[90px] sm:w-[120px] lg:w-[170px] h-full object-cover transition-transform duration-300 hover:scale-105"
                 src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt="card-image"
+                alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
               />
             </div>
             <div className="p-2 flex flex-col justify-start flex-1">
