@@ -55,7 +55,7 @@ export default async function Page({
             return (
               <Link
                 key={item.id}
-                href={`/projects/san-choi-the-thao/${item.slug}`}
+                href={`/projects/${item?.type}/${item.slug}`}
                 className={`lg:col-span-${colSpan} sm:col-span-3 col-span-6 cursor-pointer transition-opacity duration-300 group`}
               >
                 <div key={item.id} className="relative group cursor-pointer">

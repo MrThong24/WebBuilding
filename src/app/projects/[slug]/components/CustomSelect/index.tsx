@@ -8,8 +8,9 @@ export default function CustomSelect() {
   const listFilterOption = [
     { value: "tat-ca", name: "Tất cả" },
     { value: "san-choi-the-thao", name: "Sân chơi thể thao" },
-    { value: "cai-tao-cong-trinh", name: "Cải tạo công trình" },
-    { value: "cong-trinh-nha-thep", name: "Công trình nhà thép" },
+    { value: "cong-trinh-dan-dung-va-cong-nghiep", name: "Cải tạo công trình" },
+    { value: "cong-trinh-ha-tang-ky-thuat", name: "Công trình nhà thép" },
+    { value: "trung-tam-thuong-mai", name: "Trung tâm thương mại" },
   ];
   const idSlug = pathname.split("/")[2];
   const handleClickOption = (value: string) => {

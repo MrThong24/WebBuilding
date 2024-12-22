@@ -30,19 +30,34 @@ export const dataListProject = [
     slug: "tat-ca",
   },
   {
-    name: "Sân chơi thể thao",
+    name: "Sân thể thao",
     href: `/projects/san-choi-the-thao`,
     slug: "san-choi-the-thao",
   },
   {
-    name: "Cải tạo công trình",
-    href: `/projects/cai-tao-cong-trinh`,
-    slug: "cai-tao-cong-trinh",
+    name: "Công trình dân dụng và công nghiệp",
+    href: `/projects/cong-trinh-dan-dung-va-cong-nghiep`,
+    slug: "cong-trinh-dan-dung-va-cong-nghiep",
   },
-   {
-    name: "Công trình nhà thép",
-    href: `/projects/cong-trinh-nha-thep`,
-    slug: "cong-trinh-nha-thep",
+  {
+    name: "Công trình hạ tầng kỹ thuật",
+    href: `/projects/cong-trinh-ha-tang-ky-thuat`,
+    slug: "cong-trinh-ha-tang-ky-thuat",
+  },
+  {
+    name: "Sửa chửa - Cải tạo công trình",
+    href: `/projects/sua-chua-cai-tao-cong-trinh`,
+    slug: "sua-chua-cai-tao-cong-trinh",
+  },
+  {
+    name: "Trung tâm thương mại",
+    href: `/projects/trung-tam-thuong-mai`,
+    slug: "trung-tam-thuong-mai",
+  },
+  {
+    name: "Công trình khu nghỉ dưỡng",
+    href: `/projects/cong-trinh-khu-nghi-duong`,
+    slug: "cong-trinh-khu-nghi-duong",
   },
 ];
 
