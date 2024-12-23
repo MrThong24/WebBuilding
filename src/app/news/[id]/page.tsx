@@ -1,6 +1,7 @@
 import { Open_Sans } from "next/font/google";
 import { listNews } from "../Mockdata";
 import "../styles/detail.css";
+import Image from "next/image";
 interface BlogPostPageProps {
   params: Promise<{ id: string }>; // Đảm bảo params là một Promise
 }
@@ -25,11 +26,14 @@ export default async function BlogPostNews({ params }: BlogPostPageProps) {
             {detail?.title}
           </p>
         </div>
-        <img
-          className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
-          src="https://wallpaperaccess.com/full/508840.jpg"
-          alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
-        />
+
+        {detail?.img && detail.img !== "" && (
+          <Image
+            className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
+            alt={`Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát: ${detail?.title}`} // Use the title for alt text
+            src={detail.img}
+          />
+        )}
       </div>
 
       <div className="mx-auto max-w-6xl px-4 lg:px-8 pb-10 mt-4">

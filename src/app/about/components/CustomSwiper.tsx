@@ -11,6 +11,7 @@ interface Data {
   title: string;
   des: string;
   slug: string;
+  icon: any;
 }
 
 interface PageProps {
@@ -56,7 +57,7 @@ export default function CustomSwiper({ data }: PageProps) {
               <div className="flex mb-4">
                 <Image
                   alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
-                  src={ThiCong}
+                  src={item?.icon}
                   width={50}
                   height={50}
                 />
