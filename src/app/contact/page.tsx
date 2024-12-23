@@ -15,7 +15,7 @@ export default function Contact() {
         ></div>
 
         <Image
-          alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
+          alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
           src={a1}
           className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
         />

@@ -55,7 +55,7 @@ export default function CustomSwiper({ data }: PageProps) {
             <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow p-4">
               <div className="flex mb-4">
                 <Image
-                  alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
+                  alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
                   src={item?.icon}
                   width={50}
                   height={50}

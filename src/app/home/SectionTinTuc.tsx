@@ -15,7 +15,7 @@ export default function SectionTintuc({}) {
               className="relative h-auto overflow-hidden text-white rounded-tl-md rounded-tr-md cursor-pointer"
             >
               <Image
-                alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
+                alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát"
                 src={logoNew1}
                 className="lg:h-[328px] h-auto w-full object-cover transition-transform duration-300 hover:scale-105"
               />
@@ -48,7 +48,7 @@ export default function SectionTintuc({}) {
               className="relative h-auto overflow-hidden text-white rounded-tl-md rounded-bl-md"
             >
               <Image
-                alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
+                alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát"
                 src={logoNew2}
                 className="w-[90px] sm:w-[120px] lg:w-[170px] h-full object-cover transition-transform duration-300 hover:scale-105"
               />

@@ -43,7 +43,7 @@ export default function SectionDuAnMoiNhat() {
               <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-green-800/30">
                 <div className="max-h-[500px] w-auto">
                   <Image
-                    alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
+                    alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát"
                     className="lg:h-[500px] sm:h-[460px] h-[400px] w-full object-fill transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                     src={DuAn1}
                   />

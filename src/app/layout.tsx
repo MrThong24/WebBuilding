@@ -5,7 +5,7 @@ import Head from "next/head"; // Thêm import này
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "daitienphatcons",
+  title: "CÔNG TY TNHH ĐẦU TƯ PHÁT TRIỂN XÂY DỰNG ĐẠI TIẾN PHÁT",
   description: "daitienphatcons",
   icons: {
     icon: [

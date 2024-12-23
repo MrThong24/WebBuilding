@@ -1,9 +1,9 @@
-"use client"; // <===== REQUIRED
-
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import About from "../assest/image/About.jpeg";
+import About from "../assest/image/home/logo-gioi-thieu-dai-tien-phat.jpeg";
+
 export default function SectionAbout() {
   const router = useRouter();
   return (
@@ -29,7 +29,7 @@ export default function SectionAbout() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát
+                  Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát
                 </motion.h2>
               </div>
               <motion.p
@@ -46,7 +46,7 @@ export default function SectionAbout() {
                 lượng vượt trội và sự hài lòng cho khách hàng
               </motion.p>
             </div>
-            <motion.button // Thay đổi từ button thành motion.button
+            <motion.button
               className="sm:w-fit px-3.5 py-2 bg-[var(--thm-primary-color)] hover:bg-[var(--thm-primary-color-hover)] transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] lg:justify-center items-center flex"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export default function SectionAbout() {
           <div className="relative lg:h-[560px] sm:h-[460px] h-[420px]">
             <Image
               className="w-full h-full rounded-2xl object-cover relative"
-              alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
+              alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát"
               src={About}
             />
             <div className="absolute inset-0 bg-black opacity-40 rounded-2xl" />

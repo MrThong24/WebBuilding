@@ -9,6 +9,22 @@ interface BlogPostPageProps {
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
+export async function generateMetadata({ params }: BlogPostPageProps) {
+  const resolvedParams = await params; // Chờ đợi params hoàn thành
+  const id = resolvedParams?.id;
+  const detail = listProject.find((item) => item?.slug === id);
+
+  // You can dynamically set metadata here based on the data
+  return {
+    title:
+      `Dự án - ${detail?.title}` ||
+      "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát", // Dynamic title based on the detail
+    des:
+      `Dự án - ${detail?.title}` ||
+      "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát", // Dynamic title based on the detail
+  };
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const resolvedParams = await params; // Chờ đợi params hoàn thành
   const id = resolvedParams?.id;
@@ -32,7 +48,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {detail?.img && detail.img !== "" && (
           <Image
             className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
-            alt={`Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát: ${detail?.title}`} // Use the title for alt text
+            alt={`Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát: ${detail?.title}`} // Use the title for alt text
             src={detail.img}
           />
         )}

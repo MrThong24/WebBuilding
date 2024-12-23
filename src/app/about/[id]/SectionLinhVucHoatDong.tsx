@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import CustomSwiper from "../components/CustomSwiper";
 import {
   dataCaiTaoSuaChuaCongTrinh,
-  dataCongTrinhNhaThep,
+  dataCongTrinhDanDungVaCongNghiep,
   dataSanTheThao,
 } from "../mockData";
 
@@ -29,7 +29,7 @@ export default function SectionLinhVucHoatDong() {
         <h3 className="text-[16px] md:text-2xl leading-6 font-semibold text-green-900 mb-6">
           Công trình nhà thép
         </h3>
-        <CustomSwiper data={dataCongTrinhNhaThep} />
+        <CustomSwiper data={dataCongTrinhDanDungVaCongNghiep} />
       </div>
     </div>
   );

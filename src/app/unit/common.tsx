@@ -7,7 +7,7 @@ export const getTypeNameAbout = (id: string): string => {
       return "Tổng quan";
 
     case TypeAbout.LICH_SU_PHAT_TRIEN_TYPE:
-      return "Lịch sử phát triễn";
+      return "Lịch sử phát triển";
 
     case TypeAbout.TAM_NHIN_SU_MENH_GIA_TRI_COT_LOI_TYPE:
       return "Tầm nhìn sứ mệnh giá trị cốt lõi";

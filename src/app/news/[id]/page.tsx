@@ -2,13 +2,31 @@ import { Open_Sans } from "next/font/google";
 import { listNews } from "../Mockdata";
 import "../styles/detail.css";
 import Image from "next/image";
+
 interface BlogPostPageProps {
-  params: Promise<{ id: string }>; // Đảm bảo params là một Promise
+  params: Promise<{ id: string }>;
 }
+
 const openSans = Open_Sans({ subsets: ["latin"] });
 
+export async function generateMetadata({ params }: BlogPostPageProps) {
+  const resolvedParams = await params; // Wait for params to resolve
+  const id = resolvedParams?.id;
+  const detail = listNews.find((item) => item?.slug === id);
+
+  // You can dynamically set metadata here based on the data
+  return {
+    title:
+      `Tin tức - ${detail?.title}` ||
+      "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát",
+    des:
+      `Tin tức - ${detail?.title}` ||
+      "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát",
+  };
+}
+
 export default async function BlogPostNews({ params }: BlogPostPageProps) {
-  const resolvedParams = await params; // Chờ đợi params hoàn thành
+  const resolvedParams = await params; // Wait for params to resolve
   const id = resolvedParams?.id;
   const detail = listNews.find((item) => item?.slug === id);
   return (
@@ -30,7 +48,7 @@ export default async function BlogPostNews({ params }: BlogPostPageProps) {
         {detail?.img && detail.img !== "" && (
           <Image
             className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
-            alt={`Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát: ${detail?.title}`} // Use the title for alt text
+            alt={`Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát: ${detail?.title}`}
             src={detail.img}
           />
         )}
@@ -47,9 +65,8 @@ export default async function BlogPostNews({ params }: BlogPostPageProps) {
 }
 
 export async function generateStaticParams() {
-  // Here you would typically fetch the list of news slugs or IDs
   const params = listNews.map((news) => ({
-    id: String(news.slug), // Assuming 'slug' is the identifier for the news
+    id: String(news.slug),
   }));
   return params;
 }

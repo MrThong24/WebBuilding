@@ -9,15 +9,26 @@ import SectionTamNhin from "./SectionTamNhin";
 import SectionSoDoToChuc from "./SectionSoDoToChuc";
 import SectionLinhVucHoatDong from "./SectionLinhVucHoatDong";
 import logoHear from "../../assest/image/about/logo-about-dai-tien-phat.jpg";
-import { Metadata } from "next";
 import Image from "next/image";
 interface BlogPostPageProps {
   params: Promise<{ id: string }>; // Đảm bảo params là một Promise
 }
-export const metadata: Metadata = {
-  title: "Giới thiệu",
-  description: "Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát",
-};
+
+export async function generateMetadata({ params }: BlogPostPageProps) {
+  const resolvedParams = await params; // Chờ đợi params hoàn thành
+  const id = resolvedParams?.id;
+  const detail = dataAbout.find((item) => item?.href === id);
+
+  // You can dynamically set metadata here based on the data
+  return {
+    title:
+      `Giới thiệu - ${detail?.name}` ||
+      "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát",
+    des:
+      `Giới thiệu - ${detail?.name}` ||
+      "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát",
+  };
+}
 export default async function About({ params }: BlogPostPageProps) {
   const resolvedParams = await params; // Chờ đợi params hoàn thành
   const id = resolvedParams?.id;
@@ -34,7 +45,7 @@ export default async function About({ params }: BlogPostPageProps) {
         ></div>
         <Image
           className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
-          alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
+          alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
           src={logoHear}
         />
         <Breadcrumb

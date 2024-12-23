@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Montserrat } from "next/font/google";
-import logoCty from "../../assest/image/LOGO CTY.jpg";
 import Image from "next/image";
 import { dataIntroduce, dataListProject } from "./mockData";
 import { CustomPopover } from "./components/CustomPopover";
 import CustomDisclosure from "./components/CustomDisclosure";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import logoCty from "../../assest/image/header/logo-cong-ty-dai-tien-phat.jpg";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -47,7 +47,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <Image
-              alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
+              alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
               src={logoCty}
               width={80} // Thay đổi kích thước theo yêu cầu
               height={80} // Thay đổi kích thước theo yêu cầu

@@ -5,6 +5,7 @@ import Image from "next/image";
 import React from "react";
 import CustomSelect from "./components/CustomSelect";
 import logoHeader from "../../assest/image/projects/logo-about-dai-tien-phat-du-an.png";
+import { Metadata } from "next";
 export async function generateStaticParams() {
   // Here you would typically fetch the list of project slugs or IDs
   const params = dataListProject.map((project) => ({
@@ -12,7 +13,10 @@ export async function generateStaticParams() {
   }));
   return params;
 }
-
+export const metadata: Metadata = {
+  title: "Dự án",
+  description: "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát",
+};
 export default async function Page({
   params,
 }: {
@@ -40,7 +44,7 @@ export default async function Page({
 
         <Image
           className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
-          alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
+          alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
           src={logoHeader}
         />
       </div>
@@ -63,7 +67,7 @@ export default async function Page({
                   <div className="overflow-hidden h-[400px] group-hover:opacity-60 transition-opacity duration-300">
                     <Image
                       src={item.img}
-                      alt={`Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát: ${item.title}`}
+                      alt={`Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát: ${item.title}`}
                       className="w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>

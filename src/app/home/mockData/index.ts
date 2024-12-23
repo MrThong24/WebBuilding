@@ -1,12 +1,12 @@
-import Quality from "../../assest/image/Quality.jpg";
-import Renovate from "../../assest/image/Renovate.png";
-import Credibility from "../../assest/image/Credibility.png";
-import Sustainability from "../../assest/image/Sustainability.png";
-import Team from "../../assest/image/Team.png";
-import Custom from "../../assest/image/Custom.png";
 import ThiCong from "../../assest/image/ThiCong.png";
 import CongNghiep from "../../assest/image/CongNghiep.png";
 import ThietKe from "../../assest/image/ThietKe.png";
+import Team from "../../assest/image/home/logo-doi-ngu-dai-tien-phat.png";
+import Custom from "../../assest/image/home/logo-khach-hang-dai-tien-phat.png";
+import Quality from "../../assest/image/home/logo-chat-luong-dai-tien-phat.jpg";
+import Renovate from "../../assest/image/home/logo-doi-moi-dai-tien-phat.png";
+import Credibility from "../../assest/image/home/logo-tin-cay-dai-tien-phat.png";
+import Sustainability from "../../assest/image/home/logo-benh-vung-dai-tien-phat.png";
 
 export const dataGiaTriCotLoi = [
   {
@@ -64,7 +64,7 @@ export const dataLinhVucHoatDong = [
   },
   {
     id: 2,
-    title: "Cải tạo công trình",
+    title: "Cải tạo sửa chửa công trình",
     description:
       "DTP là đối tác tin cậy trong lĩnh vực thi công nhà xưởng công nghiệp. Chúng tôi hiểu rằng mỗi ngành công nghiệp đều có những yêu cầu đặc thù về không gian và cơ sở hạ tầng. Vì vậy, các giải pháp của chúng tôi luôn được tùy chỉnh để đáp ứng tối đa nhu cầu sản xuất và vận hành của khách hàng.",
     icons: CongNghiep,
@@ -72,7 +72,7 @@ export const dataLinhVucHoatDong = [
   },
   {
     id: 3,
-    title: "Công trình nhà thép",
+    title: "Công trình dân dụng và công nghiệp",
     description:
       "Trong lĩnh vực thi công công trình dân dụng, DTP luôn đặt chất lượng và sự hài lòng của khách hàng lên hàng đầu. Chúng tôi đã và đang thực hiện thành công nhiều dự án nhà ở, trung tâm thương mại và showroom, góp phần nâng cao chất lượng cuộc sống và hiệu quả kinh doanh.",
     icons: ThietKe,

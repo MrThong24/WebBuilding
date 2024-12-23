@@ -74,7 +74,7 @@ export default function Footer() {
           <div className="flex items-center justify-center">
             <span className="text-sm text-white ">
               ©<a href="https://pagedone.io/">Copyright</a> 2024, Thiết kế bởi
-              Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát
+              Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát
             </span>
           </div>
         </div>
