@@ -1,5 +1,4 @@
-import Image from "next/image";
-import ThiCong from "../../assest/image/ThiCong.png";
+import Image, { StaticImageData } from "next/image";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -11,7 +10,7 @@ interface Data {
   title: string;
   des: string;
   slug: string;
-  icon: any;
+  icon: string | StaticImageData;
 }
 
 interface PageProps {

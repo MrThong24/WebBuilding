@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import CustomSelect from "./components/CustomSelect";
-
+import logoHeader from "../../assest/image/projects/logo-about-dai-tien-phat-du-an.png";
 export async function generateStaticParams() {
   // Here you would typically fetch the list of project slugs or IDs
   const params = dataListProject.map((project) => ({
@@ -37,10 +37,11 @@ export default async function Page({
         <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl font-bold">
           DỰ ÁN
         </h2>
-        <img
+
+        <Image
           className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
-          src="https://www.cc1.vn/wp-content/themes/cc1/assets/images/project/23.png"
-          alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
+          alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
+          src={logoHeader}
         />
       </div>
       <div className="mx-auto px-4 lg:px-8 pb-10">

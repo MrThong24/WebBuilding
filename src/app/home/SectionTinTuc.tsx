@@ -1,7 +1,9 @@
 import LayoutSection from "./layout/LayoutSection";
-import a1_content1 from "../assest/image/News/News1/a1.jpg";
+import logoNew1 from "../../../public/images/news/DuAn1/a1.jpg";
+import logoNew2 from "../../../public/images/news/DuAn2/a1.jpg";
 import Image from "next/image";
 import Link from "next/link";
+
 export default function SectionTintuc({}) {
   return (
     <LayoutSection title="TIN TỨC" showBtnMore={true} slug="/news">
@@ -14,7 +16,7 @@ export default function SectionTintuc({}) {
             >
               <Image
                 alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
-                src={a1_content1}
+                src={logoNew1}
                 className="lg:h-[328px] h-auto w-full object-cover transition-transform duration-300 hover:scale-105"
               />
             </Link>
@@ -41,20 +43,29 @@ export default function SectionTintuc({}) {
         </div>
         <div className="col-span-4 lg:col-span-2 md:col-start-1 h-[100px] md:h-[120px]">
           <div className="relative cursor-pointer flex flex-row w-full h-full bg-white shadow-sm border border-slate-200 rounded-lg">
-            <div className="relative h-auto overflow-hidden text-white rounded-tl-md rounded-bl-md">
-              <img
-                className="w-[90px] sm:w-[120px] lg:w-[170px] h-full object-cover transition-transform duration-300 hover:scale-105"
-                src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+            <Link
+              href="/news/aeon-mall-quyet-dinh-dau-tu-trung-tam-thuong-mai-aeon-mall-da-nang-thanh-khe"
+              className="relative h-auto overflow-hidden text-white rounded-tl-md rounded-bl-md"
+            >
+              <Image
                 alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
+                src={logoNew2}
+                className="w-[90px] sm:w-[120px] lg:w-[170px] h-full object-cover transition-transform duration-300 hover:scale-105"
               />
-            </div>
+            </Link>
             <div className="p-2 flex flex-col justify-start flex-1">
               <h4 className="mb-2 text-slate-800 text-[12px] sm:text-[14px] font-semibold line-clamp-3">
-                Lyft launching cross-platform service this week
+                AEON MALL QUYẾT ĐỊNH ĐẦU TƯ TRUNG TÂM THƯƠNG MẠI AEON MALL ĐÀ
+                NẴNG THANH KHÊ
               </h4>
               <p className=" text-slate-600 leading-normal text-[10px] sm:text-[12px] font-light line-clamp-2">
-                Like so many organizations these days, Autodesk is a company
-                Like so many organizations these days, Autodesk is a company
+                Tháng 1-2024, Công ty CP Địa ốc Sài Gòn Thương Tín (TTC Land)
+                trực thuộc Tập đoàn TTC ký kết với Công ty TNHH AEONMall Việt
+                Nam trực thuộc Tập đoàn bán lẻ hàng đầu Châu Á là AEON (Nhật
+                Bản) về việc hợp tác triển khai Trung tâm Thương mại AEON Mall
+                Đà Nẵng tại Dự án TTC Plaza Đà Nẵng nằm trên đường Điện Biên Phủ
+                (phường Chính Gián, quận Thanh Khê, TP Đà Nẵng) do TTC Land làm
+                chủ đầu tư.
               </p>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { listNews } from "./Mockdata";
 import Image from "next/image";
-
+import logoHeader from "../assest/image/news/logo-about-dai-tien-phat-tin-tuc.png";
 export default function MyApp() {
   return (
     <div className="mt-24 bg-white">
@@ -13,10 +13,10 @@ export default function MyApp() {
               "linear-gradient(115deg, rgba(27 49 71), rgba(179, 205, 209, 0.5))",
           }}
         ></div>
-        <img
+        <Image
           className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
-          src="https://www.cc1.vn/wp-content/themes/cc1/assets/images/project/23.png"
-          alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát"
+          alt="Công ty TNHH Đầu tư Phát triễn Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
+          src={logoHeader}
         />
         <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl font-bold">
           TIN TỨC

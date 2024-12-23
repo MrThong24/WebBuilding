@@ -8,9 +8,26 @@ export default function CustomSelect() {
   const listFilterOption = [
     { value: "tat-ca", name: "Tất cả" },
     { value: "san-choi-the-thao", name: "Sân chơi thể thao" },
-    { value: "cong-trinh-dan-dung-va-cong-nghiep", name: "Cải tạo công trình" },
-    { value: "cong-trinh-ha-tang-ky-thuat", name: "Công trình nhà thép" },
-    { value: "trung-tam-thuong-mai", name: "Trung tâm thương mại" },
+    {
+      value: "cong-trinh-dan-dung-va-cong-nghiep",
+      name: "Công trình dân dụng và công nghiệp",
+    },
+    {
+      value: "cong-trinh-ha-tang-ky-thuat",
+      name: "Công trình hạ tầng kỹ thuật",
+    },
+    {
+      value: "sua-chua-cai-tao-cong-trinh",
+      name: "Sửa chửa - Cải tạo công trình",
+    },
+    {
+      value: "trung-tam-thuong-mai",
+      name: "Trung tâm thương mại",
+    },
+    {
+      value: "cong-trinh-khu-nghi-duong",
+      name: "Công trình khu nghỉ dưỡng",
+    },
   ];
   const idSlug = pathname.split("/")[2];
   const handleClickOption = (value: string) => {
@@ -19,7 +36,7 @@ export default function CustomSelect() {
   return (
     <div className="relative mb-8">
       <div className="border-t-black"></div>
-      <div className="flex items-center relative max-w-[280px] bg-slate-500">
+      <div className="flex items-center relative max-w-[340px] bg-slate-500">
         <select
           className="h-12 text-gray-900 text-sm font-medium py-2.5 px-4 appearance-none w-full cursor-pointer"
           onChange={(e) => handleClickOption(e.target.value)}
