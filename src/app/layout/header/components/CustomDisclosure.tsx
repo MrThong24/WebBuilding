@@ -1,3 +1,4 @@
+"use client";
 import {
   Disclosure,
   DisclosureButton,
@@ -14,16 +15,29 @@ interface Item {
 interface CustomDisclosureProps {
   title: string;
   items: Item[];
+  slug: string;
 }
 
 const CustomDisclosure: React.FC<CustomDisclosureProps> = ({
   title,
   items,
+  slug,
 }) => {
   return (
     <Disclosure as="div" className="-mx-3">
-      <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-[var(--thm-base-color)] hover:text-white ">
-        {title}
+      <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-[var(--thm-base-color)] hover:text-white">
+        <Link
+          href={slug}
+          onClick={(e) => {
+            if (items?.length > 0) {
+              return;
+            }
+            e.preventDefault(); // Ngăn chặn hành động mặc định
+            window.location.href = slug;
+          }}
+        >
+          {title}
+        </Link>
         {items?.length > 0 && (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,17 +70,6 @@ const CustomDisclosure: React.FC<CustomDisclosureProps> = ({
                 {item.name}
               </div>
             </Link>
-            // <DisclosureButton
-            //   key={item.name}
-            //   as="a"
-            //   onClick={() => {
-            //     localStorage.setItem("keyFilter", item.slug || "");
-            //   }}
-            //   href={item.href}
-            //   className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-            // >
-            //   {item.name}
-            // </DisclosureButton>
           ))}
         </DisclosurePanel>
       )}

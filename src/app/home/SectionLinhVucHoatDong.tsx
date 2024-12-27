@@ -6,6 +6,7 @@ import LayoutSection from "./layout/LayoutSection";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import { Navigation } from "swiper/modules";
 
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -31,16 +32,14 @@ export default function SectionLinhVucHoatDong({ datas }: PageProps) {
       <Swiper
         style={
           {
-            "--swiper-navigation-color": "#fff",
-            "--swiper-pagination-color": "#fff",
+            "--swiper-navigation-color": "#e50019",
+            "--swiper-pagination-color": "#e50019",
+            "--swiper-navigation-size": "30px",
           } as React.CSSProperties
         }
         slidesPerView={4}
         spaceBetween={30}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
+        navigation={true}
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -55,6 +54,8 @@ export default function SectionLinhVucHoatDong({ datas }: PageProps) {
             slidesPerView: 4,
           },
         }}
+        modules={[Navigation]}
+        className="mySwiper"
       >
         {datas?.map((item) => (
           <SwiperSlide

@@ -121,7 +121,6 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
             >
-              <span className="sr-only">Close menu</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -141,10 +140,18 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6 mt-6">
-                <CustomDisclosure title="Giới thiệu" items={dataIntroduce} />
-                <CustomDisclosure title="Dự án" items={dataListProject} />
-                <CustomDisclosure title="Tin tức" items={[]} />
-                <CustomDisclosure title="Liên hệ" items={[]} />
+                <CustomDisclosure
+                  slug="/"
+                  title="Giới thiệu"
+                  items={dataIntroduce}
+                />
+                <CustomDisclosure
+                  slug="/"
+                  title="Dự án"
+                  items={dataListProject}
+                />
+                <CustomDisclosure slug="/news" title="Tin tức" items={[]} />
+                <CustomDisclosure slug="/contact" title="Liên hệ" items={[]} />
               </div>
             </div>
           </div>

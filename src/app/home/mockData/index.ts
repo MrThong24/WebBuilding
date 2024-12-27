@@ -64,7 +64,7 @@ export const dataLinhVucHoatDong = [
   },
   {
     id: 2,
-    title: "Cải tạo sửa chửa công trình",
+    title: "Sửa chửa - Cải tạo công trình",
     description:
       "DTP là đối tác tin cậy trong lĩnh vực thi công nhà xưởng công nghiệp. Chúng tôi hiểu rằng mỗi ngành công nghiệp đều có những yêu cầu đặc thù về không gian và cơ sở hạ tầng. Vì vậy, các giải pháp của chúng tôi luôn được tùy chỉnh để đáp ứng tối đa nhu cầu sản xuất và vận hành của khách hàng.",
     icons: CongNghiep,
@@ -77,5 +77,29 @@ export const dataLinhVucHoatDong = [
       "Trong lĩnh vực thi công công trình dân dụng, DTP luôn đặt chất lượng và sự hài lòng của khách hàng lên hàng đầu. Chúng tôi đã và đang thực hiện thành công nhiều dự án nhà ở, trung tâm thương mại và showroom, góp phần nâng cao chất lượng cuộc sống và hiệu quả kinh doanh.",
     icons: ThietKe,
     href: "thi-cong-cong-trinh-dan-dung",
+  },
+  {
+    id: 4,
+    title: "Công trình hạ tầng kỹ thuật",
+    description:
+      "Đại Tiến Phát Group chuyên thi công các hệ thống hạ tầng kỹ thuật như thoát nước mưa, thoát nước thải và san nền. Chúng tôi cung cấp giải pháp tối ưu, đáp ứng tiêu chuẩn kỹ thuật và môi trường, với đội ngũ kỹ sư, thợ lành nghề cùng vật liệu chất lượng cao. Các dịch vụ của chúng tôi đảm bảo hiệu quả lâu dài, an toàn và bền vững, giúp bảo vệ công trình và tạo môi trường sống tiện nghi, hiện đại.",
+    icons: ThietKe,
+    href: "cong-trinh-ha-tang-ky-thuat",
+  },
+  {
+    id: 5,
+    title: "Trung tâm thương mại",
+    description:
+      "Hoàn thiện nội thất là bước cuối cùng để biến một không gian thành tổ ấm hoặc nơi làm việc hoàn hảo. Với dịch vụ thi công nội thất chuyên nghiệp, Đại Tiến Phát Group mang đến sự tinh tế trong từng chi tiết, từ lắp đặt sàn, trần, hệ thống chiếu sáng đến các hạng mục trang trí. Đội ngũ thi công giàu kinh nghiệm của chúng tôi đảm bảo tiến độ nhanh chóng, chất lượng vượt trội, và đáp ứng tối đa yêu cầu thẩm mỹ của khách hàng. Đại Tiến Phát – đồng hành cùng bạn kiến tạo không gian sống lý tưởng!",
+    icons: ThietKe,
+    href: "trung-tam-thuong-mai",
+  },
+  {
+    id: 5,
+    title: "Công trình khu nghỉ dưỡng",
+    description:
+      "Đại Tiến Phát Group chuyên thi công các công trình khu nghỉ dưỡng, bao gồm nhà hàng và nội thất, với mục tiêu mang lại không gian hoàn hảo và trải nghiệm tuyệt vời cho khách hàng. Chúng tôi cung cấp dịch vụ thi công trọn gói, từ thiết kế đến hoàn thiện, đảm bảo tính thẩm mỹ, công năng và tối ưu chi phí. Đội ngũ chuyên gia giàu kinh nghiệm cam kết thực hiện dự án nhanh chóng, chất lượng vượt trội, tạo ra không gian kinh doanh và nghỉ dưỡng độc đáo, hấp dẫn.",
+    icons: ThietKe,
+    href: "cong-trinh-khu-nghi-duong",
   },
 ];
