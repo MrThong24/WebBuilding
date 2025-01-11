@@ -60,7 +60,7 @@ export default function SectionLinhVucHoatDong({ datas }: PageProps) {
         {datas?.map((item) => (
           <SwiperSlide
             className="bg-slate-200 rounded-lg hover:bg-slate-300 transition-colors duration-300"
-            key={item?.id}
+            key={item.href}
           >
             <Link href={`/about/linh-vuc-hoat-dong`}>
               <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow p-4">

@@ -45,7 +45,7 @@ export default function Contact() {
                     />
                   </svg>
                   <p className="text-white text-sm ml-4">
-                    daitienphatgroup@gmail.com
+                    daitienphatgroup@gmail.com - info@daitienphatcons.com
                   </p>
                 </li>
                 <li className="flex items-center">
