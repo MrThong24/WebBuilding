@@ -1,10 +1,14 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import { Navigation } from "swiper/modules";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
-import { Navigation } from "swiper/modules";
 
 interface Data {
   title: string;

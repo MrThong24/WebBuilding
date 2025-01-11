@@ -36,7 +36,7 @@ export default async function BlogPostNews({ params }: BlogPostPageProps) {
           className="absolute inset-0 z-0"
           style={{
             background:
-              "linear-gradient(115deg, rgba(27 49 71), rgba(179, 205, 209, 0.5))",
+              "linear-gradient(115deg, rgb(27, 49, 71), rgb(99 102 102 / 50%))",
           }}
         ></div>
         <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center items-center p-6">

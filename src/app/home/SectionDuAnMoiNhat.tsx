@@ -1,7 +1,7 @@
 "use client"; // <===== REQUIRED
 
 import React from "react";
-
+import a1_TTTM_2 from "../../../public/images/project/ProjectTrungTamThuongMai/DuAn2/a1.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -59,6 +59,39 @@ export default function SectionDuAnMoiNhat() {
                     chuyên nghiệp, đảm bảo rằng mọi sân pickleball đều đạt tiêu
                     chuẩn cao nhất. Với thi công sân pickleball chú trọng vào
                     từng chi tiết, sẽ mang lại trải nghiệm cho khách hàng
+                  </p>
+                  <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-green-600/60">
+                    Xem chi tiết
+                  </button>
+                </div>
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide className=" bg-slate-400">
+            <Link
+              href={`/projects/trung-tam-thuong-mai/anh-kafe-cong-trinh-thi-cong-noi-that-doc-dao-mang-dam-hon-co-do-hue/`}
+            >
+              <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-green-800/30">
+                <div className="max-h-[500px] w-auto">
+                  <Image
+                    alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát"
+                    className="lg:h-[500px] sm:h-[460px] h-[400px] w-full object-fill transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                    src={a1_TTTM_2}
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black ` group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70" />
+                <div className="absolute inset-12 flex translate-y-[60%] flex-col items-center justify-center px-5 text-center transition-all duration-500 group-hover:translate-y-0">
+                  <h1 className="text-[18px] font-bold text-white flex w-auto">
+                    Anh Kafe - Công Trình Thi Công Nội Thất Độc Đáo Mang Đậm Hồn
+                    Cố Đô Huế
+                  </h1>
+                  <p className="mb-3 text-[14px] italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    Tại AEON Mall Huế, Anh Kafe là một dự án nổi bật mà đội ngũ
+                    thi công của Đại Tiến Phát vô cùng tự hào khi được đồng hành
+                    thực hiện. Với sứ mệnh tái hiện tinh hoa văn hóa cố đô trong
+                    từng đường nét thiết kế, dự án không chỉ mang đến một không
+                    gian cà phê độc đáo mà còn là một công trình nội thất tinh
+                    xảo, kết hợp hài hòa giữa truyền thống và hiện đại.
                   </p>
                   <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-green-600/60">
                     Xem chi tiết
