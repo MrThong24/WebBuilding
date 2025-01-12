@@ -14,14 +14,23 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   const id = resolvedParams?.id;
   const detail = listProject.find((item) => item?.slug === id);
 
-  // You can dynamically set metadata here based on the data
+  // Đặt tiêu đề và mô tả metadata
+  const title =
+    detail?.title || "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát";
+  const description = detail?.title || title; // Giả sử có trường mô tả cho dự án
+  const image = "/images/favicon-light.png"; // Đặt ảnh mặc định nếu không có ảnh dự án
+  const url = `https://daitienphatcons.com/projects/cong-trinh-ha-tang-ky-thuat/${id}`; // Cập nhật URL với đường dẫn trang dự án
+
   return {
-    title:
-      `Dự án - ${detail?.title}` ||
-      "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát", // Dynamic title based on the detail
-    des:
-      `Dự án - ${detail?.title}` ||
-      "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát", // Dynamic title based on the detail
+    title: `Dự án - ${title}`,
+    des: description,
+    openGraph: {
+      title: `Dự án - ${title}`,
+      description: description,
+      image: image, // Cập nhật đường dẫn tới ảnh của dự án
+      url: url, // Đảm bảo URL của trang là chính xác
+      type: "website", // Loại nội dung của trang
+    },
   };
 }
 
