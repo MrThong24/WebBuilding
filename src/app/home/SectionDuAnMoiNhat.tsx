@@ -1,7 +1,6 @@
 "use client"; // <===== REQUIRED
 
 import React from "react";
-import a1_TTTM_2 from "../../../public/images/project/ProjectTrungTamThuongMai/DuAn2/a1.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
