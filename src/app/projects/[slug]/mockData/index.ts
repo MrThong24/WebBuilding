@@ -5,6 +5,7 @@ import { listProjectTrungTamThuongMai } from "./TrungTamThuongMai";
 import { listProjectCongTrinhHaTangKyThuat } from "./CongTrinhHaTangKyThuat";
 import { listSanChoiTheThao } from "./SanChoiTheThao";
 import { listProjectCongTrinhDanDungVaCongNghiep } from "./CongTrinhDanDungVaCongNghiep";
+import { listProjectCongTrinhKhuNghiDuong } from "./CongTrinhKhuNghiDuong";
 
 export interface Project {
   id: number;
@@ -24,4 +25,5 @@ export const listProject: Project[] = [
   ...listProjectCaiTaoSuaChuaCongTrinh,
   ...listProjectCongTrinhHaTangKyThuat,
   ...listProjectCongTrinhDanDungVaCongNghiep,
+  ...listProjectCongTrinhKhuNghiDuong,
 ];
