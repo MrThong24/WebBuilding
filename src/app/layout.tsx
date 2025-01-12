@@ -5,6 +5,7 @@ import Head from "next/head";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://daitienphatcons.com"),
   title: "CÔNG TY TNHH ĐẦU TƯ PHÁT TRIỂN XÂY DỰNG ĐẠI TIẾN PHÁT",
   description: "CÔNG TY TNHH ĐẦU TƯ PHÁT TRIỂN XÂY DỰNG ĐẠI TIẾN PHÁT",
   icons: {
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
         href: "/images/favicon-light.png",
       },
     ],
+  },
+  openGraph: {
+    title: "CÔNG TY TNHH ĐẦU TƯ PHÁT TRIỂN XÂY DỰNG ĐẠI TIẾN PHÁT",
+    description: "CÔNG TY TNHH ĐẦU TƯ PHÁT TRIỂN XÂY DỰNG ĐẠI TIẾN PHÁT",
+    images: "/images/favicon-light-custom.jpg",
+    url: `https://daitienphatcons.com`,
+    type: "website",
   },
 };
 

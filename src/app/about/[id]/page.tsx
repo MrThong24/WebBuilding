@@ -21,12 +21,24 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 
   // You can dynamically set metadata here based on the data
   return {
+    metadataBase: new URL("https://daitienphatcons.com"), // Thiết lập metadataBase cho các URL đầy đủ
     title:
       `Giới thiệu - ${detail?.name}` ||
       "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát",
     des:
       `Giới thiệu - ${detail?.name}` ||
       "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát",
+    openGraph: {
+      title:
+        `Giới thiệu - ${detail?.name}` ||
+        "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát",
+      description:
+        `Giới thiệu - ${detail?.name}` ||
+        "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát",
+      images: "/images/favicon-light-custom.jpg",
+      url: `https://daitienphatcons.com/about/${id}`,
+      type: "website",
+    },
   };
 }
 export default async function About({ params }: BlogPostPageProps) {
