@@ -10,26 +10,27 @@ interface BlogPostPageProps {
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
-  const resolvedParams = await params; // Chờ đợi params hoàn thành
+  const resolvedParams = await params;
   const id = resolvedParams?.id;
   const detail = listProject.find((item) => item?.slug === id);
 
   // Đặt tiêu đề và mô tả metadata
   const title =
     detail?.title || "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát";
-  const description = detail?.title || title; // Giả sử có trường mô tả cho dự án
-  const image = "/images/favicon-light.png"; // Đặt ảnh mặc định nếu không có ảnh dự án
+  const description = detail?.title || title;
+  const image = "/images/favicon-light-custom.jpg"; // Đặt ảnh mặc định nếu không có ảnh dự án
   const url = `https://daitienphatcons.com/projects/cong-trinh-ha-tang-ky-thuat/${id}`; // Cập nhật URL với đường dẫn trang dự án
 
   return {
+    metadataBase: new URL("https://daitienphatcons.com"), // Thiết lập metadataBase cho các URL đầy đủ
     title: `Dự án - ${title}`,
-    des: description,
+    description: description,
     openGraph: {
       title: `Dự án - ${title}`,
       description: description,
-      image: image, // Cập nhật đường dẫn tới ảnh của dự án
-      url: url, // Đảm bảo URL của trang là chính xác
-      type: "website", // Loại nội dung của trang
+      images: image,
+      url: url,
+      type: "website",
     },
   };
 }
