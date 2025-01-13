@@ -28,7 +28,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-3 items-start gap-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-lg mt-12">
             <div className="bg-[var(--thm-primary-color)] rounded-tl-lg rounded-bl-lg p-6 h-full max-lg:order-1">
               <h2 className="text-xl text-white">
-                Công ty TNHH Đầu tư Xây dựng Đại Tiến Phát
+                Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát
               </h2>
               <ul className="mt-16 space-y-8">
                 <li className="flex items-center">
