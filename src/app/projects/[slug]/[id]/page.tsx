@@ -23,10 +23,10 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 
   return {
     metadataBase: new URL("https://daitienphatcons.com"), // Thiết lập metadataBase cho các URL đầy đủ
-    title: `Dự án - ${title}`,
+    title: `${title}`,
     description: description,
     openGraph: {
-      title: `Dự án - ${title}`,
+      title: `${title}`,
       description: description,
       images: image,
       url: url,

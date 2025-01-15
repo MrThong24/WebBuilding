@@ -1,4 +1,3 @@
-"use client";
 import a1 from "../assest/image/contact/a1.jpg";
 import Image from "next/image";
 
