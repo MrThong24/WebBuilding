@@ -27,6 +27,7 @@ const CustomDisclosure: React.FC<CustomDisclosureProps> = ({
     <Disclosure as="div" className="-mx-3">
       <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-[var(--thm-base-color)] hover:text-white">
         <Link
+          className="flex justify-start flex-1"
           href={slug}
           onClick={(e) => {
             if (items?.length > 0) {
