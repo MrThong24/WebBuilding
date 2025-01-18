@@ -42,7 +42,7 @@ export default function Footer() {
               </div>
               <div className="flex gap-x-8">
                 <span className="text-white text-[14px] w-[80px]">EMAIL</span>
-                <span className="text-white text-[14px]">
+                <span className="text-white text-[14px] flex-1">
                   daitienphatgroup@gmail.com - info@daitienphatcons.com
                 </span>
               </div>

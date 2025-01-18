@@ -58,6 +58,7 @@ input:focus-visible {
   outline: none;
   border: 1px solid #254a39;
 }
+li,
 td {
   color: rgb(0, 0, 0) !important;
 }
