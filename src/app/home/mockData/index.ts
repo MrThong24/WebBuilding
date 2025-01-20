@@ -7,6 +7,7 @@ import Quality from "../../assest/image/home/logo-chat-luong-dai-tien-phat.jpg";
 import Renovate from "../../assest/image/home/logo-doi-moi-dai-tien-phat.png";
 import Credibility from "../../assest/image/home/logo-tin-cay-dai-tien-phat.png";
 import Sustainability from "../../assest/image/home/logo-benh-vung-dai-tien-phat.png";
+// import anhKafe from "../../assest/image/khachHang/anh kafe.png;
 
 export const dataGiaTriCotLoi = [
   {
@@ -101,5 +102,15 @@ export const dataLinhVucHoatDong = [
       "Đại Tiến Phát Group chuyên thi công các công trình khu nghỉ dưỡng, bao gồm nhà hàng và nội thất, với mục tiêu mang lại không gian hoàn hảo và trải nghiệm tuyệt vời cho khách hàng. Chúng tôi cung cấp dịch vụ thi công trọn gói, từ thiết kế đến hoàn thiện, đảm bảo tính thẩm mỹ, công năng và tối ưu chi phí. Đội ngũ chuyên gia giàu kinh nghiệm cam kết thực hiện dự án nhanh chóng, chất lượng vượt trội, tạo ra không gian kinh doanh và nghỉ dưỡng độc đáo, hấp dẫn.",
     icons: ThietKe,
     href: "cong-trinh-khu-nghi-duong",
+  },
+];
+
+export const dataKhachHang = [
+  {
+    id: 1,
+    title: "Chất lượng",
+    description:
+      "Chúng tôi cam kết cung cấp sản phẩm và dịch vụ chất lượng cao nhất, đảm bảo sự hài lòng của khách hàng.",
+    icons: Quality,
   },
 ];
