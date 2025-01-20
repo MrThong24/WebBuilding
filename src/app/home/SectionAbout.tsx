@@ -76,6 +76,8 @@ export default function SectionAbout() {
               className="w-full h-full rounded-2xl object-cover relative"
               alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát"
               src={About}
+              width={1200} // Cung cấp chiều rộng cụ thể
+              height={560} // Cung cấp chiều cao cụ thể
             />
             <div className="absolute inset-0 bg-black opacity-40 rounded-2xl" />
           </div>
