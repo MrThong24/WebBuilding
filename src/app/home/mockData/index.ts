@@ -7,7 +7,15 @@ import Quality from "../../assest/image/home/logo-chat-luong-dai-tien-phat.jpg";
 import Renovate from "../../assest/image/home/logo-doi-moi-dai-tien-phat.png";
 import Credibility from "../../assest/image/home/logo-tin-cay-dai-tien-phat.png";
 import Sustainability from "../../assest/image/home/logo-benh-vung-dai-tien-phat.png";
-// import anhKafe from "../../assest/image/khachHang/anh kafe.png;
+import Aeon from "../../assest/image/khachHang/aeon.png";
+import Anhkafe from "../../assest/image/khachHang/anhkafe.png";
+import Archi from "../../assest/image/khachHang/archi.png";
+import Dookki from "../../assest/image/khachHang/dookki.png";
+import Fam from "../../assest/image/khachHang/fam.jpg";
+import Fm from "../../assest/image/khachHang/fm.png";
+import Fusion from "../../assest/image/khachHang/fusion.jpg";
+import Hoiana from "../../assest/image/khachHang/hoiana.png";
+import Sam from "../../assest/image/khachHang/sam.jpg";
 
 export const dataGiaTriCotLoi = [
   {
@@ -108,9 +116,38 @@ export const dataLinhVucHoatDong = [
 export const dataKhachHang = [
   {
     id: 1,
-    title: "Chất lượng",
-    description:
-      "Chúng tôi cam kết cung cấp sản phẩm và dịch vụ chất lượng cao nhất, đảm bảo sự hài lòng của khách hàng.",
-    icons: Quality,
+    icons: Aeon,
+  },
+  {
+    id: 2,
+    icons: Anhkafe,
+  },
+  {
+    id: 3,
+    icons: Archi,
+  },
+  {
+    id: 4,
+    icons: Dookki,
+  },
+  {
+    id: 5,
+    icons: Fam,
+  },
+  {
+    id: 6,
+    icons: Fm,
+  },
+  {
+    id: 7,
+    icons: Fusion,
+  },
+  {
+    id: 8,
+    icons: Hoiana,
+  },
+  {
+    id: 9,
+    icons: Sam,
   },
 ];

@@ -6,22 +6,19 @@ import LayoutSection from "./layout/LayoutSection";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
 
 interface Data {
   id: number; // or string, depending on your data
-  title: string;
-  description: string;
-  href: string;
   icons: StaticImageData;
 }
 
 interface PageProps {
   datas: Data[];
 }
+
 export default function SectionKhachHang({ datas }: PageProps) {
   return (
     <LayoutSection
@@ -37,49 +34,37 @@ export default function SectionKhachHang({ datas }: PageProps) {
             "--swiper-navigation-size": "30px",
           } as React.CSSProperties
         }
-        slidesPerView={6}
-        spaceBetween={30}
+        spaceBetween={20}
+        slidesPerView={5}
         navigation={true}
+        autoplay={{
+          delay: 1500, // Thời gian mỗi slide chuyển đổi (ms)
+          disableOnInteraction: false, // Giữ autoplay ngay cả khi người dùng tương tác
+        }}
         breakpoints={{
           0: {
-            slidesPerView: 1,
+            slidesPerView: 2,
           },
           640: {
-            slidesPerView: 2,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
             slidesPerView: 4,
           },
+          768: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 5,
+          },
         }}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         className="mySwiper"
       >
-        {datas?.map((item) => (
-          <SwiperSlide
-            className="bg-slate-200 rounded-lg hover:bg-slate-300 transition-colors duration-300"
-            key={item.href}
-          >
-            <Link href={`/about/linh-vuc-hoat-dong`}>
-              <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow p-4">
-                <div className="flex mb-4">
-                  <Image
-                    alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát"
-                    src={item?.icons}
-                    width={50}
-                    height={50}
-                  />
-                </div>
-                <h3 className="mt-2 text-lg font-semibold text-[var(--thm-primary-color)] mb-4 h-14">
-                  {item.title}
-                </h3>
-                <p className="text-[14px] text-black leading-6 line-clamp-6 ">
-                  {item?.description}
-                </p>
-              </div>
-            </Link>
+        {datas?.map((item, index) => (
+          <SwiperSlide className="" key={index}>
+            <Image
+              alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát"
+              src={item?.icons}
+              className="w-[100%] h-[160px] md:h-[180px] object-contain rounded-lg"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
