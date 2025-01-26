@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 import a1_CTKND_1 from "../../../../../../public/images/project/CongTrinhKhuNghiDuong/DuAn1/du-an-dai-tien-phat-a1.jpg";
 import a1_CTKND_2 from "../../../../../../public/images/project/CongTrinhKhuNghiDuong/DuAn2/du-an-dai-tien-phat-a1.jpg";
-import { randomUUID } from "crypto";
+
 export interface Project {
   id: number;
   title: string;
