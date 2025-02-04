@@ -36,9 +36,9 @@ export default function CustomSelect() {
   return (
     <div className="relative mb-8">
       <div className="border-t-black"></div>
-      <div className="flex items-center relative max-w-[340px] bg-slate-500">
+      <div className="flex items-center relative sm:max-w-[340px] rounded-sm">
         <select
-          className="h-12 text-gray-900 text-sm font-medium py-2.5 px-4 appearance-none w-full cursor-pointer"
+          className="text-gray-900 text-sm font-medium py-2.5 px-4 appearance-none w-full cursor-pointer bg-transparent rounded-md"
           onChange={(e) => handleClickOption(e.target.value)}
           value={
             listFilterOption?.find((item) => item?.value === idSlug)?.value

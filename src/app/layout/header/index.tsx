@@ -10,6 +10,7 @@ import CustomDisclosure from "./components/CustomDisclosure";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import logoCty from "../../assest/image/header/logo-cong-ty-dai-tien-phat.jpg";
+import phone from "../../assest/image/phone.gif";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -103,7 +104,17 @@ export default function Header() {
             isProject={false}
           />
         </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-2">
+          <Image
+            alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
+            src={phone}
+            width={28} // Thay đổi kích thước theo yêu cầu
+            height={28} // Thay đổi kích thước theo yêu cầu
+          />
+          <h2 className="leading-[26px] text-[16px] font-semibold text-[var(--thm-primary-color)]">
+            (+84) 905 519 995
+          </h2>
+        </div>
       </nav>
       <Dialog
         open={mobileMenuOpen}
