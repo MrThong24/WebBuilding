@@ -62,3 +62,16 @@ li,
 td {
   color: rgb(0, 0, 0) !important;
 }
+.footer {
+  width: 100%;
+  clear: both;
+  position: relative;
+  background: #232323 url("/images/footer.png") no-repeat;
+  background-size: 120% auto; /* Default size for larger screens */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    background-size: 360% auto; /* Adjust for mobile */
+  }
+}

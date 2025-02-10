@@ -10,8 +10,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 16.067, // Vĩ độ của địa chỉ bạn muốn hiển thị trên bản đồ
-  lng: 108.221, // Kinh độ của địa chỉ bạn muốn hiển thị trên bản đồ
+  lat: 16.056911077130504, // Vĩ độ của địa chỉ bạn muốn hiển thị trên bản đồ
+  lng: 108.17088239542588, // Kinh độ của địa chỉ bạn muốn hiển thị trên bản đồ
 };
 
 export default function Contact() {
@@ -37,10 +37,10 @@ export default function Contact() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 lg:px-8 pb-10 mt-10">
-        <div className="mx-auto bg-white my-6 font-[sans-serif]">
-          <div className="grid lg:grid-cols-3 items-start gap-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-lg mt-12">
-            <div className="bg-[var(--thm-primary-color)] rounded-tl-lg rounded-bl-lg p-6 h-full max-lg:order-1">
-              <h2 className="text-xl text-white">
+        <div className="mx-auto bg-white my-6">
+          <div className="grid lg:grid-cols-2 items-start gap-2 overflow-hidden rounded-lg mt-12">
+            <div className="bg-[var(--thm-primary-color)] p-6 h-full max-lg:order-1">
+              <h2 className="text-xl text-white font-semibold">
                 Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát
               </h2>
               <ul className="mt-16 space-y-8">
@@ -90,10 +90,9 @@ export default function Contact() {
                 </li>
               </ul>
             </div>
-
             {/* Thêm bản đồ */}
-            <div className="lg:col-span-2 mt-4 lg:mt-0">
-              <LoadScript googleMapsApiKey="123">
+            <div className="lg:col-span-1 mt-4 lg:mt-0">
+              <LoadScript googleMapsApiKey="AIzaSyB7ETOwK6NMmiPXlHUAThIjfDbCxXq_A6c">
                 <GoogleMap
                   mapContainerStyle={containerStyle}
                   center={center}

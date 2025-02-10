@@ -14,7 +14,7 @@ export default function SectionAbout() {
             <div className="w-full flex-col justify-start lg:items-start items-center gap-4 flex">
               <div className="border-l-[3px] border-[var(--thm-primary-color)] pl-3 w-full">
                 <motion.h2
-                  className="text-[var(--thm-primary-color)] text-4xl lg:text-5xl font-bold font-manrope leading-normal lg:text-start"
+                  className="text-[var(--thm-primary-color)] text-4xl lg:text-5xl font-bold font-manrope leading-normal lg:text-start lg:mb-2"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}

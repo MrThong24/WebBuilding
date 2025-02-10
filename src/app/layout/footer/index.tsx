@@ -2,16 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer
-      className="w-full"
-      style={{
-        clear: "both",
-        width: "100%",
-        position: "relative",
-        background: "#232323 url('/images/footer.png') no-repeat",
-        backgroundSize: "120% auto",
-      }}
-    >
+    <footer className="footer">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/*Grid*/}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-10 max-w-full mx-auto sm:max-w-2xl lg:max-w-full">
@@ -58,6 +49,15 @@ export default function Footer() {
                   className="text-white"
                 >
                   AEON HUẾ CHÍNH THỨC ĐI VÀO HOẠT ĐỘNG
+                </Link>
+              </li>
+
+              <li className="mb-2 text-[14px]">
+                <Link
+                  href="/news/tinh-hinh-trien-khai-du-an-mo-trong-nha-mat-loc-dau-dung-quat/"
+                  className="text-white"
+                >
+                  TÌNH HÌNH TRIỂN KHAI DỰ ÁN MỞ RỘNG NHÀ MÁY LỌC DẦU DUNG QUẤT
                 </Link>
               </li>
             </ul>

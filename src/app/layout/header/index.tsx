@@ -30,6 +30,9 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const handleClose = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header
@@ -155,14 +158,26 @@ export default function Header() {
                   slug="/"
                   title="Giới thiệu"
                   items={dataIntroduce}
+                  handleClose={handleClose}
                 />
                 <CustomDisclosure
                   slug="/"
                   title="Dự án"
                   items={dataListProject}
+                  handleClose={handleClose}
                 />
-                <CustomDisclosure slug="/news" title="Tin tức" items={[]} />
-                <CustomDisclosure slug="/contact" title="Liên hệ" items={[]} />
+                <CustomDisclosure
+                  slug="/news"
+                  title="Tin tức"
+                  items={[]}
+                  handleClose={handleClose}
+                />
+                <CustomDisclosure
+                  slug="/contact"
+                  title="Liên hệ"
+                  items={[]}
+                  handleClose={handleClose}
+                />
               </div>
             </div>
           </div>
