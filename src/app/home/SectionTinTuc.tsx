@@ -1,6 +1,7 @@
 import LayoutSection from "./layout/LayoutSection";
 import logoNew1 from "../../../public/images/news/DuAn1/a1.jpg";
 import logoNew2 from "../../../public/images/news/DuAn2/a1.jpg";
+import logoNew3 from "../../../public/images/news/DuAn3/du-an-dai-tien-phat-1.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -41,7 +42,7 @@ export default function SectionTintuc({}) {
             </div>
           </div>
         </div>
-        <div className="col-span-4 lg:col-span-2 md:col-start-1 h-[100px] md:h-[120px]">
+        <div className="col-span-4 lg:col-span-2 md:col-start-1 h-[110px] md:h-[120px]">
           <div className="relative cursor-pointer flex flex-row w-full h-full bg-white shadow-sm border border-slate-200 rounded-lg">
             <Link
               href="/news/aeon-mall-quyet-dinh-dau-tu-trung-tam-thuong-mai-aeon-mall-da-nang-thanh-khe"
@@ -66,6 +67,31 @@ export default function SectionTintuc({}) {
                 Đà Nẵng tại Dự án TTC Plaza Đà Nẵng nằm trên đường Điện Biên Phủ
                 (phường Chính Gián, quận Thanh Khê, TP Đà Nẵng) do TTC Land làm
                 chủ đầu tư.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="col-span-4 lg:col-span-2 md:col-start-1 h-[110px] md:h-[120px]">
+          <div className="relative cursor-pointer flex flex-row w-full h-full bg-white shadow-sm border border-slate-200 rounded-lg">
+            <Link
+              href="/news/tinh-hinh-trien-khai-du-an-mo-trong-nha-mat-loc-dau-dung-quat"
+              className="relative h-auto overflow-hidden text-white rounded-tl-md rounded-bl-md"
+            >
+              <Image
+                alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát"
+                src={logoNew3}
+                className="w-[90px] sm:w-[120px] lg:w-[170px] h-full object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </Link>
+            <div className="p-2 flex flex-col justify-start flex-1">
+              <h4 className="mb-2 text-slate-800 text-[12px] sm:text-[14px] font-semibold line-clamp-3">
+                TÌNH HÌNH TRIỂN KHAI DỰ ÁN MỞ RỘNG NHÀ MÁY LỌC DẦU DUNG QUẤT
+              </h4>
+              <p className=" text-slate-600 leading-normal text-[10px] sm:text-[12px] font-light line-clamp-2">
+                Ngày 4/2/2025 (tức ngày mùng 7 Tết Ất Tỵ), Tổng Giám đốc Công ty
+                cổ phần Lọc hóa dầu Bình Sơn (BSR) Nguyễn Việt Thắng đã làm việc
+                với Ban Quản lý dự án Nâng cấp Mở rộng Nhà máy Lọc dầu Dung Quất
+                về tình hình triển khai dự án.
               </p>
             </div>
           </div>
