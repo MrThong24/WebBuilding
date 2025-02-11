@@ -39,11 +39,14 @@ export default function SectionAbout() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát là đơn vị
-                thi công xây dựng uy tín tại Việt Nam, chuyên cung cấp giải pháp
-                hoàn thiện nội thất, xây dựng công trình dân dụng và công
-                nghiệp. Với đội ngũ kỹ sư chuyên nghiệp, chúng tôi cam kết mang
-                đến chất lượng vượt trội và sự hài lòng cho khách hàng
+                Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát là Nhà
+                thầu thi công hoạt động trong lĩnh vực Xây dựng bao gồm: Xây
+                dựng Hạ tầng Công nghiệp, Xây dựng Dân Dụng, Cải tạo và Bảo trì
+                Công trình, Hoàn thiện các Gian hàng trong Siêu thị - TTTM...
+                <br />
+                Chúng tôi có thế mạnh và kinh nghiệm về việc thực hiện các Dự án
+                theo tiêu chuẩn Quốc tế với các yêu cầu khắt khe về tính Kỹ
+                thuật - Chất lượng - Tiến độ – An toàn.
               </motion.p>
             </div>
             <motion.button
