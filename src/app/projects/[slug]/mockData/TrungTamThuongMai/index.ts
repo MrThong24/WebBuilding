@@ -63,7 +63,7 @@ export const listProjectTrungTamThuongMai: Project[] = [
       "Thi Công Nội Thất Beverly Hills Polo Club - Sang Trọng và Đẳng Cấp Tại AEON Mall Huế",
     img: a1_TTTM_4,
     type: "trung-tam-thuong-mai",
-    col: 3,
+    col: 2,
     slug: "thi-cong-noi-that-beverly-hills-polo-club-sang-trong-va-dang-cap-tai-aeon-mall-hue",
     time: "Tháng 6-8/2024",
     des: "Thi Công Nội Thất Beverly Hills Polo Club - Sang Trọng và Đẳng Cấp Tại AEON Mall Huế",

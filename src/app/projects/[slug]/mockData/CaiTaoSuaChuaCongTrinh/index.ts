@@ -20,7 +20,7 @@ export const listProjectCaiTaoSuaChuaCongTrinh: Project[] = [
     title: "Sửa Chữa – CẢI TẠO CÔNG TRÌNH Tại Đà Nẵng",
     img: a1_CTSCCT_1,
     type: "sua-chua-cai-tao-cong-trinh",
-    col: 2,
+    col: 3,
     slug: "sua-chua-cai-tao-cong-trinh-tai-da-nang",
     time: "Tháng 6-8/2024",
     des: "Sửa Chữa – CẢI TẠO CÔNG TRÌNH Tại Đà Nẵng",
