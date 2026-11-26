@@ -110,7 +110,7 @@ export default function SectionDuAnMoiNhat() {
           href={`/projects/${GRANITO_PROJECT.slug}/`}
           className="mt-5 inline-block font-semibold text-green-800 underline"
         >
-          Thi công đá mài Granito
+          Thi công {GRANITO_PROJECT.name}
         </Link>
       </div>
     </LayoutSection>

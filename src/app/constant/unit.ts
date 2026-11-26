@@ -20,5 +20,5 @@ export const TypeService = {
 
 export const GRANITO_PROJECT = {
   slug: "da-mai-granito",
-  name: "Đá mài Granito",
+  name: "Đá mài Granito - Đá rửa",
 };

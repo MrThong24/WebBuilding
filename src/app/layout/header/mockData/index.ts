@@ -34,7 +34,6 @@ export const dataListProject = [
   },
   {
     name: "Sân thể thao",
-    filterName: "Sân chơi thể thao",
     href: `/projects/san-choi-the-thao`,
     slug: "san-choi-the-thao",
     heading: "Thi công sân thể thao",
@@ -84,9 +83,9 @@ export const dataListProject = [
   {
     ...GRANITO_PROJECT,
     href: `/projects/${GRANITO_PROJECT.slug}`,
-    heading: "Thi công đá mài Granito",
+    heading: `Thi công ${GRANITO_PROJECT.name}`,
     description:
-      "Tìm hiểu thi công đá mài Granito với Đại Tiến Phát. Xem báo giá theo hạng mục, ứng dụng nội thất và giải pháp sàn cho nhà máy chế biến thủy sản.",
+      "Tìm hiểu dịch vụ thi công đá mài Granito và đá rửa của Đại Tiến Phát. Xem báo giá Granito, ứng dụng nội thất và giải pháp sàn cho nhà máy chế biến thủy sản.",
   },
 ];
 
