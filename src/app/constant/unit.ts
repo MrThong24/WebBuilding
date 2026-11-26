@@ -1,3 +1,5 @@
+export const SITE_URL = "https://daitienphatcons.com";
+
 export const TypeAbout = {
   TONG_QUAN_TYPE: "tong-quan",
   LICH_SU_PHAT_TRIEN_TYPE: "lich-su-phat-trien",

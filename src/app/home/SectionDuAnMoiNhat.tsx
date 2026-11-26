@@ -10,6 +10,7 @@ import Image from "next/image";
 import DuAn1 from "../assest/image/DuAnMoiNhat/a1.jpg";
 import DuAn2 from "../assest/image/DuAnMoiNhat/a2.jpg";
 import Link from "next/link";
+import { GRANITO_PROJECT } from "@/app/constant/unit";
 
 export default function SectionDuAnMoiNhat() {
   return (
@@ -105,6 +106,12 @@ export default function SectionDuAnMoiNhat() {
             </Link>
           </SwiperSlide>
         </Swiper>
+        <Link
+          href={`/projects/${GRANITO_PROJECT.slug}/`}
+          className="mt-5 inline-block font-semibold text-green-800 underline"
+        >
+          Thi công đá mài Granito
+        </Link>
       </div>
     </LayoutSection>
   );

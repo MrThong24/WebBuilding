@@ -11,6 +11,7 @@ import { listProjectDaMaiGranito } from "./DaMaiGranito";
 export interface Project {
   id: number;
   title: string;
+  seoTitle?: string;
   img: string | StaticImageData;
   type: string;
   col: number;

@@ -5,6 +5,12 @@ import sanNoiThat from "../../../../../../public/images/project/DaMaiGranito/san
 import sanNhaMay from "../../../../../../public/images/project/DaMaiGranito/san-nha-may-thuy-san.webp";
 
 const images = "/images/project/DaMaiGranito";
+const granitoPath = `/projects/${GRANITO_PROJECT.slug}`;
+const granitoSlugs = {
+  pricing: "granito-la-gi-gia-thi-cong-va-ung-dung",
+  interiors: "granito-xu-huong-trang-tri-noi-that-hien-dai",
+  seafood: "thi-cong-san-granito-nha-may-thuy-san-hai-san",
+};
 
 export const listProjectDaMaiGranito: Project[] = [
   {
@@ -13,7 +19,8 @@ export const listProjectDaMaiGranito: Project[] = [
     img: giaThiCongGranito,
     type: GRANITO_PROJECT.slug,
     col: 2,
-    slug: "granito-la-gi-gia-thi-cong-va-ung-dung",
+    slug: granitoSlugs.pricing,
+    seoTitle: "Giá thi công đá mài Granito bao nhiêu tiền/m²?",
     time: "",
     des: "Tìm hiểu cấu tạo đá mài Granito, giá thi công tham khảo và các ứng dụng phổ biến.",
     content: `
@@ -74,7 +81,7 @@ export const listProjectDaMaiGranito: Project[] = [
         <h3>Nhà xưởng, kho bãi – nơi đòi hỏi sàn siêu chịu lực</h3>
         <p>Granito có thể chịu được tải trọng xe nâng, xe đẩy, thiết bị cơ giới nhỏ. Đây là vật liệu hoàn hảo cho:</p>
         <ul>
-          <li>Khu sản xuất, đóng gói.</li>
+          <li><a href="${granitoPath}/${granitoSlugs.seafood}/">Khu sản xuất, đóng gói</a>.</li>
           <li>Nhà kho chứa hàng hóa lớn.</li>
           <li>Hành lang vận chuyển nội bộ.</li>
         </ul>
@@ -86,7 +93,7 @@ export const listProjectDaMaiGranito: Project[] = [
 
         <h2>4. Kết luận</h2>
         <p>Đá mài Granito là giải pháp kiến trúc tối ưu dung hòa được ba yếu tố: độ bền cao, thẩm mỹ linh hoạt và ngân sách đầu tư hợp lý. Việc chọn lựa đúng chủng loại và đơn vị thi công có tay nghề cao sẽ quyết định trực tiếp đến tuổi thọ lâu dài của toàn bộ công trình.</p>
-        <p>Nếu bạn đang tìm kiếm giải pháp thiết kế và ứng dụng đá mài Granito vào không gian sống, ĐẠI TIẾN PHÁT là một trong những đơn vị uy tín sẵn sàng hỗ trợ. Với quy trình làm việc bài bản cùng đội ngũ kỹ thuật giàu kinh nghiệm, chúng tôi hỗ trợ tối ưu hóa thiết kế phù hợp với ngân sách của bạn.</p>
+        <p>Nếu bạn đang tìm kiếm giải pháp thiết kế và <a href="${granitoPath}/${granitoSlugs.interiors}/">ứng dụng đá mài Granito vào không gian sống</a>, ĐẠI TIẾN PHÁT là một trong những đơn vị uy tín sẵn sàng hỗ trợ. Với quy trình làm việc bài bản cùng đội ngũ kỹ thuật giàu kinh nghiệm, chúng tôi hỗ trợ tối ưu hóa thiết kế phù hợp với ngân sách của bạn.</p>
         <p>Hotline: <a href="tel:0905519995">0905 519 995</a> – <a href="tel:0395124140">0395 124 140</a></p>
         <p>Website: <a href="https://daitienphatcons.com/">https://daitienphatcons.com/</a></p>
         <p>Email: <a href="mailto:daitienphatgroup@gmail.com">daitienphatgroup@gmail.com</a> - <a href="mailto:info@daitienphatcons.com">info@daitienphatcons.com</a></p>
@@ -99,7 +106,8 @@ export const listProjectDaMaiGranito: Project[] = [
     img: sanNoiThat,
     type: GRANITO_PROJECT.slug,
     col: 2,
-    slug: "granito-xu-huong-trang-tri-noi-that-hien-dai",
+    slug: granitoSlugs.interiors,
+    seoTitle: "Đá mài Granito trong thiết kế nội thất",
     time: "",
     des: "Khám phá cách phối màu, chọn hạt đá và ứng dụng Granito cho sàn, cầu thang, mặt bàn và lavabo.",
     content: `
@@ -138,7 +146,7 @@ export const listProjectDaMaiGranito: Project[] = [
           <img src="${images}/ung-dung-noi-that.webp" alt="Các hạng mục nội thất sử dụng đá mài Granito" width="1199" height="1312" loading="lazy" />
         </figure>
 
-        <h2>5. Giá thành hợp lý – Lợi ích kép về chi phí và giá trị thẩm mỹ</h2>
+        <h2>5. <a href="${granitoPath}/${granitoSlugs.pricing}/">Giá thành hợp lý</a> – Lợi ích kép về chi phí và giá trị thẩm mỹ</h2>
         <p>Phù hợp với mọi phân khúc: Từ nhà ở bình dân đến biệt thự cao cấp.</p>
         <p>Chi phí bảo trì thấp: Không cần đánh bóng thường xuyên, không bong tróc như gạch men.</p>
         <p>Đầu tư một lần, dùng bền lâu.</p>
@@ -177,7 +185,7 @@ export const listProjectDaMaiGranito: Project[] = [
             <img src="${images}/san-khu-che-bien.webp" alt="Sàn Granito và rãnh thoát nước trong khu chế biến" width="1600" height="900" loading="lazy" />
             <img src="${images}/ranh-thoat-nuoc.webp" alt="Rãnh thu nước chạy dọc sàn khu chế biến thủy sản" width="1449" height="1086" loading="lazy" />
           </div>
-          <figcaption>Đá mài granito khu vực sản xuất thủy sản – hải sản – bếp công nghiệp</figcaption>
+          <figcaption><a href="${granitoPath}/${granitoSlugs.seafood}/">Đá mài granito khu vực sản xuất thủy sản – hải sản – bếp công nghiệp</a></figcaption>
         </figure>
         <figure>
           <div class="granito-gallery">
@@ -200,7 +208,8 @@ export const listProjectDaMaiGranito: Project[] = [
     img: sanNhaMay,
     type: GRANITO_PROJECT.slug,
     col: 2,
-    slug: "thi-cong-san-granito-nha-may-thuy-san-hai-san",
+    slug: granitoSlugs.seafood,
+    seoTitle: "Thi công sàn Granito nhà máy thủy sản",
     time: "",
     des: "Yêu cầu về chống trượt, thoát nước, quy trình thi công và cách so sánh Granito với các hệ sàn công nghiệp.",
     content: `
@@ -222,7 +231,7 @@ export const listProjectDaMaiGranito: Project[] = [
           <li>Có thể xử lý bề mặt nhám để hạn chế trơn trượt.</li>
           <li>Bề mặt đặc chắc, ít mạch nối, dễ vệ sinh khi thi công đúng kỹ thuật.</li>
           <li>Chịu mài mòn tốt, có thể phục hồi bằng phương pháp mài lại.</li>
-          <li>Đa dạng màu sắc và kích thước hạt đá.</li>
+          <li><a href="${granitoPath}/${granitoSlugs.interiors}/">Đa dạng màu sắc và kích thước hạt đá</a>.</li>
         </ul>
 
         <h2>2. Các khu vực ứng dụng sàn Granito</h2>
@@ -305,7 +314,7 @@ export const listProjectDaMaiGranito: Project[] = [
 
         <h2>7. DTP – Giải pháp thi công sàn Granito</h2>
         <p>DTP hướng đến cung cấp giải pháp sàn Granito phù hợp với nhu cầu từng công trình, chú trọng độ bền, tính thẩm mỹ, khả năng vệ sinh và hiệu quả đầu tư lâu dài.</p>
-        <p>Với phương châm CREATING VALUE, chúng tôi hướng đến xây dựng không gian sản xuất sạch sẽ, chuyên nghiệp và bền vững. Liên hệ DTP để được tư vấn giải pháp kỹ thuật và báo giá thi công phù hợp.</p>
+        <p>Với phương châm CREATING VALUE, chúng tôi hướng đến xây dựng không gian sản xuất sạch sẽ, chuyên nghiệp và bền vững. Liên hệ DTP để được tư vấn giải pháp kỹ thuật và <a href="${granitoPath}/${granitoSlugs.pricing}/">báo giá thi công phù hợp</a>.</p>
       </article>
     `,
   },

@@ -74,7 +74,7 @@ export default async function About({ params }: BlogPostPageProps) {
               <li className="flex-shrink-0" key={item?.href}>
                 <Link
                   href={`/about/${item?.href}`}
-                  aria-current="page"
+                  aria-current={id === item.href ? "page" : undefined}
                   className={`inline-block sm:p-4 p-[12px] border-b-2 rounded-t-lg ${
                     id === item?.href
                       ? "border-red-600 text-red-500"

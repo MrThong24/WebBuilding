@@ -85,12 +85,14 @@ export default function Header() {
           <CustomPopover
             title="GIỚI THIỆU"
             items={dataIntroduce}
+            fontClassName={montserrat.className}
             isStatus={pathname.split("/")[1] === "about"}
             isProject={false}
           />
           <CustomPopover
             title="DỰ ÁN"
             items={dataListProject}
+            fontClassName={montserrat.className}
             isStatus={pathname.split("/")[1] === "projects"}
             isProject={true}
           />
@@ -122,7 +124,7 @@ export default function Header() {
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
-        className="lg:hidden"
+        className="relative z-[60] lg:hidden"
       >
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -165,6 +167,7 @@ export default function Header() {
                   title="Dự án"
                   items={dataListProject}
                   handleClose={handleClose}
+                  isProject
                 />
                 <CustomDisclosure
                   slug="/news"

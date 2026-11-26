@@ -3,6 +3,7 @@ import { dataListProject } from "@/app/layout/header/mockData";
 import { listProject } from "./mockData";
 import Link from "next/link";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import React from "react";
 import CustomSelect from "./components/CustomSelect";
 import logoHeader from "../../assest/image/projects/logo-about-dai-tien-phat-du-an.png";
@@ -16,26 +17,37 @@ export async function generateStaticParams() {
   return dataListProject.map(({ slug }) => ({ slug }));
 }
 
+function getCategory(slug: string) {
+  const category = dataListProject.find((project) => project.slug === slug);
+  if (!category) notFound();
+  return category;
+}
+
 export async function generateMetadata({
   params,
 }: ProjectCategoryProps): Promise<Metadata> {
   const { slug } = await params;
-  if (slug === GRANITO_PROJECT.slug) {
-    return {
-      title: GRANITO_PROJECT.name,
-      description:
-        "Tìm hiểu giá thi công đá mài Granito, ứng dụng trong nội thất và giải pháp sàn cho nhà máy chế biến thủy sản.",
-    };
-  }
+  const { heading, description, href } = getCategory(slug);
+  const title = `${heading} | Đại Tiến Phát`;
+  const url = `${href}/`;
 
   return {
-    title: "Dự án",
-    description: "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát",
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: logoHeader.src,
+      type: "website",
+    },
   };
 }
 
 export default async function Page({ params }: ProjectCategoryProps) {
   const { slug } = await params;
+  const category = getCategory(slug);
   const isGranitoCategory = slug === GRANITO_PROJECT.slug;
   const detail =
     slug === "tat-ca"
@@ -52,9 +64,9 @@ export default async function Page({ params }: ProjectCategoryProps) {
               "linear-gradient(115deg, rgba(27 49 71), rgba(179, 205, 209, 0.5))",
           }}
         ></div>
-        <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl font-bold">
-          DỰ ÁN
-        </h2>
+        <h1 className="absolute inset-0 flex items-center justify-center px-4 text-center text-2xl font-bold text-white md:text-3xl">
+          {category.heading}
+        </h1>
 
         <Image
           className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
@@ -63,9 +75,9 @@ export default async function Page({ params }: ProjectCategoryProps) {
         />
       </div>
       <div className="mx-auto px-4 lg:px-8 pb-10">
-        <h2 className="text-[18px] md:text-2xl leading-6 font-semibold text-green-900 text-center mt-10 mb-10">
-          {isGranitoCategory ? GRANITO_PROJECT.name : "Tất cả dự án"}
-        </h2>
+        <p className="mx-auto max-w-3xl py-8 text-center text-base leading-7 text-gray-700">
+          {category.description}
+        </p>
         <CustomSelect />
 
         <div
@@ -110,6 +122,14 @@ export default async function Page({ params }: ProjectCategoryProps) {
             );
           })}
         </div>
+        {isGranitoCategory && (
+          <Link
+            href="/contact/"
+            className="mt-8 inline-block font-semibold text-green-800 underline"
+          >
+            Liên hệ tư vấn thi công Granito
+          </Link>
+        )}
       </div>
     </div>
   );

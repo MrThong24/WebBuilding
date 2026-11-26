@@ -1,22 +1,28 @@
 import { getLink } from "@/app/unit/common";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { Inter } from "next/font/google";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import ProjectMenuLinks from "./ProjectMenuLinks";
 
-const inter = Inter({ subsets: ["latin"] });
+const panelStyle = "rounded-xl border border-gray-200 bg-white p-3 shadow-xl shadow-gray-900/10";
 
 interface CustomPopoverProps {
   title: string;
   items: Array<{ name: string; href: string; slug?: string }>;
   isStatus: boolean;
   isProject: boolean;
+  fontClassName?: string;
 }
 
 export const CustomPopover = ({
   title,
   items,
   isStatus,
+  isProject,
+  fontClassName = "",
 }: CustomPopoverProps) => {
+  const pathname = usePathname().replace(/\/$/, "");
+
   return (
     <Popover className="relative">
       <PopoverButton
@@ -43,42 +49,37 @@ export const CustomPopover = ({
           </>
         )}
       </PopoverButton>
-      {items?.length > 0 && (
+      {isProject && items.length > 0 && (
+        <PopoverPanel
+          anchor={{ to: "bottom", gap: 12, padding: 16 }}
+          transition
+          className={`${fontClassName} ${panelStyle} z-[60] w-[34rem] max-w-[calc(100vw-2rem)] transition duration-150 data-[closed]:translate-y-1 data-[closed]:opacity-0 motion-reduce:transition-none`}
+        >
+          {({ close }) => (
+            <ProjectMenuLinks items={items} onSelect={() => close()} twoColumns />
+          )}
+        </PopoverPanel>
+      )}
+      {!isProject && items.length > 0 && (
         <PopoverPanel
           transition
-          className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-[280px] overflow-hidden bg-[var(--thm-primary-color)] shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+          className={`${fontClassName} ${panelStyle} absolute -left-8 top-full z-10 mt-3 w-screen max-w-[280px] transition duration-150 data-[closed]:translate-y-1 data-[closed]:opacity-0 motion-reduce:transition-none`}
         >
-          <div className={`${inter.className}`}>
-            {items?.map((item, index) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault(); // Ngăn chặn hành động mặc định
-                  // Thực hiện hành động ẩn PopoverPanel
-                  const popover = e.currentTarget.closest(
-                    "[data-headlessui-state]"
-                  );
-                  if (popover) {
-                    popover.setAttribute("data-leave", "true"); // Thêm thuộc tính data-leave
-                  }
-
-                  // Chuyển hướng đến href
-                  window.location.href = item.href;
-                }}
-              >
-                <div
-                  className={`group relative flex items-center gap-x-6 py-3 px-4 text-sm/6 hover:bg-[var(--thm-base-color-rgb)] ${
-                    items.length - 1 !== index ? "border-b-[1px]" : ""
-                  } border-b-white`}
+          {({ close }) => (
+            <div className="grid gap-1">
+              {items.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => close()}
+                  aria-current={pathname === item.href.replace(/\/$/, "") ? "page" : undefined}
+                  className="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm font-medium leading-snug text-gray-800 hover:bg-green-50 hover:text-green-900 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-green-700 aria-[current=page]:bg-green-100 aria-[current=page]:font-semibold aria-[current=page]:text-green-900"
                 >
-                  <div className="flex-auto">
-                    <p className="block text-white">{item.name}</p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          )}
         </PopoverPanel>
       )}
     </Popover>

@@ -4,7 +4,8 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import ProjectMenuLinks from "./ProjectMenuLinks";
 
 interface Item {
   name: string;
@@ -17,6 +18,7 @@ interface CustomDisclosureProps {
   items: Item[];
   slug: string;
   handleClose?: () => void;
+  isProject?: boolean;
 }
 
 const CustomDisclosure: React.FC<CustomDisclosureProps> = ({
@@ -24,8 +26,12 @@ const CustomDisclosure: React.FC<CustomDisclosureProps> = ({
   items,
   slug,
   handleClose,
+  isProject,
 }) => {
   const router = useRouter();
+  const pathname = usePathname().replace(/\/$/, "");
+  const activeSection =
+    !isProject && items.some(({ href }) => pathname === href.replace(/\/$/, ""));
   return (
     <Disclosure as="div" className="-mx-3">
       <DisclosureButton
@@ -38,7 +44,7 @@ const CustomDisclosure: React.FC<CustomDisclosureProps> = ({
           }
           router.push(slug);
         }}
-        className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-[var(--thm-base-color)] hover:text-white"
+        className={`group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold hover:bg-[var(--thm-base-color)] hover:text-white ${activeSection ? "bg-green-50 text-green-900" : "text-gray-900"}`}
       >
         {title}
         {items?.length > 0 && (
@@ -59,21 +65,24 @@ const CustomDisclosure: React.FC<CustomDisclosureProps> = ({
         )}
       </DisclosureButton>
 
-      {items?.length > 0 && (
+      {isProject && items.length > 0 && (
+        <DisclosurePanel className="px-2 pb-2 pt-1">
+          <div className="rounded-xl border border-gray-200 bg-white p-2">
+            <ProjectMenuLinks items={items} onSelect={handleClose} />
+          </div>
+        </DisclosurePanel>
+      )}
+      {!isProject && items.length > 0 && (
         <DisclosurePanel className="mt-2 space-y-2">
           {items.map((item) => (
             <Link
-              key={item.name}
+              key={item.href}
               href={item.href}
-              onClick={() => {
-                if (handleClose) {
-                  handleClose(); // Call handleClose only if it's defined
-                }
-              }}
+              onClick={handleClose}
+              aria-current={pathname === item.href.replace(/\/$/, "") ? "page" : undefined}
+              className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-green-50 hover:text-green-900 aria-[current=page]:bg-green-100 aria-[current=page]:text-green-900"
             >
-              <div className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">
-                {item.name}
-              </div>
+              {item.name}
             </Link>
           ))}
         </DisclosurePanel>

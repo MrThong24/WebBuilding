@@ -1,14 +1,17 @@
 import "./globals.css";
 import Footer from "./layout/footer";
 import Header from "./layout/header";
-import Head from "next/head";
+import { SITE_URL } from "./constant/unit";
 import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://daitienphatcons.com"),
+  metadataBase: new URL(SITE_URL),
   title: "CÔNG TY TNHH ĐẦU TƯ PHÁT TRIỂN XÂY DỰNG ĐẠI TIẾN PHÁT",
   description: "Chuyên đầu tư và phát triển xây dựng tại Việt Nam.",
+  verification: {
+    google: "7AIi6IlmHq81QYPQ6YBBl4NayIcxJVnNMHQyLPRTD2g",
+  },
   icons: {
     icon: [
       {
@@ -21,7 +24,7 @@ export const metadata: Metadata = {
     title: "CÔNG TY TNHH ĐẦU TƯ PHÁT TRIỂN XÂY DỰNG ĐẠI TIẾN PHÁT",
     description: "Chuyên đầu tư và phát triển xây dựng tại Việt Nam.",
     images: "/images/favicon-light-custom.jpg",
-    url: "https://daitienphatcons.com",
+    url: SITE_URL,
     type: "website",
   },
 };
@@ -32,20 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Head>
-        <title>Đại Tiến Phát - Xây Dựng & Đầu Tư</title>
-        <meta name="title" content="Đại Tiến Phát - Xây Dựng & Đầu Tư" />
-        <meta
-          name="description"
-          content="Chuyên đầu tư và phát triển xây dựng tại Việt Nam."
-        />
-        <meta
-          name="google-site-verification"
-          content="7AIi6IlmHq81QYPQ6YBBl4NayIcxJVnNMHQyLPRTD2g"
-        />
-        <link rel="icon" href="/images/favicon-light.png" />
-      </Head>
+    <html lang="vi">
       <Script
         id="structured-data"
         type="application/ld+json"
@@ -55,13 +45,7 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "WebSite",
             name: "Đại Tiến Phát",
-            url: "https://daitienphatcons.com",
-            potentialAction: {
-              "@type": "SearchAction",
-              target:
-                "https://daitienphatcons.com/search?q={search_term_string}",
-              "query-input": "required name=search_term_string",
-            },
+            url: SITE_URL,
           }),
         }}
       />

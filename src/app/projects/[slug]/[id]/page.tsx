@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { dataListProject } from "@/app/layout/header/mockData";
 import { listProject } from "../mockData";
 import { Open_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
@@ -23,8 +25,10 @@ export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
   const { slug, id } = await params;
-  const { img, title, des } = getProject(slug, id);
-  const description = des || title;
+  const project = getProject(slug, id);
+  const { img, des, seoTitle } = project;
+  const title = seoTitle ? `${seoTitle} | Đại Tiến Phát` : project.title;
+  const description = des || project.title;
   const image =
     (typeof img === "string" ? img : img.src) ||
     "/images/favicon-light-custom.jpg";
@@ -47,6 +51,7 @@ export async function generateMetadata({
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug, id } = await params;
   const detail = getProject(slug, id);
+  const category = dataListProject.find((project) => project.slug === slug);
 
   return (
     <div className="pt-24 bg-white ">
@@ -73,6 +78,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </div>
 
       <div className="mx-auto max-w-6xl px-4 lg:px-8 pb-10 mt-4">
+        {category && (
+          <nav aria-label="Danh mục bài viết" className="mb-4 text-sm">
+            <Link href="/projects/tat-ca/" className="text-green-800 underline">
+              Dự án
+            </Link>
+            <span aria-hidden="true" className="mx-2 text-gray-500">
+              /
+            </span>
+            <Link href={`${category.href}/`} className="text-green-800 underline">
+              {category.heading}
+            </Link>
+          </nav>
+        )}
         <div
           className={`${openSans.className} containerEditor`}
           dangerouslySetInnerHTML={{ __html: detail.content }}
