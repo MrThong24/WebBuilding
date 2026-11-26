@@ -1,18 +1,10 @@
-"use client";
-
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import a1 from "../assest/image/contact/a1.jpg";
 import Image from "next/image";
+import a1 from "../assest/image/contact/a1.webp";
 
-const containerStyle = {
-  width: "100%",
-  height: "400px",
-};
-
-const center = {
-  lat: 16.056911077130504, // Vĩ độ của địa chỉ bạn muốn hiển thị trên bản đồ
-  lng: 108.17088239542588, // Kinh độ của địa chỉ bạn muốn hiển thị trên bản đồ
-};
+const officeAddress = "222 Tôn Đức Thắng, Đà Nẵng";
+const mapEmbedUrl =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.166976564631!2d108.17088369999999!3d16.056822699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142191760cf54df%3A0x6a7cb5b551408886!2zMjIyIFTDtG4gxJDhu6ljIFRo4bqvbmcsIEjDsmEgS2jDoW5oLCDEkMOgIE7hurVuZyA1NTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1795708012955!5m2!1svi!2s";
+const mapLocationUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
 
 export default function Contact() {
   return (
@@ -90,17 +82,21 @@ export default function Contact() {
                 </li>
               </ul>
             </div>
-            {/* Thêm bản đồ */}
             <div className="lg:col-span-1 mt-4 lg:mt-0">
-              <LoadScript googleMapsApiKey="AIzaSyB7ETOwK6NMmiPXlHUAThIjfDbCxXq_A6c">
-                <GoogleMap
-                  mapContainerStyle={containerStyle}
-                  center={center}
-                  zoom={16}
-                >
-                  <Marker position={center} />
-                </GoogleMap>
-              </LoadScript>
+              <iframe
+                src={mapEmbedUrl}
+                title={`Bản đồ văn phòng Đại Tiến Phát tại ${officeAddress}`}
+                className="block h-[400px] w-full border-0"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+              <a
+                className="mt-3 inline-block text-green-800 underline"
+                href={mapLocationUrl}
+              >
+                Mở vị trí trên Google Maps
+              </a>
             </div>
           </div>
         </div>

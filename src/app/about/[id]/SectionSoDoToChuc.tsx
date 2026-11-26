@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SoDoToChuc from "../../assest/image/about/logo-so-do-to-chuc-dai-tien-phat.jpg";
+import SoDoToChuc from "../../assest/image/about/logo-so-do-to-chuc-dai-tien-phat.webp";
 export default function SectionSoDoToChuc() {
   return (
     <div className="px-4 py-5 sm:px-6 flex justify-center">

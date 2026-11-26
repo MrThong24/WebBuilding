@@ -19,8 +19,6 @@
 }
 
 .granito-article {
-  max-width: 52rem;
-  margin-inline: auto;
   color: #24302c;
   overflow-wrap: break-word;
 }

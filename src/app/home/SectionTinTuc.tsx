@@ -1,7 +1,7 @@
 import LayoutSection from "./layout/LayoutSection";
-import logoNew1 from "../../../public/images/news/DuAn1/a1.jpg";
-import logoNew2 from "../../../public/images/news/DuAn2/a1.jpg";
-import logoNew3 from "../../../public/images/news/DuAn3/du-an-dai-tien-phat-1.jpg";
+import logoNew1 from "../../../public/images/news/DuAn1/a1.webp";
+import logoNew2 from "../../../public/images/news/DuAn2/a1.webp";
+import logoNew3 from "../../../public/images/news/DuAn3/du-an-dai-tien-phat-1.webp";
 import Image from "next/image";
 import Link from "next/link";
 

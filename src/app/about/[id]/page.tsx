@@ -8,7 +8,7 @@ import SectionLichSu from "./SectionLichSu";
 import SectionTamNhin from "./SectionTamNhin";
 import SectionSoDoToChuc from "./SectionSoDoToChuc";
 import SectionLinhVucHoatDong from "./SectionLinhVucHoatDong";
-import logoHear from "../../assest/image/about/logo-about-dai-tien-phat.jpg";
+import logoHear from "../../assest/image/about/logo-about-dai-tien-phat.webp";
 import Image from "next/image";
 interface BlogPostPageProps {
   params: Promise<{ id: string }>; // Đảm bảo params là một Promise
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
       description:
         `Giới thiệu - ${detail?.name}` ||
         "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát",
-      images: "/images/favicon-light-custom.jpg",
+      images: "/images/favicon-light-custom.webp",
       url: `https://daitienphatcons.com/about/${id}`,
       type: "website",
     },

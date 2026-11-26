@@ -15,15 +15,15 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/images/favicon-light.png",
-        href: "/images/favicon-light.png",
+        url: "/images/favicon-light.webp",
+        href: "/images/favicon-light.webp",
       },
     ],
   },
   openGraph: {
     title: "CÔNG TY TNHH ĐẦU TƯ PHÁT TRIỂN XÂY DỰNG ĐẠI TIẾN PHÁT",
     description: "Chuyên đầu tư và phát triển xây dựng tại Việt Nam.",
-    images: "/images/favicon-light-custom.jpg",
+    images: "/images/favicon-light-custom.webp",
     url: SITE_URL,
     type: "website",
   },

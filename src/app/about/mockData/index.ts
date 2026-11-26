@@ -1,10 +1,10 @@
 import { TypeAbout } from "@/app/constant/unit";
-import pickleball from "../../assest/image/pickleball.png";
-import ThiCong from "../../assest/image/ThiCong.png";
-import NhaThep from "../../assest/image/NhaThep.png";
-import SuaChua from "../../assest/image/SuaChua.png";
-import TrungTamThuongMai from "../../assest/image/TrungTamThuongMai.png";
-import KhuNghiDuong from "../../assest/image/KhuNghiDuong.png";
+import pickleball from "../../assest/image/pickleball.webp";
+import ThiCong from "../../assest/image/ThiCong.webp";
+import NhaThep from "../../assest/image/NhaThep.webp";
+import SuaChua from "../../assest/image/SuaChua.webp";
+import TrungTamThuongMai from "../../assest/image/TrungTamThuongMai.webp";
+import KhuNghiDuong from "../../assest/image/KhuNghiDuong.webp";
 
 import { StaticImageData } from "next/image";
 // Define an interface for the data structure

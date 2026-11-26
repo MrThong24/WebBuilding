@@ -31,7 +31,7 @@ export async function generateMetadata({
   const description = des || project.title;
   const image =
     (typeof img === "string" ? img : img.src) ||
-    "/images/favicon-light-custom.jpg";
+    "/images/favicon-light-custom.webp";
   const url = `/projects/${slug}/${id}/`;
 
   return {

@@ -28,7 +28,7 @@ export const dataListProject = [
     name: "Tất cả",
     href: `/projects/tat-ca`,
     slug: "tat-ca",
-    heading: "Dự án xây dựng",
+    heading: "Tất cả dự án",
     description:
       "Khám phá các dự án và giải pháp thi công của Đại Tiến Phát, từ sân thể thao, công trình dân dụng, nhà xưởng đến hạ tầng kỹ thuật và đá mài Granito.",
   },

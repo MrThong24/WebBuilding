@@ -9,8 +9,8 @@ import { CustomPopover } from "./components/CustomPopover";
 import CustomDisclosure from "./components/CustomDisclosure";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import logoCty from "../../assest/image/header/logo-cong-ty-dai-tien-phat.jpg";
-import phone from "../../assest/image/phone.gif";
+import logoCty from "../../assest/image/header/logo-cong-ty-dai-tien-phat.webp";
+import phone from "../../assest/image/phone.webp";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 

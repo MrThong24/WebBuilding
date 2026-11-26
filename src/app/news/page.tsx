@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { listNews } from "./Mockdata";
 import Image from "next/image";
-import logoHeader from "../assest/image/news/logo-about-dai-tien-phat-tin-tuc.png";
+import logoHeader from "../assest/image/news/logo-about-dai-tien-phat-tin-tuc.webp";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

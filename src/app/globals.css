@@ -66,7 +66,7 @@ td {
   width: 100%;
   clear: both;
   position: relative;
-  background: #232323 url("/images/footer.png") no-repeat;
+  background: #232323 url("/images/footer.webp") no-repeat;
   background-size: 120% auto; /* Default size for larger screens */
 }
 

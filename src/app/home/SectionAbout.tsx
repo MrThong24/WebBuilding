@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import About from "../assest/image/home/logo-gioi-thieu-dai-tien-phat.jpeg";
+import About from "../assest/image/home/logo-gioi-thieu-dai-tien-phat.webp";
 
 export default function SectionAbout() {
   const router = useRouter();

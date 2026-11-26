@@ -1,4 +1,4 @@
-import { GRANITO_PROJECT } from "@/app/constant/unit";
+import { GRANITO_PROJECT, SITE_URL } from "@/app/constant/unit";
 import { dataListProject } from "@/app/layout/header/mockData";
 import { listProject } from "./mockData";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import React from "react";
 import ProjectCategoryGrid from "./components/ProjectCategoryGrid";
-import logoHeader from "../../assest/image/projects/logo-about-dai-tien-phat-du-an.png";
+import { getProjectCategoryCover } from "./categoryCovers";
 import type { Metadata } from "next";
 
 type ProjectCategoryProps = {
@@ -30,6 +30,7 @@ export async function generateMetadata({
   const { heading, description, href } = getCategory(slug);
   const title = `${heading} | Đại Tiến Phát`;
   const url = `${href}/`;
+  const cover = getProjectCategoryCover(slug);
 
   return {
     title,
@@ -39,7 +40,7 @@ export async function generateMetadata({
       title,
       description,
       url,
-      images: logoHeader.src,
+      images: new URL(typeof cover === "string" ? cover : cover.src, SITE_URL),
       type: "website",
     },
   };
@@ -51,26 +52,31 @@ export default async function Page({ params }: ProjectCategoryProps) {
   const isAllProjects = slug === "tat-ca";
   const isGranitoCategory = slug === GRANITO_PROJECT.slug;
   const projects = listProject.filter((item) => item.type === slug);
+  const cover = getProjectCategoryCover(slug);
 
   return (
     <div className="mt-24 bg-white">
-      <div className="relative">
+      <div className="relative h-[240px] md:h-[300px] lg:h-[60vh]">
+        <Image
+          src={cover}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <div
-          className="absolute inset-0 z-0"
+          aria-hidden="true"
+          className="absolute inset-0"
           style={{
-            background:
-              "linear-gradient(115deg, rgba(27 49 71), rgba(179, 205, 209, 0.5))",
+            background: isAllProjects
+              ? "linear-gradient(115deg, rgba(27 49 71), rgba(179, 205, 209, 0.5))"
+              : "rgba(15, 23, 42, 0.6)",
           }}
-        ></div>
+        />
         <h1 className="absolute inset-0 flex items-center justify-center px-4 text-center text-2xl font-bold text-white md:text-3xl">
           {category.heading}
         </h1>
-
-        <Image
-          className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
-          alt="Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát" // Cập nhật thuộc tính alt
-          src={logoHeader}
-        />
       </div>
       <div className="mx-auto px-4 lg:px-8 pb-10">
         <p className="mx-auto max-w-3xl py-8 text-center text-base leading-7 text-gray-700">
