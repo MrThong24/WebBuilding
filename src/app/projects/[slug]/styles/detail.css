@@ -17,3 +17,121 @@
   color: rgb(36, 34, 34) !important;
   font-size: 24px !important;
 }
+
+.granito-article {
+  max-width: 52rem;
+  margin-inline: auto;
+  color: #24302c;
+  overflow-wrap: break-word;
+}
+
+.granito-article h2 {
+  margin-block: 2rem 0.75rem;
+  color: #14532d;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.granito-article h3 {
+  margin-top: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.granito-article p,
+.granito-article ul,
+.granito-article ol {
+  margin-block: 0.75rem;
+}
+
+.granito-article ul,
+.granito-article ol {
+  padding-inline-start: 1.5rem;
+}
+
+.granito-article ul {
+  list-style: disc;
+}
+
+.granito-article ol {
+  list-style: decimal;
+}
+
+.granito-article li + li {
+  margin-top: 0.5rem;
+}
+
+.granito-article a {
+  color: #166534;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.granito-article figure {
+  margin-block: 1.5rem;
+}
+
+.granito-article figure img {
+  height: auto !important;
+  border-radius: 0.375rem;
+}
+
+.granito-article figcaption {
+  margin-top: 0.5rem;
+  color: #4b5563;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.granito-article .granito-figure-portrait {
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+.granito-gallery {
+  display: grid;
+  gap: 1rem;
+}
+
+.granito-table {
+  overflow-x: auto;
+  margin-block: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+}
+
+.granito-table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.granito-table-comparison table {
+  min-width: 38rem;
+}
+
+.granito-table th,
+.granito-table td {
+  padding: 0.625rem 0.75rem;
+  vertical-align: top;
+}
+
+.granito-table thead {
+  background-color: #ecfdf5;
+  color: #14532d;
+}
+
+.granito-table tbody tr {
+  border-top: 1px solid #d1d5db;
+}
+
+.granito-table th[scope="row"] {
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .granito-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

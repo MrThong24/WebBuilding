@@ -15,3 +15,8 @@ export const TypeService = {
   SAN_XUAT_THUONG_MAI_NOI_THAT_QUANG_CAO_TYPE:
     "san-xuat-thuong-mai-noi-that-quang-cao",
 };
+
+export const GRANITO_PROJECT = {
+  slug: "da-mai-granito",
+  name: "Đá mài Granito",
+};

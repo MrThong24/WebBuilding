@@ -1,4 +1,4 @@
-import { TypeAbout, TypeService } from "@/app/constant/unit";
+import { GRANITO_PROJECT, TypeAbout, TypeService } from "@/app/constant/unit";
 
 export const dataIntroduce = [
   {
@@ -31,6 +31,7 @@ export const dataListProject = [
   },
   {
     name: "Sân thể thao",
+    filterName: "Sân chơi thể thao",
     href: `/projects/san-choi-the-thao`,
     slug: "san-choi-the-thao",
   },
@@ -58,6 +59,10 @@ export const dataListProject = [
     name: "Công trình khu nghỉ dưỡng",
     href: `/projects/cong-trinh-khu-nghi-duong`,
     slug: "cong-trinh-khu-nghi-duong",
+  },
+  {
+    ...GRANITO_PROJECT,
+    href: `/projects/${GRANITO_PROJECT.slug}`,
   },
 ];
 

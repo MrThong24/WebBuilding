@@ -1,44 +1,52 @@
 import Image from "next/image";
 import { listProject } from "../mockData";
 import { Open_Sans } from "next/font/google";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import "../styles/detail.css";
 
 interface BlogPostPageProps {
-  params: Promise<{ id: string }>; // Đảm bảo params là một Promise
+  params: Promise<{ slug: string; id: string }>;
 }
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
-export async function generateMetadata({ params }: BlogPostPageProps) {
-  const resolvedParams = await params;
-  const id = resolvedParams?.id;
-  const detail = listProject.find((item) => item?.slug === id);
+function getProject(slug: string, id: string) {
+  const project = listProject.find(
+    (item) => item.type === slug && item.slug === id
+  );
+  if (!project) notFound();
+  return project;
+}
 
-  // Đặt tiêu đề và mô tả metadata
-  const title =
-    detail?.title || "Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát";
-  const description = detail?.title || title;
-  const image = "/images/favicon-light-custom.jpg"; // Đặt ảnh mặc định nếu không có ảnh dự án
-  const url = `https://daitienphatcons.com/projects/cong-trinh-ha-tang-ky-thuat/${id}`; // Cập nhật URL với đường dẫn trang dự án
+export async function generateMetadata({
+  params,
+}: BlogPostPageProps): Promise<Metadata> {
+  const { slug, id } = await params;
+  const { img, title, des } = getProject(slug, id);
+  const description = des || title;
+  const image =
+    (typeof img === "string" ? img : img.src) ||
+    "/images/favicon-light-custom.jpg";
+  const url = `/projects/${slug}/${id}/`;
 
   return {
-    metadataBase: new URL("https://daitienphatcons.com"), // Thiết lập metadataBase cho các URL đầy đủ
-    title: `${title}`,
-    description: description,
+    title,
+    description,
+    alternates: { canonical: url },
     openGraph: {
-      title: `${title}`,
-      description: description,
+      title,
+      description,
       images: image,
-      url: url,
+      url,
       type: "website",
     },
   };
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const resolvedParams = await params; // Chờ đợi params hoàn thành
-  const id = resolvedParams?.id;
-  const detail = listProject.find((item) => item?.slug === id);
+  const { slug, id } = await params;
+  const detail = getProject(slug, id);
 
   return (
     <div className="pt-24 bg-white ">
@@ -51,14 +59,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           }}
         ></div>
         <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center items-center p-6">
-          <p className="text-white text-xl sm:text-3xl font-semibold min-w-[260px] text-center">
-            {detail?.title}
-          </p>
+          <h1 className="text-white text-xl sm:text-3xl font-semibold min-w-[260px] text-center">
+            {detail.title}
+          </h1>
         </div>
-        {detail?.img && detail.img !== "" && (
+        {detail.img && (
           <Image
             className="md:h-[300px] lg:h-[60vh] h-[240px] w-full object-cover"
-            alt={`Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát: ${detail?.title}`} // Use the title for alt text
+            alt={`Công ty TNHH Đầu tư Phát triển Xây dựng Đại Tiến Phát: ${detail.title}`}
             src={detail.img}
           />
         )}
@@ -67,7 +75,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="mx-auto max-w-6xl px-4 lg:px-8 pb-10 mt-4">
         <div
           className={`${openSans.className} containerEditor`}
-          dangerouslySetInnerHTML={{ __html: detail?.content ?? "" }}
+          dangerouslySetInnerHTML={{ __html: detail.content }}
         ></div>
       </div>
     </div>
@@ -75,10 +83,5 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 }
 
 export async function generateStaticParams() {
-  // Here you would typically fetch the list of project slugs or IDs
-  const params = listProject.map((project) => ({
-    slug: project.type,
-    id: project.slug, // Assuming 'slug' is the identifier for the project
-  }));
-  return params;
+  return listProject.map((project) => ({ slug: project.type, id: project.slug }));
 }
