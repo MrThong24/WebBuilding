@@ -8,9 +8,8 @@ const categoryCovers: Partial<Record<string, string>> = {
   "cong-trinh-ha-tang-ky-thuat":
     "/images/project/categories/ha-tang-ky-thuat.webp", // Pexels 35425762
   "sua-chua-cai-tao-cong-trinh":
-    "/images/project/categories/sua-chua-cai-tao.webp", // Pexels 20648486
-  "trung-tam-thuong-mai":
-    "/images/project/categories/trung-tam-thuong-mai.webp", // Pexels 7314561
+    "/images/project/categories/sua-chua-cai-tao.webp",
+  "trung-tam-thuong-mai": "/images/project/categories/trung-tam-thuong-mai.webp",
   "cong-trinh-khu-nghi-duong":
     "/images/project/categories/khu-nghi-duong.webp", // Pexels 6460876
   [GRANITO_PROJECT.slug]:
